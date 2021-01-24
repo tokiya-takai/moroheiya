@@ -17,14 +17,15 @@
 |       address       | string  | null: false |
 |       building      | string  |             |
 |     phone_number    | string  | null: false |
-|      black_iine     | integer |             |
-|      gold_iine      | integer |             |
-|     purple_iine     | integer |             |
+|   black_favorite    | integer |             |
+|   gold_favorite     | integer |             |
+|   purple_favorite   | integer |             |
 
 ### Associations
 
 has_many :contests
 has_many :works
+has_one :favorite
 
 
 ## contests テーブル
@@ -49,12 +50,24 @@ belongs_to :user
 | --------------- | ---------- | ----------- |
 |      title      | string     | null: false |
 |     content     | string     | null: false |
-|    black_iine   | integer    |             |
-|    gold_iine    | integer    |             |
-|    purple_iine  | integer    |             |
-|    normal_iine  | integer    |             |
 |       user      | references | null: false |
 |      contest    | references | null: false |
 
 belongs_to :user
 belongs_to :contest
+has_one :favorite
+
+## favorites テーブル
+
+|     Column      |    Type    |   Options   |
+| --------------- | ---------- | ----------- |
+| black_favorite  | integer    |             |
+| gold_favorite   | integer    |             |
+| purple_favorite | integer    |             |
+| normal_favorite | integer    |             |
+
+### Association
+
+belongs_to :user
+belongs_to :work
+
