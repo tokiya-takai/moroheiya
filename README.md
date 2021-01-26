@@ -20,6 +20,7 @@
 |   black_favorite    | integer |             |
 |   gold_favorite     | integer |             |
 |   purple_favorite   | integer |             |
+|    count_first      | integer |             |
 
 ### Associations
 
@@ -30,14 +31,15 @@ has_one :favorite
 
 ## contests テーブル
 
-|     Column      |    Type    |   Options   |
-| --------------- | ---------- | ----------- |
-|      title      | string     | null: false |
-|    genre_id     | integer    | null: false |
-|   category_id   | integer    | null: false |
-|     content     | integer    | null: false |
-|     deadline    | string     | null: false |
-|       user      | references | null: false |
+|     Column      |    Type    |   Options                  |
+| --------------- | ---------- | -------------------------- |
+|      title      | string     | null: false                |
+|    genre_id     | integer    | null: false                |
+|   category_id   | integer    | null: false                |               
+|     content     | integer    | null: false                |
+|     deadline    | string     | null: false                |
+|      public     | boolean    | null: false, default: true |
+|       user      | references | null: false                |
 
 ### Associations テーブル
 

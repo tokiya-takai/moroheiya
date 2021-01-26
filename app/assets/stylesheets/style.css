@@ -1,0 +1,181 @@
+body {
+  font-family: "Open Sans", "Myriad", Helvetica, Arial, "Noto Sans JP", sans-serif;
+  font: bold 14px "ヒラギノ角ゴ ProN W3", "Hiragino KaKu Gothic ProN", "メイリオ", Meiryo,"Lucida Grande", Verdana, "MS Pゴシック", sans-serif;
+}
+
+/* header */
+.header {
+  height: 80px;
+  width: 100%;
+  border-top: 1px solid #2d2020;
+  border-bottom:1px solid #2d2020;
+  box-shadow: 0 3px 5px 2px rgba(136,136,136,0.3);
+}
+.inner {
+  height: 100%;
+  width: 100%;
+}
+.nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.nav_left {
+  width: 32%;
+  height: 100%;
+}
+.nav_left_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 173px;
+  margin: 0 20px
+}
+.form_block {
+  background-color: #f6f6f6;
+  border: 1px solid#707070;
+  border-radius: 2px;
+  width: 180px;
+  height: 25px;
+}
+.search_form {
+  width: 202px;
+  height: 25px;
+}
+.search {
+  width: 13px;
+  height: 13px;
+  margin-left: 2px;
+}
+.search_input {
+  color: #707070;
+  font-size: 8px;
+}
+.nav_center {
+  width: 46%;
+  height: 100%;
+}
+.nav_center_container {
+  width: 100%;
+  height: 100%;
+}
+.list_header_nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 12px;
+}
+.nav_item_border {
+  border-bottom: 2px solid #2d2020;
+}
+.nav_center_container ul li a{
+  padding: 31px 0;
+}
+.nav_right {
+  width: 32%;
+  height: 100%;
+}
+.nav_right_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.left_btn {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: #5a4040;
+}
+.right_btn {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  background-color: #2d2020;
+}
+.left_btn a, .right_btn a {
+  color: white;
+  width: 100%;
+  padding: 31px 0;
+}
+.find_list {
+  display: none;
+  position: relative;
+}
+.find_list_container {
+  position: relative;
+  background-color: white;
+  border-left: 1px solid #202020;
+  border-right: 1px solid #202020;
+  border-bottom: 1px solid #202020;
+  width: 60%;
+  height: 35vh;
+  margin: 1px auto 0 auto;
+  color: #2d2020;
+}
+.find_list_title {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.find_list_title h3 {
+  border-bottom: 2px solid #ffd500;
+}
+.find_list_division {
+  display: flex;
+  margin: 5px 0;
+}
+.division_genre {
+  width: 40%;
+  text-align: center;
+}
+.division_category {
+  width: 60%;
+}
+.find_list_items {
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}
+.find_list_genre_container {
+  width: 40%;
+  /* text-align: center; */
+  padding-left: 30px;
+}
+.find_list_genre {
+  width: 20%;
+  margin: 0 auto;
+}
+.find_list_category_1 {
+  width: 30%;
+  padding-left: 20px;
+}
+.find_list_category_2 {
+  width: 30%;
+}
+.list_item {
+  list-style: circle;
+}
+
+/* トップページ */
+.hero_container {
+  position: relative;
+  z-index: -1;
+  width: 100%;
+  height: 83%;
+}
+.hero {
+  width: 100%;
+  height: 83%;
+}
