@@ -118,6 +118,7 @@ body {
 }
 .find_list_container {
   position: relative;
+  z-index: 5;
   border-bottom: 1px solid #202020;
   width: 100%;
   height: 300px;
@@ -175,18 +176,188 @@ body {
 .list_item {
   margin: 8px 0;
   list-style: inside;
-  list-style-image: url('../images/arrow.png');
+  list-style-image: url('/images/arrow.png');
   opacity: 1;
 }
 
 /* トップページ */
 .hero_container {
-  position: relative;
-  z-index: -1;
-  width: 100%;
-  height: 83%;
+  width: 100vw;
+  height: 75vh;
+  background-image: url('/images/main.jpg');
+  background-size: cover;
 }
-.hero {
+.catch_copy {
   width: 100%;
-  height: 83%;
+  font-size: 75px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  /* -webkit- transform: translateY(-50%) translateX(-50%); */
+  opacity: 0;
+}
+.hero_border {
+  width: 100%;
+  height: 50px;
+  background-color: #2d2020;
+}
+.initial {
+  height: 150px;
+}
+.initial_title {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+}
+.initial_button_container {
+  font-size: 20px;
+}
+.initial_button_frame {
+  width: 250px;
+  height: 40px;
+  margin: 0 auto;;
+  border-radius: 5px;
+  background-color: #ffd500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 2px 3px #aaaaaa;
+}
+.initial_button {
+  padding: 0 55px;
+}
+
+/* MOROHEIYAとは */
+
+.what {
+  height: 1600px;
+}
+.what_title_container {
+  width: 100%;
+  height: 16%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.what_title {
+  width: 30%;
+  text-align: center;
+  font-size: 50px;
+  border-bottom: 5px solid #ffd500;
+}
+
+/* what共通設定 */
+.what_first,.what_second {
+  height: 43%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.what_content_container,.what_image_container {
+  width: 50%;
+}
+.what_content {
+  width: 75%;
+  font-size: 25px;
+  margin: 0 auto;
+}
+.content_title {
+  font-size: 30px;
+}
+.what_image {
+  margin: 0 auto;
+  text-align: center;
+}
+.image_body {
+  width: 500px;
+  height: 500px;
+}
+/* ここまで */
+
+/* 特徴 */
+.feature {
+  width: 100%;
+  height: 700px;
+  background-color: #2d2020;
+  color: white;
+}
+.feature_title_container {
+  height: 20%;
+}
+.feature_title {
+  width: 7%;
+  text-align: center;
+  font-size: 50px;
+  border-bottom: 5px solid #ffd500;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.feature_upper {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.feature_upper_left, .feature_upper_right, .feature_lower_left, .feature_lower_right {
+  width: 50%;
+  height: 100%;
+}
+.three_types {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.type {
+  width: 130px;
+  height: 130px;
+  margin: 0 15px;
+}
+.type_names {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.type_name {
+  width: 130px;
+  text-align: center;
+  margin: 0 15px;
+}
+.three_types_content {
+  text-align: center;
+  margin-top: 10px;
+}
+.proof {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.proof_image {
+  height: 130px;
+}
+.proof_content {
+  margin-top: 46px;
+  text-align: center;
+}
+.feature_lower {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.favo_content {
+  width: 60%;
+  margin: 0 auto;
+}
+.feature_to_how {
+  font-size: 18px;
+  border-bottom: 1px solid white;
 }
