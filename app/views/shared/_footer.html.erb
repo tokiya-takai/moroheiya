@@ -1,0 +1,70 @@
+<footer class="footer">
+  <div class="footer_container">
+    <nav class="footer_nav">
+      <div class="footer_find">
+        <h3 class="footer_list_title">コンテストをさがす</h3>
+        <ul class="find_type footer_lists">
+          <li class="list_sub find_left">ジャンル</li>
+          <li class="list_sub">カテゴリ</li>
+        </ul>
+        <div class="list_division">
+          <div class="genre_list find_left">
+            <ul class="footer_lists">
+              <li class="footer_list_arrow"><%= link_to '画像', root_path, class: :list_item %></li>
+              <li class="footer_list_arrow"><%= link_to '動画', root_path, class: :list_item %></li>
+            </ul>
+          </div>
+          <div class="category_list">
+            <ul class="footer_lists">
+              <li class="footer_list_arrow"><%= link_to 'エンターテインメント', root_path, class: :list_item %></li>
+              <li class="footer_list_arrow"><%= link_to 'スポーツ', root_path, class: :list_item %></li>
+              <li class="footer_list_arrow"><%= link_to 'ファッション', root_path, class: :list_item %></li>
+              <li class="footer_list_arrow"><%= link_to 'アニメ・マンガ', root_path, class: :list_item %></li>
+              <li class="footer_list_arrow"><%= link_to 'ゲーム', root_path, class: :list_item %></li>
+              <li class="footer_list_arrow"><%= link_to 'ビジネス', root_path, class: :list_item %></li>
+              <li class="footer_list_arrow"><%= link_to 'アート・イラスト', root_path, class: :list_item %></li>
+              <li class="footer_list_arrow"><%= link_to '音楽', root_path, class: :list_item %></li>
+              <li class="footer_list_arrow"><%= link_to 'その他', root_path, class: :list_item %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer_start">
+        <h3 class="footer_list_title">コンテストをはじめる</h3>
+        <div class="start_guide">
+          <p class="footer_lists list_sub">3つの方法があります</p>
+        </div>
+        <div class="start_list">
+          <ul class="footer_lists">
+            <li class="footer_list_arrow"><%= link_to '開催する', root_path, class: :list_item %></li>
+            <li class="footer_list_arrow"><%= link_to '参加する', root_path, class: :list_item %></li>
+            <li class="footer_list_arrow"><%= link_to '応援する', root_path, class: :list_item %></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer_how">
+        <h3 class="footer_list_title">MOROHEIYAについて</h3>
+        <div class="how_list">
+          <ul class="footer_lists">
+            <li class="footer_list_arrow"><%= link_to '使い方', root_path, class: :list_item %></li>
+            <li class="footer_list_arrow"><%= link_to 'ヘルプ', root_path, class: :list_item %></li>
+            <li class="footer_list_arrow"><%= link_to 'お問い合わせ', root_path, class: :list_item %></li>
+            <li class="footer_list_arrow"><%= link_to '利用規約', root_path, class: :list_item %></li>
+            <li class="footer_list_arrow"><%= link_to 'プライバシーポリシー', root_path, class: :list_item %></li>
+            <li class="footer_list_arrow"><%= link_to '特定商取引法に基づく表記', root_path, class: :list_item %></li>
+            <li class="footer_list_arrow"><%= link_to '情報セキュリティ方針', root_path, class: :list_item %></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="footer_bottom_area">
+      <div class="footer_logo">
+        <%= image_tag('footer_logo.png',class: :footer_image) %>
+      </div>
+      <div class="copyright">
+        <p>&copy;2021 MOROHEIYA</p>
+      </div>
+      <span class="footer_span"></span>
+    </div>
+  </div>
+</footer>

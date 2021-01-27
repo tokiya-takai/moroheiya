@@ -2,6 +2,118 @@
 
 <div class="wrapper">
   <div class="hero_container">
-    <%= image_tag 'main.jpg', class: :hero %>
+    <h1 class="catch_copy">ここが私の、第一歩だ。</h1>
   </div>
+  <div class="hero_border"></div>
+  <div class="initial">
+    <h3 class="initial_title">作品を投稿して、上を目指そう。</h2>
+    <div class="initial_button_container">
+      <div class="initial_button_frame">
+        <%= link_to '今すぐはじめる', root_path, class: :initial_button %>
+      </div>
+    </div>
+  </div>
+  <div class="what">
+    <div class="what_title_container">
+      <h2 class="what_title">MOROHEIYAとは</h2>
+    </div>
+    <div class="what_first">
+      <div class="what_content_container">
+        <div class="what_content">
+          <p class="content_title">あなたの「好き！」を磨きます。</p>
+          <p class="content_body">開催するコンテストはどんなこと、どんなものでもOK！<br>写真、イラスト、おもしろ動画、すごいけど役に立たない能力動画などなど！<br>コンテストを開催、もしくは参加して、1位を目指しましょう！</p>
+        </div>
+      </div>
+      <div class="what_image_container">
+        <div class="what_image">
+          <%= image_tag('camera.png', class: :image_body) %>
+        </div>
+      </div>
+    </div>
+    <div class="what_second">
+      <div class="what_image_container">
+        <div class="what_image">
+          <%= image_tag('dog.png', class: :image_body) %>
+        </div>
+      </div>
+      <div class="what_content_container">
+        <div class="what_content">
+          <p class="content_title">あなたの「好き！」を応援できます。</p>
+          <p class="content_body">コンテストに参加しなくても、作品を見ることができます。気に入った作品があれば、いいねを送りましょう！<br>あなたの1票が、運命を左右するかも知れません！</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="feature">
+    <div class="feature_title_container">
+      <h2 class="feature_title">特徴</h2>
+    </div>
+    <div class="feature_upper">
+      <div class="feature_upper_left">
+        <div class="three_types">
+          <figure><%= image_tag('gold_medal.png', class: :type) %></figure>
+          <figure><%= image_tag('silver_medal.png', class: :type) %></figure>
+          <figure><%= image_tag('bronze_medal.png', class: :type) %></figure>
+        </div>
+        <div class="type_names">
+          <figcaption class="type_name">1位</figcaption>
+          <figcaption class="type_name">2位</figcaption>
+          <figcaption class="type_name">3位</figcaption>
+        </div>
+        <div class="three_types_content">
+          <figcaption>上位に入ると、メダルが授与されます。</figcaption>
+        </div>
+      </div>
+      <div class="feature_upper_right">
+        <div class="proof">
+          <figure><%= image_tag('proof.svg', class: :proof_image) %></figure>
+        </div>
+        <div class="proof_content">
+          <figcaption>1度1位になると、名前の横にマークが付きます。</figcaption>
+        </div>
+      </div>
+    </div>
+    <div class="feature_lower">
+      <div class="feature_lower_left">
+        <div class="proof">
+          <figure><%= image_tag('five_gold_medals.svg', class: :proof_image) %></figure>
+        </div>
+        <div class="proof_content">
+          <figcaption>1位を5回獲ると...</figcaption>
+        </div>
+      </div>
+      <div class="feature_upper_right">
+        <div class="three_types">
+          <figure><%= image_tag('black_favo.png', class: :type) %></figure>
+          <figure><%= image_tag('gold_favo.png', class: :type) %></figure>
+          <figure><%= image_tag('purple_favo.png', class: :type) %></figure>
+        </div>
+        <div class="type_names">
+          <figcaption class="type_name">Black</figcaption>
+          <figcaption class="type_name">Gold</figcaption>
+          <figcaption class="type_name">Purple</figcaption>
+        </div>
+        <div class="three_types_content">
+          <figcaption class="favo_content">特に気に入った作品には、特別ないいねを送ることもできます。<%= link_to'使い方',root_path, class: :feature_to_how %></figcaption>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'pick_up' %>
+
+  <div class="top_page_last">
+    <div class="last_container">
+      <div class="last_title">
+        <p>さあ、はじめよう</p>
+      </div>
+      <div class="last_button_container">
+        <div class="last_button_frame">
+          <%= link_to 'スタートページ', root_path, class: :last_button %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'shared/footer' %>
 </div>

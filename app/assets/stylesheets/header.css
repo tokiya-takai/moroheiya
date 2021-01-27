@@ -1,0 +1,183 @@
+
+/* header */
+.header {
+  height: 80px;
+  /* width: 100%; */
+  border-top: 1px solid #2d2020;
+  border-bottom:1px solid #2d2020;
+  box-shadow: 0 3px 5px 2px rgba(136,136,136,0.3);
+}
+.inner {
+  height: 100%;
+  /* width: 100%; */
+}
+.header_items {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header_left {
+  width: 32%;
+  height: 100%;
+}
+.header_left_container {
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 173px;
+  margin: 0 20px
+}
+.form_block {
+  background-color: #f6f6f6;
+  border: 1px solid#707070;
+  border-radius: 2px;
+  width: 180px;
+  height: 25px;
+}
+.search_form {
+  width: 202px;
+  height: 25px;
+}
+.search {
+  width: 13px;
+  height: 13px;
+  margin-left: 2px;
+}
+.search_input {
+  color: #707070;
+  font-size: 8px;
+}
+.header_nav {
+  width: 46%;
+  height: 100%;
+}
+.nav_container {
+  /* width: 100%; */
+  height: 100%;
+}
+.header_nav_list {
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 12px;
+}
+.nav_item_border {
+  border-bottom: 2px solid #2d2020;
+}
+.nav_container ul li a{
+  padding: 31px 0;
+}
+.header_right {
+  width: 32%;
+  height: 100%;
+}
+.header_right_container {
+  /* width: 100%; */
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.left_btn {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right_btn {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sign_in_button {
+  color:#2d2020;
+  border-bottom: 2px solid #fbfbfb;
+}
+.sign_up_button {
+  color:#2d2020;
+  padding: auto 0 28px 0;
+  border-bottom: 2px solid #fbfbfb;
+}
+
+/* ファインドリスト */
+.find_list {
+  display: none;
+  position: relative;
+}
+.find_list_container {
+  position: relative;
+  z-index: 5;
+  border-bottom: 1px solid #202020;
+  width: 100%;
+  height: 0px;
+  margin: 1px auto 0 auto;
+  background-color: #2d2020;
+}
+#show-later {
+  height: 300px;
+  color: #fbfbfb;
+  display: none;
+}
+.find_list_title {
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.find_list_title h3 {
+  font-size: 18px;
+  border-bottom: 2px solid #ffd500;
+}
+.find_list_division {
+  display: flex;
+  margin: 5px 0;
+}
+.division_genre {
+  width: 40%;
+  text-align: center;
+  opacity: 0.7;
+}
+.division_category {
+  width: 60%;
+  opacity: 0.7;
+}
+.find_list_items {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+.find_list_genre_container {
+  width: 40%;
+  /* text-align: center; */
+  /* padding-left: 30px; */
+}
+.find_list_genre {
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+}
+.find_list_category_1 {
+  width: 30%;
+  /* padding-left: 20px; */
+}
+.find_list_category_2 {
+  width: 30%;
+}
+.header_list_arrow {
+  margin: 8px 0;
+  list-style: inside;
+  list-style-image: url('/images/arrow.png');
+}
+
+/* フッター共通 */
+.list_item {
+  opacity: 1;
+}

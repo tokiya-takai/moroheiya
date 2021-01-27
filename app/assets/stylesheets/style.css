@@ -3,190 +3,309 @@ body {
   font: bold 14px "ヒラギノ角ゴ ProN W3", "Hiragino KaKu Gothic ProN", "メイリオ", Meiryo,"Lucida Grande", Verdana, "MS Pゴシック", sans-serif;
 }
 
-/* header */
-.header {
-  height: 80px;
+/* トップページ */
+.hero_container {
+  width: 100vw;
+  height: 75vh;
+  background-image: url('/images/main.jpg');
+  background-size: cover;
+}
+.catch_copy {
   width: 100%;
-  border-top: 1px solid #2d2020;
-  border-bottom:1px solid #2d2020;
-  box-shadow: 0 3px 5px 2px rgba(136,136,136,0.3);
+  font-size: 75px;
+  font-weight: bold;
+  color: #fbfbfb;
+  text-align: center;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  /* -webkit- transform: translateY(-50%) translateX(-50%); */
+  opacity: 0;
 }
-.inner {
-  height: 100%;
+.hero_border {
   width: 100%;
+  height: 50px;
+  background-color: #2d2020;
 }
-.nav {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
+.initial {
+  height: 150px;
 }
-.nav_left {
-  width: 32%;
-  height: 100%;
+.initial_title {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
 }
-.nav_left_container {
-  width: 100%;
-  height: 100%;
+.initial_button_container {
+  font-size: 20px;
+}
+.initial_button_frame {
+  width: 250px;
+  height: 40px;
+  margin: 0 auto;;
+  border-radius: 5px;
+  background-color: #ffd500;
   display: flex;
   align-items: center;
-}
-.logo {
-  width: 173px;
-  margin: 0 20px
-}
-.form_block {
-  background-color: #f6f6f6;
-  border: 1px solid#707070;
-  border-radius: 2px;
-  width: 180px;
-  height: 25px;
-}
-.search_form {
-  width: 202px;
-  height: 25px;
-}
-.search {
-  width: 13px;
-  height: 13px;
-  margin-left: 2px;
-}
-.search_input {
-  color: #707070;
-  font-size: 8px;
-}
-.nav_center {
-  width: 46%;
-  height: 100%;
-}
-.nav_center_container {
-  width: 100%;
-  height: 100%;
-}
-.list_header_nav {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 12px;
-}
-.nav_item_border {
-  border-bottom: 2px solid #2d2020;
-}
-.nav_center_container ul li a{
-  padding: 31px 0;
-}
-.nav_right {
-  width: 32%;
-  height: 100%;
-}
-.nav_right_container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.left_btn {
-  width: 30%;
-  height: 100%;
-  display: flex;
   justify-content: center;
-  align-items: center;
+  box-shadow: 2px 3px #aaaaaa;
 }
-.right_btn {
-  width: 30%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sign_in_button {
-  color:#2d2020;
-  border-bottom: 2px solid white;
-}
-.sign_up_button {
-  color:#2d2020;
-  padding: auto 0 28px 0;
-  border-bottom: 2px solid white;
+.initial_button {
+  padding: 0 55px;
 }
 
-/* ファインドリスト */
-.find_list {
-  display: none;
-  position: relative;
+/* MOROHEIYAとは */
+
+.what {
+  height: 1600px;
 }
-.find_list_container {
-  position: relative;
-  border-bottom: 1px solid #202020;
+.what_title_container {
   width: 100%;
-  height: 300px;
-  margin: 1px auto 0 auto;
-  color: white;
-  /* background: linear-gradient(to bottom,#2d2020,#a88282); */
-  background-color: #2d2020;
-  /* box-shadow:  3px 3px 5px 2px rgba(136,136,136,0.5); */
-}
-.find_list_title {
-  height: 20%;
+  height: 16%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.find_list_title h3 {
-  font-size: 18px;
-  border-bottom: 2px solid #ffd500;
-}
-.find_list_division {
-  display: flex;
-  margin: 5px 0;
-}
-.division_genre {
-  width: 40%;
+.what_title {
+  width: 30%;
   text-align: center;
-  opacity: 0.7;
+  font-size: 50px;
+  border-bottom: 5px solid #ffd500;
 }
-.division_category {
-  width: 60%;
-  opacity: 0.7;
-}
-.find_list_items {
+
+/* what共通設定 */
+.what_first,.what_second {
+  height: 43%;
   display: flex;
   justify-content: center;
-  font-size: 16px;
+  align-items: center;
 }
-.find_list_genre_container {
-  width: 40%;
-  /* text-align: center; */
-  /* padding-left: 30px; */
+.what_content_container,.what_image_container {
+  width: 50%;
 }
-.find_list_genre {
-  width: 20%;
+.what_content {
+  width: 75%;
+  font-size: 25px;
+  margin: 0 auto;
+}
+.content_title {
+  font-size: 30px;
+}
+.what_image {
   margin: 0 auto;
   text-align: center;
 }
-.find_list_category_1 {
-  width: 30%;
-  /* padding-left: 20px; */
+.image_body {
+  width: 500px;
+  height: 500px;
 }
-.find_list_category_2 {
-  width: 30%;
+/* ここまで */
+
+/* 特徴 */
+.feature {
+  width: 100%;
+  height: 700px;
+  background-color: #2d2020;
+  color: #fbfbfb;
 }
-.list_item {
-  margin: 8px 0;
-  list-style: inside;
-  list-style-image: url('../images/arrow.png');
-  opacity: 1;
+.feature_title_container {
+  height: 20%;
+}
+.feature_title {
+  width: 7%;
+  text-align: center;
+  font-size: 50px;
+  border-bottom: 5px solid #ffd500;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.feature_upper {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.feature_upper_left, .feature_upper_right, .feature_lower_left, .feature_lower_right {
+  width: 50%;
+  height: 100%;
+}
+.three_types {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.type {
+  width: 130px;
+  height: 130px;
+  margin: 0 15px;
+}
+.type_names {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.type_name {
+  width: 130px;
+  text-align: center;
+  margin: 0 15px;
+}
+.three_types_content {
+  text-align: center;
+  margin-top: 10px;
+}
+.proof {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.proof_image {
+  height: 130px;
+}
+.proof_content {
+  margin-top: 46px;
+  text-align: center;
+}
+.feature_lower {
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+.favo_content {
+  width: 60%;
+  margin: 0 auto;
+}
+.feature_to_how {
+  font-size: 18px;
+  border-bottom: 1px solid #fbfbfb;
 }
 
-/* トップページ */
-.hero_container {
-  position: relative;
-  z-index: -1;
+/* ピックアップ 一部コンテストページ共通*/
+
+.pick_up {
   width: 100%;
-  height: 83%;
+  height: 650px;
 }
-.hero {
+.pick_up_title_container {
+  height: 20%;
+}
+.pick_up_title {
+  width: 15%;
+  text-align: center;
+  font-size: 50px;
+  border-bottom: 5px solid #ffd500;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.pick_up_body {
+  height: 80%;
+}
+.pick_up_body_container {
+  width: 70%;
+  margin: 0 auto;
+}
+.pick_up_contests {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+/* 以下コンテストページ共通 */
+.contest_body {
+  width: 300px;
+  height: 370px;
+  border: 15px solid #2d2020;
+  border-radius: 8px;
+  box-shadow: 2px 3px 2px #aaaaaa;
+}
+.contest_image_container {
+  margin-top: 10px;
   width: 100%;
-  height: 83%;
+  height: 200px;
+}
+.contest_image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.contest_title {
+  width: 100%;
+  height: 25%;
+  font-size: 16px;
+}
+.contest_title p {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.contest_content {
+  font-size: 10px;
+  width: 95%;
+  height: 75%;
+  margin: 0 auto;
+}
+.contest_content p {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.contest_information {
+  width: 90%;
+  height: 30%;
+  margin: 0 auto;
+}
+.other_information {
+  width: 90%;
+  height: 8%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 8px;
+  opacity: 0.7;
+}
+.contest_people {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ピックアップここまで */
+
+/* トップページラスト  */
+.top_page_last {
+  width: 100vw;
+  height: 80vh;
+  background-image: url('/images/footer_image.jpg');
+  background-size: cover;
+}
+.last_title {
+  text-align: center;
+  font-size: 50px;
+  padding-top: 40px;
+}
+.last_button_container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.last_button_frame {
+  width: 20%;
+  height: 60%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f15656;
+  border-radius: 5px;
+  box-shadow: 2px 3px #8f7c00;
+}
+.last_button {
+  font-size: 20px;
+  color: #fbfbfb;
 }

@@ -1,8 +1,8 @@
 <header class="header">
   <div class="inner">
-    <div class="nav">
-      <div class="nav_left">
-        <div class="nav_left_container">
+    <div class="header_items">
+      <div class="header_left">
+        <div class="header_left_container">
           <%= link_to image_tag('logo.png', class: :logo), root_path %>
           <div class="form_block">
             <%= form_with url: '#', local: true, method: :get, class: "serch_form" do | form | %>
@@ -12,28 +12,28 @@
           </div>
         </div>
       </div>
-      <div class="nav_center">
-        <div class="nav_center_container">
-          <ul class="list_header_nav">
+      <nav class="header_nav">
+        <div class="nav_container">
+          <ul class="header_nav_list">
             <li><%= link_to "はじめる",root_path ,class: :nav_items %></li>
-            <li><a href="javascript:void(0);" id="find">みつける</a></li>
+            <li><a href="javascript:void(0);" id="find", class="nav_items">さがす</a></li>
             <li><%= link_to "MOROHEIYAとは",root_path, class: :nav_items %></li>
             <li><%= link_to "使い方",root_path, class: :nav_items %></li>
           </ul>
         </div>
-      </div>
-      <div class="nav_right">
+      </nav>
+      <div class="header_right">
         <%# unless user_signed_in? %>
-          <div class="nav_right_container">
-            <div class="left_btn" id="left-btn">
+          <div class="header_right_container">
+            <div class="left_btn">
               <%= link_to "ログイン", root_path, class: :sign_in_button %>
             </div>
-            <div class="right_btn" id="right-btn">
+            <div class="right_btn">
               <%= link_to "新規登録", root_path, class: :sign_up_button %>
             </div>
           </div>
         <%# else %>
-          <%#<div class="nav_right_container">
+          <%#<div class="header_right_container">
             <%# <div class="left_btn" id="left-btn">
               <%= "◯" %>
             <%# <%= link_to "ニックネーム", root_path %>
@@ -49,33 +49,35 @@
   </div>
   <div class="find_list" id="find-list">
     <div class="find_list_container" id="find-list-zone">
-      <div class="find_list_title">
-        <h3>コンテストをさがす</h3>
-      </div>
-      <div class="find_list_division">
-        <h4 class="division_genre">ジャンル</h4>
-        <h4 class="division_category">カテゴリ</h4>
-      </div>
-      <div class="find_list_items">
-        <div class="find_list_genre_container">
-          <ul class="find_list_genre">
-            <li class="list_item"><%= link_to "画像系", root_path %></li>
-            <li class="list_item"><%= link_to "動画系", root_path %></li>
+      <div id="show-later">
+        <div class="find_list_title">
+          <h3>コンテストをさがす</h3>
+        </div>
+        <div class="find_list_division">
+          <h4 class="division_genre">ジャンル</h4>
+          <h4 class="division_category">カテゴリ</h4>
+        </div>
+        <div class="find_list_items">
+          <div class="find_list_genre_container">
+            <ul class="find_list_genre">
+              <li class="header_list_arrow"><%= link_to "画像系", root_path, class: :list_item %></li>
+              <li class="header_list_arrow"><%= link_to "動画系", root_path, class: :list_item %></li>
+            </ul>
+          </div>
+          <ul class="find_list_category_1">
+            <li class="header_list_arrow"><%= link_to "エンターテインメント", root_path, class: :list_item %></li>
+            <li class="header_list_arrow"><%= link_to "スポーツ", root_path, class: :list_item %></li>
+            <li class="header_list_arrow"><%= link_to "ファッション", root_path, class: :list_item %></li>
+            <li class="header_list_arrow"><%= link_to "アニメ・マンガ", root_path, class: :list_item %></li>
+          </ul>
+          <ul class="find_list_category_2">
+            <li class="header_list_arrow"><%= link_to "ゲーム", root_path, class: :list_item %></li>
+            <li class="header_list_arrow"><%= link_to "ビジネス", root_path, class: :list_item %></li>
+            <li class="header_list_arrow"><%= link_to "アート・イラスト", root_path, class: :list_item %></li>
+            <li class="header_list_arrow"><%= link_to "音楽", root_path, class: :list_item %></li>
+            <li class="header_list_arrow"><%= link_to "その他", root_path, class: :list_item %></li>
           </ul>
         </div>
-        <ul class="find_list_category_1">
-          <li class="list_item"><%= link_to "エンターテインメント", root_path %></li>
-          <li class="list_item"><%= link_to "スポーツ", root_path %></li>
-          <li class="list_item"><%= link_to "ファッション", root_path %></li>
-          <li class="list_item"><%= link_to "アニメ・マンガ", root_path %></li>
-        </ul>
-        <ul class="find_list_category_2">
-          <li class="list_item"><%= link_to "ゲーム", root_path %></li>
-          <li class="list_item"><%= link_to "ビジネス", root_path %></li>
-          <li class="list_item"><%= link_to "アート・イラスト", root_path %></li>
-          <li class="list_item"><%= link_to "音楽", root_path %></li>
-          <li class="list_item"><%= link_to "その他", root_path %></li>
-        </ul>
       </div>
     </div>
   <div>
