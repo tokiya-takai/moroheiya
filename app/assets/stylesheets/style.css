@@ -3,183 +3,6 @@ body {
   font: bold 14px "ヒラギノ角ゴ ProN W3", "Hiragino KaKu Gothic ProN", "メイリオ", Meiryo,"Lucida Grande", Verdana, "MS Pゴシック", sans-serif;
 }
 
-/* header */
-.header {
-  height: 80px;
-  width: 100%;
-  border-top: 1px solid #2d2020;
-  border-bottom:1px solid #2d2020;
-  box-shadow: 0 3px 5px 2px rgba(136,136,136,0.3);
-}
-.inner {
-  height: 100%;
-  width: 100%;
-}
-.nav {
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-.nav_left {
-  width: 32%;
-  height: 100%;
-}
-.nav_left_container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
-.logo {
-  width: 173px;
-  margin: 0 20px
-}
-.form_block {
-  background-color: #f6f6f6;
-  border: 1px solid#707070;
-  border-radius: 2px;
-  width: 180px;
-  height: 25px;
-}
-.search_form {
-  width: 202px;
-  height: 25px;
-}
-.search {
-  width: 13px;
-  height: 13px;
-  margin-left: 2px;
-}
-.search_input {
-  color: #707070;
-  font-size: 8px;
-}
-.nav_center {
-  width: 46%;
-  height: 100%;
-}
-.nav_center_container {
-  width: 100%;
-  height: 100%;
-}
-.list_header_nav {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 12px;
-}
-.nav_item_border {
-  border-bottom: 2px solid #2d2020;
-}
-.nav_center_container ul li a{
-  padding: 31px 0;
-}
-.nav_right {
-  width: 32%;
-  height: 100%;
-}
-.nav_right_container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.left_btn {
-  width: 30%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.right_btn {
-  width: 30%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sign_in_button {
-  color:#2d2020;
-  border-bottom: 2px solid white;
-}
-.sign_up_button {
-  color:#2d2020;
-  padding: auto 0 28px 0;
-  border-bottom: 2px solid white;
-}
-
-/* ファインドリスト */
-.find_list {
-  display: none;
-  position: relative;
-}
-.find_list_container {
-  position: relative;
-  z-index: 5;
-  border-bottom: 1px solid #202020;
-  width: 100%;
-  height: 300px;
-  margin: 1px auto 0 auto;
-  color: white;
-  /* background: linear-gradient(to bottom,#2d2020,#a88282); */
-  background-color: #2d2020;
-  /* box-shadow:  3px 3px 5px 2px rgba(136,136,136,0.5); */
-}
-.find_list_title {
-  height: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.find_list_title h3 {
-  font-size: 18px;
-  border-bottom: 2px solid #ffd500;
-}
-.find_list_division {
-  display: flex;
-  margin: 5px 0;
-}
-.division_genre {
-  width: 40%;
-  text-align: center;
-  opacity: 0.7;
-}
-.division_category {
-  width: 60%;
-  opacity: 0.7;
-}
-.find_list_items {
-  display: flex;
-  justify-content: center;
-  font-size: 16px;
-}
-.find_list_genre_container {
-  width: 40%;
-  /* text-align: center; */
-  /* padding-left: 30px; */
-}
-.find_list_genre {
-  width: 20%;
-  margin: 0 auto;
-  text-align: center;
-}
-.find_list_category_1 {
-  width: 30%;
-  /* padding-left: 20px; */
-}
-.find_list_category_2 {
-  width: 30%;
-}
-.list_item {
-  margin: 8px 0;
-  list-style: inside;
-  list-style-image: url('/images/arrow.png');
-  opacity: 1;
-}
-
 /* トップページ */
 .hero_container {
   width: 100vw;
@@ -191,7 +14,7 @@ body {
   width: 100%;
   font-size: 75px;
   font-weight: bold;
-  color: white;
+  color: #fbfbfb;
   text-align: center;
   vertical-align: middle;
   position: absolute;
@@ -284,7 +107,7 @@ body {
   width: 100%;
   height: 700px;
   background-color: #2d2020;
-  color: white;
+  color: #fbfbfb;
 }
 .feature_title_container {
   height: 20%;
@@ -359,5 +182,130 @@ body {
 }
 .feature_to_how {
   font-size: 18px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #fbfbfb;
+}
+
+/* ピックアップ 一部コンテストページ共通*/
+
+.pick_up {
+  width: 100%;
+  height: 650px;
+}
+.pick_up_title_container {
+  height: 20%;
+}
+.pick_up_title {
+  width: 15%;
+  text-align: center;
+  font-size: 50px;
+  border-bottom: 5px solid #ffd500;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.pick_up_body {
+  height: 80%;
+}
+.pick_up_body_container {
+  width: 70%;
+  margin: 0 auto;
+}
+.pick_up_contests {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+/* 以下コンテストページ共通 */
+.contest_body {
+  width: 300px;
+  height: 370px;
+  border: 15px solid #2d2020;
+  border-radius: 8px;
+  box-shadow: 2px 3px 2px #aaaaaa;
+}
+.contest_image_container {
+  margin-top: 10px;
+  width: 100%;
+  height: 200px;
+}
+.contest_image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.contest_title {
+  width: 100%;
+  height: 25%;
+  font-size: 16px;
+}
+.contest_title p {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.contest_content {
+  font-size: 10px;
+  width: 95%;
+  height: 75%;
+  margin: 0 auto;
+}
+.contest_content p {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.contest_information {
+  width: 90%;
+  height: 30%;
+  margin: 0 auto;
+}
+.other_information {
+  width: 90%;
+  height: 8%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 8px;
+  opacity: 0.7;
+}
+.contest_people {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ピックアップここまで */
+
+/* トップページラスト  */
+.top_page_last {
+  width: 100vw;
+  height: 80vh;
+  background-image: url('/images/footer_image.jpg');
+  background-size: cover;
+}
+.last_title {
+  text-align: center;
+  font-size: 50px;
+  padding-top: 40px;
+}
+.last_button_container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+}
+.last_button_frame {
+  width: 20%;
+  height: 60%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f15656;
+  border-radius: 5px;
+  box-shadow: 2px 3px #8f7c00;
+}
+.last_button {
+  font-size: 20px;
+  color: #fbfbfb;
 }

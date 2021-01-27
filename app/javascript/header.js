@@ -1,6 +1,5 @@
 function userButton() {
-  // const leftButton = document.getElementById("left-btn");
-  // const rightButton = document.getElementById("right-btn");
+
   const signInButton = document.querySelector('.sign_in_button');
   const signUpButton = document.querySelector('.sign_up_button');
 
@@ -24,25 +23,48 @@ function findList() {
   const find = document.getElementById("find");
   const findList = document.getElementById("find-list");
   const findListZone = document.getElementById("find-list-zone")
+  const showLater = document.getElementById("show-later");
 
-  find.addEventListener('mouseover', () => {
-    find.classList.add('nav_item_border');
-    findList.style.display = "inline";
+  //ファインドリストの開閉
+  find.addEventListener('click', () => {
+    if (findListZone.classList.contains("open_list") === false) {
+      findListZone.classList.add("open_list");
+      findList.style.display = "inline";
+      $(".find_list_container").animate({ height: "300px" }, 200);
+      showLater.style.display = "inline";
+    } else {
+      findListZone.classList.remove("open_list");
+      showLater.style.display = "none";
+      $(".find_list_container").animate({ height: "0px" }, 200);
+      const promise = new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        },200)
+      })
+      promise.then(() => {
+        findList.style.display = "none";
+      });
+    }
   });
-  find.addEventListener('mouseout', () => {
-    find.classList.remove('nav_item_border');
-    findList.style.display = "none";
-  });
-  findListZone.addEventListener('mouseover', () => {
-    find.classList.add('nav_item_border');
-    findList.style.display = "inline";
-  });
-  findListZone.addEventListener('mouseout', () => {
-    find.classList.remove('nav_item_border');
-    findList.style.display = "none";
-  });
+  //外側をクリックした場合はファインドリストを閉じる
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#find')) {
+      findListZone.classList.remove("open_list");
+      showLater.style.display = "none";
+      $(".find_list_container").animate({ height: "0px" }, 200);
+      const promise = new Promise((resolve) => {
+        setTimeout(() => {
+          resolve();
+        },200)
+      })
+      promise.then(() => {
+        findList.style.display = "none";
+      });
+    }
+  })
 }
 
+//ホバーしたナビゲーションに印を付ける
 function navChoiceUnderBar() {
   const navItems = document.querySelectorAll('.nav_items');
 
@@ -56,6 +78,7 @@ function navChoiceUnderBar() {
   });
 }
 
+//ホバーしたファインドリストを少し透過する
 function listItemOpacity() {
   const listItems = document.querySelectorAll('.list_item');
 

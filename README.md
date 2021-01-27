@@ -34,8 +34,8 @@ has_one :favorite
 |     Column      |    Type    |   Options                  |
 | --------------- | ---------- | -------------------------- |
 |      title      | string     | null: false                |
-|    genre_id     | integer    | null: false                |
-|   category_id   | integer    | null: false                |               
+|    genre_id     | integer    | null: false                | ActiveHashを使用
+|   category_id   | integer    | null: false                | ActiveHashを使用
 |     content     | integer    | null: false                |
 |     deadline    | string     | null: false                |
 |      public     | boolean    | null: false, default: true |
@@ -45,6 +45,9 @@ has_one :favorite
 
 has_many :works
 belongs_to :user
+has_one :first
+has_one :second
+has_one :third
 
 ## works テーブル
 
@@ -58,6 +61,9 @@ belongs_to :user
 belongs_to :user
 belongs_to :contest
 has_one :favorite
+has_one :first
+has_one :second
+has_one :third
 
 ## favorites テーブル
 
@@ -73,3 +79,39 @@ has_one :favorite
 belongs_to :user
 belongs_to :work
 
+
+## firsts テーブル
+
+|  Column   |   Type    |   Options   |
+| --------- | --------- | ----------- |
+|  contest  | integer   | uniquness   |
+|    work   | integer   | uniquness   |(2カラムによる一意性.validatesにて担保)
+
+### Association
+
+belongs_to :contest
+belongs_to :work
+
+## seconds テーブル
+
+|  Column   |   Type    |   Options   |
+| --------- | --------- | ----------- |
+|  contest  | integer   | uniquness   |
+|    work   | integer   | uniquness   |(2カラムによる一意性.validatesにて担保)
+
+### Association
+
+belongs_to :contest
+belongs_to :work
+
+## thirds テーブル
+
+|  Column   |   Type    |   Options   |
+| --------- | --------- | ----------- |
+|  contest  | integer   | uniquness   |
+|    work   | integer   | uniquness   |(2カラムによる一意性.validatesにて担保)
+
+### Association
+
+belongs_to :contest
+belongs_to :work
