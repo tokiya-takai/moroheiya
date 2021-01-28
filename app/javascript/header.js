@@ -92,7 +92,24 @@ function listItemOpacity() {
   });
 }
 
+// クリックしたらユーザーメニューが表示される
+function openUserMenu() {
+  const userButton = document.getElementById('user-button');
+  const userMenu = document.getElementById('user-menu');
+
+  userButton.addEventListener('click', () => {
+    if (userButton.classList.contains('open_menu') === false) {
+      userButton.classList.add('open_menu');
+      userMenu.style.display = 'block';
+    } else {
+      userButton.classList.remove('open_menu');
+      userMenu.style.display = 'none';
+    }
+  });
+}
+
 window.addEventListener('load', userButton);
 window.addEventListener('load', findList);
 window.addEventListener('load', navChoiceUnderBar);
 window.addEventListener('load', listItemOpacity);
+window.addEventListener('load', openUserMenu);

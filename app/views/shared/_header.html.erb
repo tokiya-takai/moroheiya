@@ -26,7 +26,7 @@
         <% unless user_signed_in? %>
           <div class="header_right_container">
             <div class="left_btn">
-              <%= link_to "ログイン", root_path, class: :sign_in_button %>
+              <%= link_to "ログイン", new_user_session_path, class: :sign_in_button %>
             </div>
             <div class="right_btn">
               <%= link_to "新規登録", new_user_registration_path, class: :sign_up_button %>
@@ -34,11 +34,38 @@
           </div>
         <% else %>
           <div class="header_right_container">
-            <div class="left_btn">
-              <%= current_user.nickname %>
-            </div>
-            <div class="right_btn">
-              <%= link_to "ログアウト", user_registration_path, method: :delete, class: :sign_out_button %>
+            <%# <div class="left_btn"> %>
+              <%#= link_to "ログアウト", destroy_user_session_path, method: :delete, class: :sign_out_button %>
+            <%# </div> %>
+            <div class="right_btn header_user">
+              <div class="header_user_hover_area" id="user-button">
+                <div class="user_icon_container">
+                  <%= image_tag('user_icon.svg', class: :user_icon) %>
+                </div>
+                <div class="user_nick_name_container">
+                  <%= current_user.nickname %>
+                </div>
+              </div>
+              <div class="user_menu" id="user-menu">
+                <div class="user_menu_upper">
+                  <div class="user_menu_image">
+                    <%= image_tag('user_icon.svg', class: :user_image) %>
+                  </div>
+                  <div class="user_menu_nickname">
+                    <%= current_user.nickname%>
+                  </div>
+                  <div class="user_menu_email">
+                    <%= current_user.email%>
+                  </div>
+                </div>
+                <div class="user_menu_lower">
+                  <div class="sign_out_button_area">
+                    <div class="sign_out_button">
+                      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: :sign_out %>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         <% end %>
