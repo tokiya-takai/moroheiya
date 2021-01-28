@@ -23,26 +23,25 @@
         </div>
       </nav>
       <div class="header_right">
-        <%# unless user_signed_in? %>
+        <% unless user_signed_in? %>
           <div class="header_right_container">
             <div class="left_btn">
               <%= link_to "ログイン", root_path, class: :sign_in_button %>
             </div>
             <div class="right_btn">
-              <%= link_to "新規登録", root_path, class: :sign_up_button %>
+              <%= link_to "新規登録", new_user_registration_path, class: :sign_up_button %>
             </div>
           </div>
-        <%# else %>
-          <%#<div class="header_right_container">
-            <%# <div class="left_btn" id="left-btn">
-              <%= "◯" %>
-            <%# <%= link_to "ニックネーム", root_path %>
-            <%#</div>
-            <div class="right_btn" id="right-btn">
-              <%= link_to "ログアウト", root_path %>
-            <%#</div>
+        <% else %>
+          <div class="header_right_container">
+            <div class="left_btn">
+              <%= current_user.nickname %>
+            </div>
+            <div class="right_btn">
+              <%= link_to "ログアウト", user_registration_path, method: :delete, class: :sign_out_button %>
+            </div>
           </div>
-        <%# end %>
+        <% end %>
         </div>
       </div>
     </div>

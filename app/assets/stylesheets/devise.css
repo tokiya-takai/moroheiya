@@ -1,0 +1,149 @@
+.form_wrapper {
+  width: 35%;
+  margin: 20px auto;
+  background-color: #ffd500;
+  color: #2d2020;
+  border-radius: 5px;
+}
+.form_initial {
+  padding-top: 20px;
+}
+.user_information {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  font-size: 20px;
+  border-bottom: 1px solid #2d2020;
+}
+
+.form_group {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.identification {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  font-size: 20px;
+  margin-top: 20px;
+  border-bottom: 1px solid #2d2020;
+}
+.input_default {
+  width: 100%;
+  margin-top: 5px;
+  height: 40px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #2d2020;
+  background: #fff;
+  font-size: 13px;
+  resize: none;
+}
+
+.input_name_wrap {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.input_name_left {
+  width: 135px;
+  margin: 5px 5px 0 0;
+  height: 40px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #2d2020;
+  background: #fff;
+  font-size: 13px;
+  resize: none;
+}
+.input_name_right {
+  width: 135px;
+  margin: 5px 0 0 5px;
+  height: 40px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #2d2020;
+  background: #fff;
+  font-size: 13px;
+  resize: none;
+}
+.select_box {
+  height: 30px;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-left: 20px;
+}
+
+.input_birth_wrap {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+.input_birth_wrap select {
+  width: 60px;
+  margin-top: 5px;
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #2d2020;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+/* 矢印復活css */
+select {
+  -moz-appearance: menulist;
+  -webkit-appearance: menulist;
+}
+/* IE,Edge用 */
+select::-ms-expand {
+  display: block;
+}
+
+.input_birth_wrap p {
+  line-height: 50px;
+  padding: 0 5px;
+}
+.submit_area {
+  width: 100%;
+  height: 140px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.actions {
+  width: 50%;
+  height: 68px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  color: white;
+  background-color: #f15656;
+  border-radius: 5px;
+  box-shadow: 2px 3px #8f7c00;
+}
+.to_sign {
+  line-height: 50px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: normal;
+}
+.to_sign_in {
+  border-bottom: 1px solid #2d2020;
+  font-weight: bold;
+}
+
+#error_explanation {
+  width: 60%;
+  margin: 0 auto;
+  color: #f15656;
+}
