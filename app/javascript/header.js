@@ -108,8 +108,17 @@ function openUserMenu() {
   });
 }
 
+//ユーザーメニューの設定ボタン
+// function userMenuSettings() {
+//   $('#user-settings-button').on('click', () => {
+//     window.location = $(this).find(".user_setting_button > a").attr("href");
+//     return false;
+//   });
+// }
+
 window.addEventListener('load', userButton);
 window.addEventListener('load', findList);
 window.addEventListener('load', navChoiceUnderBar);
 window.addEventListener('load', listItemOpacity);
 window.addEventListener('load', openUserMenu);
+// window.addEventListener('load', userMenuSettings);

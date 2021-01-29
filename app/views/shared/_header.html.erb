@@ -58,6 +58,13 @@
                     <%= current_user.email%>
                   </div>
                 </div>
+                <div class="user_menu_middle">
+                  <div class="user_setting_area" id="user-settings-button">
+                    <div class="user_setting_button">
+                      <%= link_to image_tag('settings.svg',class: :setting_icon) + "設定", root_path, class: :user_setting%>
+                    </div>
+                  </div>
+                </div>
                 <div class="user_menu_lower">
                   <div class="sign_out_button_area">
                     <div class="sign_out_button">

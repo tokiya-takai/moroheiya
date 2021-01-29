@@ -122,7 +122,7 @@ select::-ms-expand {
 }
 .actions {
   width: 50%;
-  height: 68px;
+  height: 60px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
