@@ -49,10 +49,18 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   box-shadow: 2px 3px #aaaaaa;
 }
+.initial_button_frame:hover {
+  background-color: #ffe76e;
+  color: #503f3f;
+}
 .initial_button {
-  padding: 0 55px;
+  display: block;
+  line-height: 40px;
+  width: 100%;
+  height: 100%;
 }
 
 /* MOROHEIYAとは */
@@ -294,8 +302,8 @@ body {
   align-items: center;
 }
 .last_button_frame {
-  width: 20%;
-  height: 60%;
+  width: 18%;
+  height: 55%;
   margin: 0 auto;
   text-align: center;
   display: flex;
@@ -305,7 +313,14 @@ body {
   border-radius: 5px;
   box-shadow: 2px 3px #8f7c00;
 }
+.last_button_frame:hover {
+  background-color: #f18585;
+}
 .last_button {
+  line-height: 55px;
+  display: block;
+  width: 100%;
+  height: 100%;
   font-size: 20px;
   color: #fbfbfb;
 }

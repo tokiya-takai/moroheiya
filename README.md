@@ -11,12 +11,7 @@
 |      first_name     | string  | null: false |
 |   family_name_kana  | string  | null: false |
 |   first_name_kana   | string  | null: false |
-|     postal_code     | string  | null: false |
-|    prefecture_id    | integer | null: false |
-|     municipality    | string  | null: false |
-|       address       | string  | null: false |
-|       building      | string  |             |
-|     phone_number    | string  | null: false |
+|       birthday      | string  | null: false |
 |   black_favorite    | integer |             |
 |   gold_favorite     | integer |             |
 |   purple_favorite   | integer |             |
