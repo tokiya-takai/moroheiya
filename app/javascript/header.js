@@ -24,6 +24,7 @@ function findList() {
   const findList = document.getElementById("find-list");
   const findListZone = document.getElementById("find-list-zone")
   const showLater = document.getElementById("show-later");
+  const navItems = document.getElementById("nav-items");
 
   //ファインドリストの開閉
   find.addEventListener('click', () => {
@@ -50,6 +51,10 @@ function findList() {
   document.addEventListener('click', (e) => {
     if (!e.target.closest('#find')) {
       findListZone.classList.remove("open_list");
+      //外側をクリックした場合はボーダーが消えないため補う
+      navItems.style.borderBottom = "0px solid #2d2020";
+      navItems.classList.remove("open_list");
+      
       showLater.style.display = "none";
       $(".find_list_container").animate({ height: "0px" }, 200);
       const promise = new Promise((resolve) => {
@@ -65,17 +70,33 @@ function findList() {
 }
 
 //ホバーしたナビゲーションに印を付ける
-function navChoiceUnderBar() {
-  const navItems = document.querySelectorAll('.nav_items');
+// function navChoiceUnderBar() {
+//   const navItems = document.querySelectorAll('.nav_items');
 
-  navItems.forEach(function (navItem) {
-    navItem.addEventListener('mouseover', () => {
-      navItem.classList.add('nav_item_border');
-    });
-    navItem.addEventListener('mouseout', () => {
-      navItem.classList.remove('nav_item_border');
-    });
-  });
+//   navItems.forEach(function (navItem) {
+//     navItem.addEventListener('mouseover', () => {
+//       navItem.classList.add('nav_item_border');
+//     });
+//     navItem.addEventListener('mouseout', () => {
+//       navItem.classList.remove('nav_item_border');
+//     });
+//   });
+// }
+
+function navChoiceUnderBar() {
+  const navItems = document.getElementById('nav-items');
+
+  navItems.addEventListener('click', () => {
+    if (navItems.classList.contains("open_list") === false) {
+      navItems.classList.remove('nav_items');
+      navItems.style.borderBottom = "4px solid #2d2020";
+      navItems.classList.add('open_list');
+    } else {
+      navItems.style.borderBottom = "0px solid #2d2020";
+      navItems.classList.remove('open_list');
+      navItems.classList.add('nav_items');
+    }
+  })
 }
 
 //ホバーしたファインドリストを少し透過する

@@ -66,11 +66,26 @@
   align-items: center;
   font-size: 12px;
 }
-.nav_item_border {
+/* .nav_item_border {
   border-bottom: 2px solid #2d2020;
+} */
+.nav_items {
+  border-bottom: 0px solid #2d2020;
+  transition: 150ms;
+}
+.nav_items:hover {
+  border-bottom: 4px solid #2d2020;
+}
+.nav_container ul li {
+  height: 100%;
+  /* display: flex;
+  align-items: center; */
 }
 .nav_container ul li a{
-  padding: 31px 0;
+  /* padding: 31px 0; */
+  line-height: 78px;
+  display: block;
+  height: 100%;
 }
 .header_right {
   width: 32%;
