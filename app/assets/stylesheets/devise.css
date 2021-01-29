@@ -26,6 +26,9 @@
   margin: 0 auto;
   padding-top: 20px;
 }
+.form_text {
+  font-size: 16px;
+}
 .identification {
   width: 60%;
   text-align: center;

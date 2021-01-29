@@ -7,4 +7,7 @@ class ContestsController < ApplicationController
   def new
     sleep(0.4)
   end
+
+  def create
+  end
 end

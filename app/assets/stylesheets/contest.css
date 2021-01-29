@@ -1,3 +1,6 @@
+.start_page_wrapper {
+  color: #2d2020;
+}
 .start_page_container {
   width: 100%;
   height: 100%;
@@ -53,16 +56,53 @@
   object-fit: contain;
 }
 
+
+.start_form_right {
+  width: 50%;
+}
+.start_form_title {
+  width: 60%;
+  height: 120px;
+  display: flex;
+  align-items: flex-end;
+  margin: 0 auto;
+}
+.start_form_title h1 {
+  font-size: 27px;
+  border-bottom: 5px solid #ffd500;
+}
+
 /* フォーム(一部はdevise.cssと共通 */
+.contest_choices {
+  display: flex;
+  justify-content: space-between;
+}
+
+.choices1, .choices2, .input_contest_content {
+  margin-top: 5px;
+  height: 40px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #2d2020;
+  background: #fff;
+  font-size: 13px;
+  resize: none;
+}
+.choices1 {
+  width: 20%;
+}
+.choices2 {
+  width: 75%;
+}
 /* 締切の入力 */
 .input_deadline_wrap {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: nowrap;
 }
 
 .input_deadline_wrap select {
-  width: 60px;
+  width: 70px;
   margin-top: 5px;
   height: 40px;
   padding-left: 10px;
@@ -78,4 +118,66 @@
   padding: 0 5px;
 }
 
-/* ここまで */
+.input_contest_content {
+  width: 100%;
+  height: 150px;
+}
+/* ファイル選択 */
+.start_form_button_area {
+  /* width: 30%; */
+}
+#thumbnail { 
+  display: none;
+}
+.file_select_wrap {
+  width: 30%;
+}
+.browse_btn {
+  display: block;
+  /* width: 100%; */
+  text-align: center;
+  background-color: #ebebeb;
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid #2d2020;
+}
+.start_form_button_right {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+}
+.public_select {
+  width: 100px;
+  font-size: 16px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5px;
+}
+.public_select span {
+  line-height: 22px;
+}
+.public_select_box {
+  width: 22px;
+  height: 22px;
+  margin: 0 10px;
+}
+.create_button {
+  width: 130px;
+  height: 40px;
+  font-size: 16px;
+  margin-top: 15px;
+  background-color: #ffd500;
+  border-radius: 5px;
+  box-shadow: 2px 3px 3px #aaaaaa;
+}
+.create_button input {
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  /* padding-top: 3px; */
+}
+.publick_caution {
+  font-size: 8px;
+}
+/* フォームここまで */

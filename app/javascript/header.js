@@ -24,7 +24,6 @@ function findList() {
   const findList = document.getElementById("find-list");
   const findListZone = document.getElementById("find-list-zone")
   const showLater = document.getElementById("show-later");
-  const navItems = document.getElementById("nav-items");
 
   //ファインドリストの開閉
   find.addEventListener('click', () => {
@@ -47,13 +46,11 @@ function findList() {
       });
     }
   });
+  
   //外側をクリックした場合はファインドリストを閉じる
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('#find')) {
+    if (!e.target.closest('#find') && !e.target.closest('#find-list-zone')) {
       findListZone.classList.remove("open_list");
-      //外側をクリックした場合はボーダーが消えないため補う
-      navItems.style.borderBottom = "0px solid #2d2020";
-      navItems.classList.remove("open_list");
       
       showLater.style.display = "none";
       $(".find_list_container").animate({ height: "0px" }, 200);
@@ -69,35 +66,6 @@ function findList() {
   })
 }
 
-//ホバーしたナビゲーションに印を付ける
-// function navChoiceUnderBar() {
-//   const navItems = document.querySelectorAll('.nav_items');
-
-//   navItems.forEach(function (navItem) {
-//     navItem.addEventListener('mouseover', () => {
-//       navItem.classList.add('nav_item_border');
-//     });
-//     navItem.addEventListener('mouseout', () => {
-//       navItem.classList.remove('nav_item_border');
-//     });
-//   });
-// }
-
-function navChoiceUnderBar() {
-  const navItems = document.getElementById('nav-items');
-
-  navItems.addEventListener('click', () => {
-    if (navItems.classList.contains("open_list") === false) {
-      navItems.classList.remove('nav_items');
-      navItems.style.borderBottom = "4px solid #2d2020";
-      navItems.classList.add('open_list');
-    } else {
-      navItems.style.borderBottom = "0px solid #2d2020";
-      navItems.classList.remove('open_list');
-      navItems.classList.add('nav_items');
-    }
-  })
-}
 
 //ホバーしたファインドリストを少し透過する
 function listItemOpacity() {
@@ -127,19 +95,16 @@ function openUserMenu() {
       userMenu.style.display = 'none';
     }
   });
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#user-button') && (!e.target.closest('#user-menu'))) {
+      userButton.classList.remove("open_menu");
+      userMenu.style.display = "none";
+    }
+  });
 }
 
-//ユーザーメニューの設定ボタン
-// function userMenuSettings() {
-//   $('#user-settings-button').on('click', () => {
-//     window.location = $(this).find(".user_setting_button > a").attr("href");
-//     return false;
-//   });
-// }
 
 window.addEventListener('load', userButton);
 window.addEventListener('load', findList);
-window.addEventListener('load', navChoiceUnderBar);
 window.addEventListener('load', listItemOpacity);
 window.addEventListener('load', openUserMenu);
-// window.addEventListener('load', userMenuSettings);

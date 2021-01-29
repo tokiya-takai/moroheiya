@@ -1,11 +1,7 @@
+// ページをフェード
 $(function () {
   $('.start_page_container').animate({ opacity: 1 }, { duration: 800, easing: 'swing' });
 });
-
-// $(function () {
-//   $('.start_page_container').animate({ opacity: 1 }, { duration: 800, easing: 'swing' });
-// });
-
 function startButtonClicked() {
   const startButtons = document.querySelectorAll('.start_button');
 
@@ -15,5 +11,17 @@ function startButtonClicked() {
     });
   });
 }
+
+// ファイル名を表示
+$(function () {
+  $('#thumbnail').on("change", function () {
+    var file = this.files[0];
+    const fileName = document.getElementById("file-name");
+    console.log(file);
+    if (file != null) {
+      fileName.insertAdjacentHTML('afterend', file.name);
+    }
+  });
+});
 
 window.addEventListener('load', startButtonClicked);
