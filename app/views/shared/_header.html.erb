@@ -15,10 +15,10 @@
       <nav class="header_nav">
         <div class="nav_container">
           <ul class="header_nav_list">
-            <li><%= link_to "はじめる",root_path ,class: :nav_items %></li>
-            <li><a href="javascript:void(0);" id="find", class="nav_items">さがす</a></li>
-            <li><%= link_to "MOROHEIYAとは",root_path, class: :nav_items %></li>
-            <li><%= link_to "使い方",root_path, class: :nav_items %></li>
+            <li class="nav_items"><%= link_to "はじめる",contests_path(anchor: "start_top") %></li>
+            <li class="nav_items" id="nav-items"><a href="javascript:void(0);" id="find" >さがす</a></li>
+            <li class="nav_items"><a href="javascript:void(0);" id="to-how">MOROHEIYAとは</a></li>
+            <li class="nav_items"><%= link_to "使い方",root_path %></li>
           </ul>
         </div>
       </nav>

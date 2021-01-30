@@ -31,8 +31,8 @@ has_one :favorite
 |      title      | string     | null: false                |
 |    genre_id     | integer    | null: false                | ActiveHashを使用
 |   category_id   | integer    | null: false                | ActiveHashを使用
-|     content     | integer    | null: false                |
-|     deadline    | string     | null: false                |
+|     content     | text       | null: false                |
+|     deadline    | date       | null: false                |
 |      public     | boolean    | null: false, default: true |
 |       user      | references | null: false                |
 
@@ -49,7 +49,7 @@ has_one :third
 |     Column      |    Type    |   Options   |
 | --------------- | ---------- | ----------- |
 |      title      | string     | null: false |
-|     content     | string     | null: false |
+|     content     | text       | null: false |
 |       user      | references | null: false |
 |      contest    | references | null: false |
 

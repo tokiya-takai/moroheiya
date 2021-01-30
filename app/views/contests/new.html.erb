@@ -1,0 +1,95 @@
+<%= render 'shared/header' %>
+
+<div class="start_page_wrapper", id="start_top">
+  <%= form_with model:@contest, url: contests_path, local: true do |f| %>
+    <div class="start_page_container">
+      <div class="start_form_left">
+        <%= image_tag('start-image.png', class: :start_image)%>
+      </div>
+      <div class="start_form_right">
+        <div class="start_form_container">
+          <div class="start_form_title">
+            <h1>コンテストを開催する</h1>
+          </div>
+          <div class="contest_title">
+            <div class="form_group">
+              <div class='form_text_wrap'>
+                <label class="form_text">タイトル</label>
+              </div>
+              <%= f.text_area :title, class:"input_default", id:"title", maxlength:"40" %>
+            </div>
+          </div>
+          <div class="contest_choice">
+            <div class="form_group">
+              <div class="form_text_wrap">
+                <label class="form_text">ジャンル・カテゴリ</label>
+              </div>
+              <div class="contest_choices">
+                <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"choices1", id:"contest-genre"}) %>
+                <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"choices2", id:"contest-category"}) %>
+              </div>
+            </div>
+          </div>
+          <div class="contest_text">
+            <div class="form_group">
+              <div class='form_text_wrap'>
+                <label class="form_text">説明</label>
+              </div>
+              <%= f.text_area :content, class:"input_contest_content", id:"title", maxlength:"40" %>
+            </div>
+          </div>
+          <div class="contest_deadline">
+            <div class="form_group">
+              <div class='form_text_wrap'>
+                <label class="form_text">締め切り</label>
+              </div>
+              <div class='input_deadline_wrap'>
+                <%= raw sprintf(
+                    f.date_select(
+                      :deadline,
+                      class:'select-deadline',
+                      id:"deadline-date",
+                      use_month_numbers: true,
+                      prompt:'--',
+                      start_year: Time.now.year,
+                      end_year: (Time.now.year + 1),
+                      date_separator: '%s'),
+                      "<p> 年 </p>", "<p> 月 </p>") + "<p> 日 </p>"%>
+                <%= f.collection_select(:hour, Hour.all, :value, :name, {}, {class:"hour_select", id:"contest-hour"}) %><p>まで</p>
+              </div>
+            </div>
+          </div>
+          <div class="contest_other_area">
+            <div class="form_group">
+              <div class="start_form_button_area">
+                <div class="start_form_button_right">
+                  <div class="file_select_wrap">
+                    <div class="form_text_wrap">
+                      <label class="form_text">サムネイル</label>
+                    </div>
+                    <label for="thumbnail">
+                      <span class="browse_btn">画像を選択</span><%= f.file_field :image, id: "thumbnail" %>
+                    </label>
+                    <div id="file-name"></div>
+                  </div>
+                <div class="start_form_button_right">
+                  <div class="public_select">
+                    <span>非公開</span>
+                    <%# <input type="checkbox" naem="public-select" value="true" class="public_select_box"> %>
+                    <%= f.check_box 'public', {}, true, false %>
+                  </div>
+                  <button class="create_button"><%= f.submit "開催する"%></button>
+                </div>
+              </div>
+            </div>
+            <div class="publick_caution">
+              <p>非公開を選択すると、投稿された作品は公開されません。例えば、主催者が評価を行う場合などに使用します。変更はいつでも可能です。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'shared/footer' %>

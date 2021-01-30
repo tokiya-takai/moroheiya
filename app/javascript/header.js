@@ -46,10 +46,12 @@ function findList() {
       });
     }
   });
+  
   //外側をクリックした場合はファインドリストを閉じる
   document.addEventListener('click', (e) => {
-    if (!e.target.closest('#find')) {
+    if (!e.target.closest('#find') && !e.target.closest('#find-list-zone')) {
       findListZone.classList.remove("open_list");
+      
       showLater.style.display = "none";
       $(".find_list_container").animate({ height: "0px" }, 200);
       const promise = new Promise((resolve) => {
@@ -64,19 +66,6 @@ function findList() {
   })
 }
 
-//ホバーしたナビゲーションに印を付ける
-function navChoiceUnderBar() {
-  const navItems = document.querySelectorAll('.nav_items');
-
-  navItems.forEach(function (navItem) {
-    navItem.addEventListener('mouseover', () => {
-      navItem.classList.add('nav_item_border');
-    });
-    navItem.addEventListener('mouseout', () => {
-      navItem.classList.remove('nav_item_border');
-    });
-  });
-}
 
 //ホバーしたファインドリストを少し透過する
 function listItemOpacity() {
@@ -106,19 +95,16 @@ function openUserMenu() {
       userMenu.style.display = 'none';
     }
   });
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#user-button') && (!e.target.closest('#user-menu'))) {
+      userButton.classList.remove("open_menu");
+      userMenu.style.display = "none";
+    }
+  });
 }
 
-//ユーザーメニューの設定ボタン
-// function userMenuSettings() {
-//   $('#user-settings-button').on('click', () => {
-//     window.location = $(this).find(".user_setting_button > a").attr("href");
-//     return false;
-//   });
-// }
 
 window.addEventListener('load', userButton);
 window.addEventListener('load', findList);
-window.addEventListener('load', navChoiceUnderBar);
 window.addEventListener('load', listItemOpacity);
 window.addEventListener('load', openUserMenu);
-// window.addEventListener('load', userMenuSettings);
