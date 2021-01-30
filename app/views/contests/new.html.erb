@@ -70,12 +70,13 @@
                     <label for="thumbnail">
                       <span class="browse_btn">画像を選択</span><%= f.file_field :image, id: "thumbnail" %>
                     </label>
+                    <div id="file-name"></div>
                   </div>
-                  <div id="file-name"></div>
                 <div class="start_form_button_right">
                   <div class="public_select">
                     <span>非公開</span>
-                    <input type="checkbox" naem="public-select" value="true" class="public_select_box">
+                    <%# <input type="checkbox" naem="public-select" value="true" class="public_select_box"> %>
+                    <%= f.check_box 'public', {}, true, false %>
                   </div>
                   <button class="create_button"><%= f.submit "開催する"%></button>
                 </div>

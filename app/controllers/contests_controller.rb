@@ -6,8 +6,10 @@ class ContestsController < ApplicationController
 
   def new
     sleep(0.4)
+    @contest = Contest.new
   end
 
   def create
+    binding.pry
   end
 end
