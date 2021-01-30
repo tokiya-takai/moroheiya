@@ -1,5 +1,6 @@
 .start_page_wrapper {
   color: #2d2020;
+  height: 100vh;
 }
 .start_page_container {
   width: 100%;
@@ -9,7 +10,7 @@
 }
 .start_page_left {
   width: 50%;
-  height: 100vh;
+  height: 100%;
   position: relative;
 }
 .start_page_left h2 {
@@ -62,7 +63,7 @@
 }
 .start_form_title {
   width: 60%;
-  height: 120px;
+  height: 100px;
   display: flex;
   align-items: flex-end;
   margin: 0 auto;

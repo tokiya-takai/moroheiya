@@ -1,5 +1,8 @@
 class Contest < ApplicationRecord
   belongs_to :user
+  has_one_attached :image
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre
   belongs_to :category
 
@@ -9,6 +12,11 @@ class Contest < ApplicationRecord
     validates :category_id
     validates :content
     validates :deadline
-    validates :public
+    validates :image
+  end
+
+  with_options numericality: { other_than: 1 } do
+    validates :genre_id
+    validates :category_id
   end
 end
