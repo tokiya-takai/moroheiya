@@ -1,0 +1,18 @@
+<%= render 'shared/header' %>
+  <div class="contest_list_wrapper">
+    <div class="list_title_area">
+      <h1>開催中のコンテスト</h1>
+    </div>
+    <div class="pick_up_body">
+      <ul class="pick_up_contests">
+        <%= render partial: 'shared/contest', collection: @contests, local: {contest: @contests}%>
+      </ul>
+    </div>
+    <div class="paginate_area">
+      <div class="paginate_container">
+        <%= paginate @contests %>
+      </div>
+    </div>
+  </div>
+
+<%= render 'shared/footer' %>

@@ -1,0 +1,17 @@
+
+.list_title_area {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list_title_area h1 {
+  font-size: 40px;
+  text-align: center;
+  border-bottom: 5px solid #ffd500;
+}
+
+.list_area {
+  width: 100%;
+  list-style: none;
+}

@@ -210,22 +210,37 @@ body {
   margin: 0 auto;
   padding-top: 20px;
 }
+/* コンテストページ共通 */
 .pick_up_body {
   height: 80%;
 }
-.pick_up_body_container {
-  width: 70%;
-  margin: 0 auto;
-}
 .pick_up_contests {
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   align-items: flex-start;
 }
-/* 以下コンテストページ共通 */
-.contest_body {
+.pick_up_contest {
+  width: 33%;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contest_container {
   width: 300px;
   height: 370px;
+  opacity: 1;
+}
+.contest_container:hover {
+  opacity: 0.7;
+}
+.contest_body {
+  /* width: 300px; */
+  height: 100%;
   border: 15px solid #2d2020;
   border-radius: 8px;
   box-shadow: 2px 3px 2px #aaaaaa;

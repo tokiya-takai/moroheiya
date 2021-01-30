@@ -1,0 +1,27 @@
+<li class="pick_up_contest">
+  <div class="contest_container">
+    <%= link_to root_path do %>
+      <div class="contest_body">
+        <div class="contest_image_container">
+          <%= image_tag contest.image, class: :contest_image %>
+        </div>
+        <div class="contest_information">
+          <div class="contest_title">
+            <p><%= contest.title %></p>
+          </div>
+          <div class="contest_content">
+            <p><%= contest.content %></p>
+          </div>
+        </div>
+        <div class="other_information">
+          <div class="contest_genre"><%= contest.genre.name %></div>
+          <div class="contest_category"><%= contest.category.name%></div>
+          <div class="contest_people">
+            <p>参加人数:</p>
+            <div>120人</div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</li>

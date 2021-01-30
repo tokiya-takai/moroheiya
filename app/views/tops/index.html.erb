@@ -100,7 +100,20 @@
     </div>
   </div>
 
-  <%= render 'pick_up' %>
+  <div class="pick_up">
+    <div class="pick_up_title_container">
+      <h2 class="pick_up_title">PICK UP</h2>
+    </div>
+    <div class="pick_up_body">
+      <% if @contests.present? %>
+        <ul class="pick_up_contests">
+          <%= render partial: 'shared/contest', collection: @contests, local: {contest: @contests}%>
+        </ul>
+      <% else %>
+        <%= render'dummy' %>
+      <% end %>
+    </div>
+  </div>
 
   <div class="top_page_last">
     <div class="last_container">
@@ -115,5 +128,5 @@
     </div>
   </div>
 
-  <%= render 'shared/footer' %>
 </div>
+<%= render 'shared/footer' %>
