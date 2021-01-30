@@ -35,7 +35,7 @@ body {
 .initial_title {
   text-align: center;
   font-size: 30px;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 .initial_button_container {
   font-size: 20px;
