@@ -13,10 +13,9 @@ class Contest < ApplicationRecord
     validates :image
   end
 
-  with_options numericality: { other_than: 1 } do
-    validates :genre_id
-    validates :category_id
-  end
+
+  validates :genre_id,    numericality: { other_than: 1 }
+  validates :category_id, numericality: { other_than: 1 }
 
   # 締切は現在時刻以降は保存できない
   validate :deadline_start
@@ -25,7 +24,7 @@ class Contest < ApplicationRecord
     return if deadline.blank?
     today = DateTime.now
     if deadline < today
-      errors[:base] << "締め切りは現在時刻以降のものを選択してください"
+      errors[:base] << "締め切りは現在時刻以降のものを選択してください。"
     end
   end
 

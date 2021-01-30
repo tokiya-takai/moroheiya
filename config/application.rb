@@ -11,6 +11,8 @@ module Moroheiya
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+    
+    config.i18n.default_locale = :ja
 
     # バリデーションエラーの際にレイアウトが崩れるのを防ぐ
     config.action_view.field_error_proc = Proc.new do |html_tag, instance| 

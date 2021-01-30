@@ -74,22 +74,22 @@
 }
 /* エラーメッセージ */
 .form_errors {
-  width: 250px;
-  height: 300px;
+  width: 300px;
+  height: auto;
   position: absolute;
   right: 450px;
   top: 100px;
   color: #f15656;
+  background-color: white;
   border-radius: 5px;
   border: 1px solid #9c9c9c;
   box-shadow: 0 0 5px #9c9c9c;
 }
 .error_messages_container {
-  padding: 10px;
+  padding: 13px;
 }
 .error_messages_container ul li {
-  list-style: inside;
-  list-style-type: circle;
+  list-style: circle inside;
 }
 
 /* フォーム(一部はdevise.cssと共通 */
