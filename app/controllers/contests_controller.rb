@@ -11,6 +11,8 @@ class ContestsController < ApplicationController
 
   def create
     @contest = Contest.new(contest_params)
+    today = DateTime.new
+    
     if @contest.save
       redirect_to root_path
     else

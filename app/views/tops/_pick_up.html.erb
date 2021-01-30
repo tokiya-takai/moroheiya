@@ -4,9 +4,9 @@
   </div>
   <div class="pick_up_body">
     <div class="pick_up_body_container">
-      <%# if コンテストが1つも無ければダミー%>
+      <% unless @contest.present? %>
         <%= render'dummy' %>
-      <%# end %>
+      <% end %>
     </div>
   </div>
 </div>

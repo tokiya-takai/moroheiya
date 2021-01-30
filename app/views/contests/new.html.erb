@@ -10,6 +10,7 @@
         <div class="start_form_container">
           <div class="start_form_title">
             <h1>コンテストを開催する</h1>
+            <%= render 'shared/error_messages', model: f.object %>
           </div>
           <div class="contest_title">
             <div class="form_group">
@@ -78,7 +79,7 @@
                     <%# <input type="checkbox" naem="public-select" value="true" class="public_select_box"> %>
                     <%= f.check_box 'public', {}, true, false %>
                   </div>
-                  <button class="create_button"><%= f.submit "開催する"%></button>
+                  <button class="create_button yellow_button"><%= f.submit "開催する"%></button>
                 </div>
               </div>
             </div>

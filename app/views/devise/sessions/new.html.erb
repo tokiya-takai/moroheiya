@@ -4,6 +4,9 @@
   <div class="form_wrapper">
     <div class="form_initial">
       <h1 class="user_information">ログイン</h1>
+      <%= render "devise/shared/error_messages", resource: resource %>
+    </div>
+    <div class="user_information_area">
       <div class="form_group">
         <div class='form_text_wrap'>
           <label class="form_text">メールアドレス</label>

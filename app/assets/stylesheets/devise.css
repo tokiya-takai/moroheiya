@@ -135,6 +135,10 @@ select::-ms-expand {
   background-color: #f15656;
   border-radius: 5px;
   box-shadow: 2px 3px #8f7c00;
+  transition: 200ms;
+}
+.actions:hover {
+  background-color: #f18585;
 }
 .sign_submit_button {
   width: 100%;
