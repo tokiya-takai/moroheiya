@@ -4,7 +4,7 @@
   <div class="hero_container">
     <h1 class="catch_copy">ここが私の、第一歩だ。</h1>
   </div>
-  <div class="hero_border"></div>
+  <span class="hero_border"></span>
   <div class="initial">
     <h3 class="initial_title">作品を投稿して、上を目指そう。</h2>
     <div class="initial_button_container">
@@ -20,26 +20,26 @@
     <div class="what_first">
       <div class="what_content_container">
         <div class="what_content">
-          <p class="content_title">あなたの「好き！」を磨きます。</p>
-          <p class="content_body">開催するコンテストはどんなこと、どんなものでもOK！<br>写真、イラスト、おもしろ動画、すごいけど役に立たない能力動画などなど！<br>コンテストを開催、もしくは参加して、1位を目指しましょう！</p>
+          <p class="what_content_title">あなたの「好き！」を磨きます。</p>
+          <p class="what_content_body">開催するコンテストはどんなこと、どんなものでもOK！<br>写真、イラスト、おもしろ動画、すごいけど役に立たない能力動画などなど！<br>コンテストを開催、もしくは参加して、1位を目指しましょう！</p>
         </div>
       </div>
       <div class="what_image_container">
-        <div class="what_image">
-          <%= image_tag('camera.png', class: :image_body) %>
+        <div class="what_image_body">
+          <%= image_tag('camera.png', class: :what_image) %>
         </div>
       </div>
     </div>
     <div class="what_second">
       <div class="what_image_container">
-        <div class="what_image">
-          <%= image_tag('dog.png', class: :image_body) %>
+        <div class="what_image_body">
+          <%= image_tag('dog.png', class: :what_image) %>
         </div>
       </div>
       <div class="what_content_container">
         <div class="what_content">
-          <p class="content_title">あなたの「好き！」を応援できます。</p>
-          <p class="content_body">コンテストに参加しなくても、作品を見ることができます。気に入った作品があれば、いいねを送りましょう！<br>あなたの1票が、運命を左右するかも知れません！</p>
+          <p class="what_content_title">あなたの「好き！」を応援できます。</p>
+          <p class="what_content_body">コンテストに参加しなくても、作品を見ることができます。気に入った作品があれば、いいねを送りましょう！<br>あなたの1票が、運命を左右するかも知れません！</p>
         </div>
       </div>
     </div>
@@ -104,13 +104,15 @@
     <div class="pick_up_title_container">
       <h2 class="pick_up_title">PICK UP</h2>
     </div>
-    <div class="pick_up_body">
+    <div class="contest_container">
       <% if @contests.present? %>
-        <ul class="pick_up_contests">
+        <ul class="contests">
           <%= render partial: 'shared/contest', collection: @contests, local: {contest: @contests}%>
         </ul>
       <% else %>
-        <%= render'dummy' %>
+        <ul class="contests">
+          <%= render'dummy' %>
+        </ul>
       <% end %>
     </div>
   </div>

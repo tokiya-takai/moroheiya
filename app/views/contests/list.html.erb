@@ -1,10 +1,10 @@
 <%= render 'shared/header' %>
   <div class="contest_list_wrapper">
     <div class="list_title_area">
-      <h1>開催中のコンテスト</h1>
+      <h1>コンテスト一覧</h1>
     </div>
-    <div class="pick_up_body">
-      <ul class="pick_up_contests">
+    <div class="contest_container">
+      <ul class="contests">
         <%= render partial: 'shared/contest', collection: @contests, local: {contest: @contests}%>
       </ul>
     </div>
