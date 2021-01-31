@@ -7,6 +7,9 @@ function toHow() {
   const how = document.getElementById('how');
 
   toHow.addEventListener('click', () => {
+    if (how == null) {
+      return false;
+    }
     how.scrollIntoView({
       behavior: 'smooth',
       block: 'start'

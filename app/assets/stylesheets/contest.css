@@ -141,6 +141,7 @@
 .input_contest_content {
   width: 100%;
   height: 150px;
+  box-sizing: border-box;
 }
 /* ファイル選択 */
 .start_form_button_area {

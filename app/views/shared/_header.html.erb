@@ -17,7 +17,13 @@
           <ul class="header_nav_list">
             <li class="nav_items"><%= link_to "はじめる",contests_path(anchor: "start_top") %></li>
             <li class="nav_items" id="nav-items"><a href="javascript:void(0);" id="find" >さがす</a></li>
-            <li class="nav_items"><a href="javascript:void(0);" id="to-how">MOROHEIYAとは</a></li>
+            <% if request.path == '/'
+                  path = 'javascript:void(0);'
+               else
+                  path = '/#how'
+               end   
+            %>
+            <li class="nav_items"><a href="<%= path %>" id="to-how">MOROHEIYAとは</a></li>
             <li class="nav_items"><%= link_to "使い方",root_path %></li>
           </ul>
         </div>

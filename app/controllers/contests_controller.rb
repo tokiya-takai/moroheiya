@@ -1,5 +1,5 @@
 class ContestsController < ApplicationController
-  before_action :authenticate_user!, except: :index
+  before_action :authenticate_user!, except: [:index, :list]
 
   def index
   end
@@ -18,6 +18,10 @@ class ContestsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def list
+    @contests = Contest.page(params[:page]).per(6)
   end
 
 
@@ -49,4 +53,5 @@ class ContestsController < ApplicationController
     )
     return deadline
   end
+
 end
