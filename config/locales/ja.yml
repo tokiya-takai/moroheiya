@@ -60,7 +60,9 @@ ja:
               blank: "が入力されていません。"
               too_long: "は%{count}文字以下に設定して下さい。"
               invalid: "は有効でありません。"
-            files:
+            image:
+              blank: "が選択されていません。"
+            video:
               blank: "が選択されていません。"
             contest_id:
               blank: "がありません"
@@ -76,5 +78,6 @@ ja:
       work:
         title: "タイトル"
         content: "説明"
-        files: "ファイル"
+        image: "画像"
+        video: "動画"
         contest_id: "コンテストID"

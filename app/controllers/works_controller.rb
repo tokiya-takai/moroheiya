@@ -12,17 +12,23 @@ class WorksController < ApplicationController
 
   def create
     @work = Work.new(work_params)
+    if (@contest.genre_id == 3) && (@work.video.blank?)
+      @work.valid?
+      @work.errors[:base] << "動画が選択されていません。"
+      render :new and return
+    end
+
     if @work.save
       redirect_to root_path
     else
-      @contest = Contest.find(params[:contest_id])
       render :new
     end
+
   end
 
   private
   def work_params
-    params.require(:work).permit(:title,:content,:files).merge(contest_id: @contest.id, user_id: current_user.id)
+    params.require(:work).permit(:title,:content,:image,:video).merge(contest_id: @contest.id, user_id: current_user.id)
   end
 
   def find_contest

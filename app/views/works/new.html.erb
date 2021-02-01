@@ -38,7 +38,7 @@
             <% if @contest.genre_id == 2%>
                 <div class="form_group">
                 <label for="work-file" class="work_select_buttons">
-                  <span class="browse_btn">ファイルを選択</span><%= f.file_field :files, id: "work-file" %>
+                  <span class="browse_btn">ファイルを選択</span><%= f.file_field :image, id: "work-file" %>
                 </label>
                 <div id="work-file-name" class="file_name"></div>
               </div>
@@ -48,7 +48,7 @@
                   <label class="form_text">サムネイル</label>
                 </div>
                 <label for="work-thumbnail" class="work_select_buttons">
-                  <span class="browse_btn">選択</span><%= f.file_field :files, id: "work-thumbnail" %>
+                  <span class="browse_btn">選択</span><%= f.file_field :image, id: "work-thumbnail" %>
                 </label>
                 <div id="work-thumbnail-name" class="file_name"></div>
               </div>
@@ -57,7 +57,7 @@
                   <label class="form_text">作品動画</label>
                 </div>
                 <label for="work" class="work_select_buttons">
-                  <span class="browse_btn">選択</span><%= f.file_field :files, id: "work" %>
+                  <span class="browse_btn">選択</span><%= f.file_field :video, id: "work" %>
                 </label>
                 <div id="work-name" class="file_name"></div>
               </div>
