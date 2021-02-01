@@ -24,6 +24,10 @@ class ContestsController < ApplicationController
     @contests = Contest.page(params[:page]).per(6)
   end
 
+  def show
+    @contest = Contest.find(params[:id])
+  end
+
 
   private
   def contest_params

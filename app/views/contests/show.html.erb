@@ -1,0 +1,24 @@
+<%= render 'shared/header' %>
+<div class="work_wrapper">
+  <div class="work_header">
+    <div class="work_header_upper">
+      <div class="whu_thumbnail_frame">
+        <%= image_tag(@contest.image, class: :whu_image)%>
+      </div>
+      <h1><%= @contest.title%></h1>
+      <div class="join_button_container">
+        <button class="join_button_frame">
+          <%= link_to '参加する', root_path, class: :join_button %>
+        </button>
+      </div>
+    </div>
+    <div class="work_header_lower">
+      <%= @contest.content %>
+    </div>
+  </div>
+  <div class="work_list_wrapper">
+    <div class="list_container">
+    </div>
+  </div>
+</div>
+<%= render 'shared/footer' %>

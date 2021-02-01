@@ -1,6 +1,6 @@
 <li class="list_contest">
   <div class="contest_frame">
-    <%= link_to root_path do %>
+    <%= link_to contest_path(contest.id) do %>
       <div class="contest_body">
         <div class="contest_image_container">
           <%= image_tag contest.image, class: :contest_image %>
