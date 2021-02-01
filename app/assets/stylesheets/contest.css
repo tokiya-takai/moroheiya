@@ -1,3 +1,4 @@
+/* コンテスト作成ページ（編集ページ共通） */
 .start_page_wrapper {
   height: 100vh;
 }
@@ -54,7 +55,21 @@
   height: 100%;
   object-fit: contain;
 }
-
+.edit_form_left {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contest_edit_image_container {
+  width: 400px;
+  height: 400px;
+}
+.contest_edit_image {
+  width: 100%;
+  object-fit: contain;
+}
 
 .start_form_right {
   width: 50%;
@@ -201,6 +216,42 @@
   margin: 30px 0 15px 0;
 }
 /* フォームここまで */
+/* 完了ページ */
+.finished_wrapper {
+  height: calc(100vh - 80px);
+}
+.finished_container {
+  width: 50%;
+  margin: 0 auto;
+}
+.finished_container h1 {
+  width: 410px;
+  font-size: 40px;
+  text-align: center;
+  margin: 50px auto;
+  padding-left: 10px;
+  border-bottom: 5px solid #ffd500;
+}
+.return_to_each {
+  display: flex;
+  justify-content: space-around;
+}
+.rte_button_frame {
+  font-size: 24px;
+  width: 270px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-shadow: 2px 3px 3px #aaaaaa;
+}
+.rte_button_frame a {
+  display: block;
+  line-height: 60px;
+  width: 100%;
+  text-align: center;
+}
 
 .yellow_button {
   background-color: #ffd500;

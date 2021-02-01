@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :contests, except: [:destory] do
     collection do
       get 'list'
+
+      get 'finished'
     end
   end
 end

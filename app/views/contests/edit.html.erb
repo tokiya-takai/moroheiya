@@ -1,15 +1,17 @@
 <%= render 'shared/header' %>
 
 <div class="start_page_wrapper", id="start_top">
-  <%= form_with model:@contest, url: contests_path, local: true do |f| %>
+  <%= form_with model:@contest, url: contest_path, local: true do |f| %>
     <div class="start_page_container">
-      <div class="start_form_left">
-        <%= image_tag('start-image.png', class: :start_image)%>
+      <div class="edit_form_left">
+        <div class="contest_edit_image_container">
+          <%= image_tag(@contest.image, class: :contest_edit_image)%>
+        </div>
       </div>
       <div class="start_form_right">
         <div class="start_form_container">
           <div class="start_form_title">
-            <h1>コンテストを開催する</h1>
+            <h1>コンテストを編集する</h1>
             <%= render 'shared/error_messages', model: f.object %>
           </div>
           <div class="contest_title">
@@ -81,9 +83,6 @@
                   <button class="create_button yellow_button"><%= f.submit "開催する"%></button>
                 </div>
               </div>
-            </div>
-            <div class="publick_caution">
-              <p>非公開を選択すると、投稿された作品は公開されません。例えば、主催者が評価を行う場合などに使用します。変更はいつでも可能です。
             </div>
           </div>
         </div>

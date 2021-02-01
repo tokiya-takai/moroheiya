@@ -46,7 +46,7 @@ ja:
               too_long: "は%{count}文字以下に設定して下さい。"
               invalid: "は有効でありません。"
             deadline:
-              blank: "が入力されていません。"
+              blank: "が入力されていないか、存在しない日付です。"
               invalid: "は有効でありません。"
             image:
               blank: "が選択されていません。"
