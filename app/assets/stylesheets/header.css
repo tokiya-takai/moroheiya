@@ -250,11 +250,9 @@
   align-items: center;
 }
 .sign_in_button {
-  color:#2d2020;
   border-bottom: 2px solid #fbfbfb;
 }
 .sign_up_button {
-  color:#2d2020;
   padding: auto 0 28px 0;
   border-bottom: 2px solid #fbfbfb;
 }
