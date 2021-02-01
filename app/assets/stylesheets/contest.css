@@ -252,10 +252,3 @@
   width: 100%;
   text-align: center;
 }
-
-.yellow_button {
-  background-color: #ffd500;
-}
-.yellow_button:hover {
-  opacity: 0.7;
-}

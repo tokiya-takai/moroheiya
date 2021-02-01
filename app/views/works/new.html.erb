@@ -1,0 +1,73 @@
+<%= render 'shared/header' %>
+<div class="work_wrapper">
+  <div class="work_header">
+    <div class="work_header_upper">
+      <div class="whu_thumbnail_frame">
+        <%= image_tag(@contest.image, class: :whu_image)%>
+      </div>
+      <h1><%= @contest.title%></h1>
+      <div class="join_button_container">
+      </div>
+    </div>
+    <div class="work_header_lower">
+      <%= @contest.content %>
+    </div>
+  </div>
+  <div class="work_form_wrapper">
+    <%= form_with model: @work, url: contest_works_path, local: true do |f| %>
+    <div class="work_form_container">
+      <%= render 'error_messages', model: f.object %>      
+      <h1>作品を投稿する</h1>
+        <div class="work_title">
+          <div class="form_group">
+            <div class='form_text_wrap'>
+              <label class="form_text">タイトル</label>
+            </div>
+            <%= f.text_area :title, class:"input_default", id:"title", maxlength:"40" %>
+          </div>
+        </div>
+        <div class="work_text">
+            <div class="form_group">
+              <div class='form_text_wrap'>
+                <label class="form_text">説明</label>
+              </div>
+              <%= f.text_area :content, class:"input_work_content", id:"title", maxlength: "1000" %>
+            </div>
+          </div>
+          <div class="work_file_wrap">
+            <% if @contest.genre_id == 2%>
+                <div class="form_group">
+                <label for="work-file" class="work_select_buttons">
+                  <span class="browse_btn">ファイルを選択</span><%= f.file_field :files, id: "work-file" %>
+                </label>
+                <div id="work-file-name" class="file_name"></div>
+              </div>
+            <% else %>
+              <div class="form_group">
+                <div class="form_text_wrap">
+                  <label class="form_text">サムネイル</label>
+                </div>
+                <label for="work-thumbnail" class="work_select_buttons">
+                  <span class="browse_btn">選択</span><%= f.file_field :files, id: "work-thumbnail" %>
+                </label>
+                <div id="work-thumbnail-name" class="file_name"></div>
+              </div>
+              <div class="form_group">
+                <div class="form_text_wrap">
+                  <label class="form_text">作品動画</label>
+                </div>
+                <label for="work" class="work_select_buttons">
+                  <span class="browse_btn">選択</span><%= f.file_field :files, id: "work" %>
+                </label>
+                <div id="work-name" class="file_name"></div>
+              </div>
+            <% end%>
+          </div>
+        <div class="work_submit_area">
+          <button class="work_submit_frame yellow_button"><%= f.submit "投稿する"%></button>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'shared/footer' %>

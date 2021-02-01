@@ -38,8 +38,8 @@ has_one :favorite
 
 ### Associations テーブル
 
-has_many :works
 belongs_to :user
+has_many :works
 has_one :first
 has_one :second
 has_one :third

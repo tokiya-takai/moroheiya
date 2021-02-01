@@ -50,6 +50,21 @@ ja:
               invalid: "は有効でありません。"
             image:
               blank: "が選択されていません。"
+        work:
+          attributes:
+            title:
+              blank: "が入力されていません。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
+            content:
+              blank: "が入力されていません。"
+              too_long: "は%{count}文字以下に設定して下さい。"
+              invalid: "は有効でありません。"
+            files:
+              blank: "が選択されていません。"
+            contest_id:
+              blank: "がありません"
+              invalid: "は有効でありません。"
     attributes:
       contest:
         title: "タイトル"
@@ -58,3 +73,8 @@ ja:
         content: "説明"
         deadline: "締め切り"
         image: "サムネイル"
+      work:
+        title: "タイトル"
+        content: "説明"
+        files: "ファイル"
+        contest_id: "コンテストID"

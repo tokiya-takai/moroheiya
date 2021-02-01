@@ -12,14 +12,40 @@ function startButtonClicked() {
   });
 }
 
-// ファイル名を表示
+// ファイル名を表示（コンテスト開催）
 $(function () {
   $('#thumbnail').on("change", function () {
     var file = this.files[0];
     const fileName = document.getElementById("file-name");
-    console.log(file);
     if (file != null) {
-      fileName.insertAdjacentHTML('afterend', file.name);
+      fileName.insertAdjacentHTML('afterbegin', file.name);
+    }
+  });
+});
+
+// ファイル名を表示（作品を投稿）
+$(function () {
+  $('#work-file').on("change", function () {
+    var file = this.files[0];
+    const fileName = document.getElementById("work-file-name");
+    if (file != null) {
+      fileName.insertAdjacentHTML('afterbegin', file.name);
+    }
+  });
+
+  $('#work-thumbnail').on("change", function () {
+    var file = this.files[0];
+    const fileName = document.getElementById("work-thumbnail-name");
+    if (file != null) {
+      fileName.insertAdjacentHTML('afterbegin', file.name);
+    }
+  });
+
+  $('#work').on("change", function () {
+    var file = this.files[0];
+    const fileName = document.getElementById("work-name");
+    if (file != null) {
+      fileName.insertAdjacentHTML('afterbegin', file.name);
     }
   });
 });

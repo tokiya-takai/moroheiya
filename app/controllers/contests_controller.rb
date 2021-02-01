@@ -12,8 +12,7 @@ class ContestsController < ApplicationController
 
   def create
     @contest = Contest.new(contest_params)
-    today = DateTime.new
-    
+    # today = DateTime.new
     if @contest.save
       redirect_to root_path
     else
@@ -75,12 +74,11 @@ class ContestsController < ApplicationController
         params[:contest]["deadline(1i)"].to_i,
         params[:contest]["deadline(2i)"].to_i,
         params[:contest]["deadline(3i)"].to_i,
-        h,m,s
+        h,m,s,"+09:00"
       )
     rescue
-      deadline = 'error'
+      deadline = nil
     end
-    
     return deadline
   end
 end
