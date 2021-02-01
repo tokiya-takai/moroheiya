@@ -1,0 +1,21 @@
+<%= render 'shared/header' %>
+
+<div class="finished_wrapper">
+  <div class="finished_container">
+    <% if request.referer&.include?(new_contest_path) %>
+      <h1>コンテストを開催しました！</h1>
+    <% else request.referer&.include?("/contests/#{:id}/edit")%>
+      <h1>編集が完了しました！</h1>
+    <% end %>
+    <div class="return_to_each">
+      <div class="rte_button_frame yellow_button">
+        <%= link_to 'トップページに戻る', root_path %>
+      </div>
+      <div class="rte_button_frame yellow_button">
+        <%= link_to 'コンテスト一覧へ戻る', list_contests_path %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>

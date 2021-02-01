@@ -1,5 +1,6 @@
 class ContestsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :list]
+  before_action :find_contest, only: [:show, :edit, :update]
 
   def index
   end
@@ -25,11 +26,31 @@ class ContestsController < ApplicationController
   end
 
   def show
-    @contest = Contest.find(params[:id])
+  end
+
+  def edit
+    if @contest.user.id != current_user.id
+      render :show
+    end
+  end
+
+  def update
+    if @contest.update(contest_params)
+      render :finished
+    else
+      render :edit
+    end
+  end
+
+  def finished
   end
 
 
   private
+  def find_contest
+    @contest = Contest.find(params[:id])
+  end
+
   def contest_params
     deadline = connect_deadline
     params.require(:contest).permit(:title,:genre_id,:category_id,:content,:image).merge(deadline: deadline, user_id: current_user.id)
@@ -49,13 +70,17 @@ class ContestsController < ApplicationController
     h = time[0,2].to_i
     m = time[2,2].to_i
     s = time[4,2].to_i
-    deadline = DateTime.new(
-      params[:contest]["deadline(1i)"].to_i,
-      params[:contest]["deadline(2i)"].to_i,
-      params[:contest]["deadline(3i)"].to_i,
-      h,m,s
-    )
+    begin
+      deadline = DateTime.new(
+        params[:contest]["deadline(1i)"].to_i,
+        params[:contest]["deadline(2i)"].to_i,
+        params[:contest]["deadline(3i)"].to_i,
+        h,m,s
+      )
+    rescue
+      deadline = 'error'
+    end
+    
     return deadline
   end
-
 end
