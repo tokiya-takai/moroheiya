@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_02_033421) do
+ActiveRecord::Schema.define(version: 2021_02_02_073314) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -47,6 +47,19 @@ ActiveRecord::Schema.define(version: 2021_02_02_033421) do
     t.index ["user_id"], name: "index_contests_on_user_id"
   end
 
+  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "work_id"
+    t.integer "black_favorite", default: 0
+    t.integer "gold_favorite", default: 0
+    t.integer "purple_favorite", default: 0
+    t.integer "normal_favorite", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+    t.index ["work_id"], name: "index_favorites_on_work_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "nickname", null: false
     t.string "email", default: "", null: false
@@ -56,10 +69,10 @@ ActiveRecord::Schema.define(version: 2021_02_02_033421) do
     t.string "family_name_kana", null: false
     t.string "first_name_kana", null: false
     t.date "birthday", null: false
-    t.integer "black_favorite"
-    t.integer "gold_favorite"
-    t.integer "purple_favorite"
-    t.integer "count_first"
+    t.integer "black_favorite", default: 0
+    t.integer "gold_favorite", default: 0
+    t.integer "purple_favorite", default: 0
+    t.integer "count_first", default: 0
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -82,6 +95,8 @@ ActiveRecord::Schema.define(version: 2021_02_02_033421) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "contests", "users"
+  add_foreign_key "favorites", "users"
+  add_foreign_key "favorites", "works"
   add_foreign_key "works", "contests"
   add_foreign_key "works", "users"
 end

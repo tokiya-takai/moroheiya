@@ -1,0 +1,26 @@
+<li class="list_work">
+  <div class="work_frame">
+    <%= link_to root_path do %>
+      <div class="work_image_frame">
+        <%= image_tag image_work.image %>
+      </div>
+      <div class="work_information_area">
+        <% if image_work.user.count_first >= 1 %>
+        <%# ユーザーイメージ後入れ %>
+          <p class="work_user_nickname"><%= image_work.user.nickname %><%= image_tag 'proof_name.png'%>さんの作品</p>
+        <% else %>
+         <p class="work_user_nickname"><%= image_work.user.nickname %>さんの作品</p>
+        <% end %>
+        <div class="work_content_container">
+          <%= image_work.content%>
+        </div>
+        <ul class="list_favorite_icons">
+          <li class="favorite_icons"><%= image_tag 'black_icon.png', class: :work_icons %><%= image_work.favorite.black_favorite %></li>
+          <li class="favorite_icons"><%= image_tag 'gold_icon.png', class: :work_icons %><%= image_work.favorite.gold_favorite %></li>
+          <li class="favorite_icons"><%= image_tag 'purple_icon.png', class: :work_icons %><%= image_work.favorite.purple_favorite %></li>
+          <li class="favorite_icons"><%= image_tag 'normal_icon.png', class: :work_icons %><%= image_work.favorite.normal_favorite %></li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</li>

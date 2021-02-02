@@ -1,3 +1,4 @@
+/* コンテストに紐付いた作品表示ページ */
 .work_wrapper {
   width: 100vw;
   height: 100%;
@@ -66,5 +67,66 @@
 }
 
 .work_list_wrapper {
+  width: 100vw;
   height: 100vh;
+  margin-top: 80px;
+}
+.work_list {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.list_work {
+  width: 25%;
+  height: 100%;
+}
+.work_frame {
+  width: 75%;
+  height: 320px;
+  margin: 0 auto;
+  border: 15px solid #2d2020;
+  border-radius: 7px;
+}
+.work_image_frame {
+  width: 100%;
+  height: 55%;
+  object-fit: contain;
+  border-bottom: 3px solid #2d2020;
+  text-align: center;
+  background-color: black;
+}
+.work_image_frame img {
+  width: auto;
+  height: 100%;
+}
+.work_information_area {
+  height: 45%;
+}
+.work_user_nickname {
+  font-size: 16px;
+  width: 100%;
+  height: 30px;
+  padding-top: 2px;
+  overflow: hidden;
+}
+.work_content_container {
+  width: 100%;
+  height: 78px;
+  overflow: hidden;
+}
+.list_favorite_icons {
+  padding-left: 7px;
+  display: flex;
+}
+.favorite_icons {
+  margin-right: 7px;
+}
+.work_icons {
+  width: 20px;
+  height: 20px;
+  margin-right: 4px;
 }

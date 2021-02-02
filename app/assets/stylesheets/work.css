@@ -1,3 +1,5 @@
+
+/* 作品投稿フォーム */
 .work_form_wrapper {
   height: auto;
   margin-bottom: 50px;
@@ -59,3 +61,5 @@
   font-size: 13px;
   resize: none;
 }
+
+/* ここまで */

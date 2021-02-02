@@ -19,12 +19,16 @@ class WorksController < ApplicationController
     end
 
     if (@contest.genre_id == 3)
-      if @work.video.@original_filename.end_with?(".mp4")
-        @work.errors[:base] << "動画はMP4形式でアップロードしてください。"
+      filename = @work.video.filename.to_s
+      unless filename.end_with?(".mp4")
+        @work.valid?
+        @work.errors[:base] << "動画はmp4形式でアップロードしてください。"
+        render :new and return
       end
     end
 
     if @work.save
+      @favorite = Favorite.create(user_id: current_user.id, work_id: @work.id)
       redirect_to root_path
     else
       render :new

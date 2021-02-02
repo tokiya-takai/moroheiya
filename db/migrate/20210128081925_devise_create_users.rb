@@ -12,10 +12,10 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :family_name_kana,   null: false
       t.string :first_name_kana,    null: false
       t.date :birthday,           null: false
-      t.integer :black_favorite
-      t.integer :gold_favorite
-      t.integer :purple_favorite
-      t.integer :count_first
+      t.integer :black_favorite,    default: 0
+      t.integer :gold_favorite,     default: 0
+      t.integer :purple_favorite,   default: 0
+      t.integer :count_first,       default: 0
 
       ## Recoverable
       t.string   :reset_password_token

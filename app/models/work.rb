@@ -1,6 +1,8 @@
 class Work < ApplicationRecord
   belongs_to :user
   belongs_to :contest
+  has_one :favorite
+
   counter_culture :contest, column_name: 'works_count'
 
   has_one_attached :image
