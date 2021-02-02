@@ -13,7 +13,7 @@
         </button>
       <% else %>
         <button class="join_button_frame yellow_button">
-          <%= link_to '参加する', root_path, class: :join_button %>
+          <%= link_to '参加する', new_contest_work_path(@contest.id), class: :join_button %>
         </button>
       <% end %>
       </div>

@@ -6,6 +6,7 @@ class User < ApplicationRecord
         #,:validatable
   
   has_many :contests
+  has_many :works
 
   VALID_EMAIL_REGEX = /\A[\w\-\._]+@[\w\-\._]+\.[A-Za-z]+\z/i
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i

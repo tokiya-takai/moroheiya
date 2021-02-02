@@ -1,5 +1,6 @@
 class Contest < ApplicationRecord
   belongs_to :user
+  has_many :works
   has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions
@@ -17,7 +18,7 @@ class Contest < ApplicationRecord
   validates :genre_id,    numericality: { other_than: 1 }
   validates :category_id, numericality: { other_than: 1 }
 
-  # 締切は現在時刻以降は保存できない
+  # 締切は現在時刻以前は保存できない
   validate :deadline_start
 
   def deadline_start

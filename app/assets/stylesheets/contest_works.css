@@ -5,9 +5,10 @@
 
 .work_header {
   width: 100%;
-  height: 150px;
+  height: auto;
   background-color: #fffed8;
   border-bottom: 1px solid #c4c0c0;
+  padding-bottom: 30px;
 }
 .work_header_upper {
   width: 95%;

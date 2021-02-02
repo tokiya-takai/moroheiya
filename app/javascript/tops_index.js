@@ -17,4 +17,18 @@ function toHow() {
   });
 }
 
+function sayDummy() {
+  const dummies = document.querySelectorAll('.dummy');
+  
+  dummies.forEach(function (dummy) {
+    dummy.addEventListener('mouseenter', () => {
+      $(dummy).children('.fukidashi').animate({ opacity: 1 }, { duration: 200, easing: 'swing' });
+    });
+    dummy.addEventListener('mouseleave', () => {
+      $(dummy).children('.fukidashi').animate({ opacity: 0 }, { duration: 200, easing: 'swing' });
+    });
+  });
+}
+
 window.addEventListener('load', toHow);
+window.addEventListener('load', sayDummy);
