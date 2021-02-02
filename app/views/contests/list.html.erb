@@ -4,11 +4,9 @@
       <h1>コンテスト一覧</h1>
     </div>
     <div class="contest_container">
-    <% if @contests.present? %>
       <ul class="contests">
         <%= render partial: 'shared/contest', collection: @contests, local: {contest: @contests}%>
       </ul>
-    <% end %>
     </div>
     <div class="paginate_area">
       <div class="paginate_container">

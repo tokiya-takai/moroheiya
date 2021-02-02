@@ -14,7 +14,7 @@ class ContestsController < ApplicationController
     @contest = Contest.new(contest_params)
     # today = DateTime.new
     if @contest.save
-      redirect_to root_path
+      render :finished
     else
       render :new
     end

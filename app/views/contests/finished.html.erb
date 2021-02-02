@@ -2,11 +2,13 @@
 
 <div class="finished_wrapper">
   <div class="finished_container">
-    <% if request.referer&.include?(new_contest_path) %>
-      <h1>コンテストを開催しました！</h1>
-    <% else request.referer&.include?("/contests/#{:id}/edit")%>
-      <h1>編集が完了しました！</h1>
-    <% end %>
+    <div class="finished_title">
+      <% if request.referer&.include?(new_contest_path) %>
+        <h1>コンテストを開催しました！</h1>
+      <% else request.referer&.include?("/contests/#{:id}/edit")%>
+        <h1>編集が完了しました！</h1>
+      <% end %>
+    </div>
     <div class="return_to_each">
       <div class="rte_button_frame yellow_button">
         <%= link_to 'トップページに戻る', root_path %>

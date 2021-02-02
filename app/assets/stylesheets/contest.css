@@ -224,8 +224,12 @@
   width: 50%;
   margin: 0 auto;
 }
-.finished_container h1 {
-  width: 410px;
+.finished_title {
+  display: flex;
+  justify-content: center;
+}
+.finished_title h1 {
+  display: inline-block;
   font-size: 40px;
   text-align: center;
   margin: 50px auto;

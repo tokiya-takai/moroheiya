@@ -35,6 +35,7 @@ has_one :favorite
 |     deadline    | date       | null: false                |
 |      public     | boolean    | null: false, default: true |
 |       user      | references | null: false                |
+|    works_count  | integer    | null: false                | counter_cultureを使用
 
 ### Associations テーブル
 
