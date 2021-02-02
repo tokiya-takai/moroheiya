@@ -11,4 +11,6 @@ class Work < ApplicationRecord
     validates :image
   end
 
+  # validates :video, format: {with: }
+
 end

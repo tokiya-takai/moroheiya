@@ -18,6 +18,12 @@ class WorksController < ApplicationController
       render :new and return
     end
 
+    if (@contest.genre_id == 3)
+      if @work.video.@original_filename.end_with?(".mp4")
+        @work.errors[:base] << "動画はMP4形式でアップロードしてください。"
+      end
+    end
+
     if @work.save
       redirect_to root_path
     else

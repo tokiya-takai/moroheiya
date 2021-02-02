@@ -226,6 +226,34 @@ body {
 .to_list_container a:hover {
   opacity: 0.7;
 }
+.dummy {
+  width: 300px;
+  height: 370px;
+  position: relative;
+}
+.fukidashi {
+  width: 200px;
+  position: absolute;
+  top: -45px;
+  left: 100px;
+  padding: 16px;
+  border-radius: 5px;
+  background: #ffd500;
+  opacity: 0;
+}
+.fukidashi:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  bottom: -19px;
+  margin-left: 10px;
+  border: solid transparent;
+  border-top-color: #ffd500;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
 /* コンテスト表示は共通 */
 
 /* トップページラスト  */
