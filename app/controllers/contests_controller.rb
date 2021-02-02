@@ -25,7 +25,7 @@ class ContestsController < ApplicationController
   end
 
   def show
-    @works = Work.where(contest_id: params[:id])
+    @works = Work.where(contest_id: params[:id]).page(params[:page]).per(6).order("created_at DESC")
   end
 
   def edit

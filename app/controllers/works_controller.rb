@@ -1,6 +1,10 @@
 class WorksController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_contest, only: [:new, :create]
+  before_action :find_contest, only: [:new, :create, :show]
+
+  def show
+    @work = Work.find(params[:id])
+  end
 
 
   def new

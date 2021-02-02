@@ -27,6 +27,7 @@
     <% if @contest.genre_id == 2%>
       <%= render partial: 'image_work', collection: @works, local: { image_work: @works }%>
     <% else %>
+    <%# 動画バージョン %>
     <% end%>
     </ul>
   </div>
