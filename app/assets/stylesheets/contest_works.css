@@ -60,12 +60,16 @@
 }
 .work_header_lower {
   width: 85%;
-  height: 50%;
+  height: 150px;
   padding: 20px 0 0 20px;
   margin: 0 auto;
   font-size: 15px;
 }
-
+.work_header_content {
+  height: 100%;
+  white-space: pre-wrap;
+  overflow-y: scroll;
+}
 .work_list_wrapper {
   width: 100vw;
   height: 100vh;
@@ -99,15 +103,15 @@
 }
 .work_image_frame {
   width: 100%;
-  height: 55%;
-  object-fit: contain;
+  height: 56%;
   border-bottom: 3px solid #2d2020;
   text-align: center;
   background-color: black;
 }
 .work_image_frame img {
-  width: auto;
+  width: 100%;
   height: 100%;
+  object-fit: contain;
 }
 .work_information_area {
   height: 40%;

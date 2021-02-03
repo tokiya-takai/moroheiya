@@ -8,6 +8,10 @@ Rails.application.routes.draw do
 
       get 'finished'
     end
-    resources :works
+    resources :works do
+      collection do
+        get 'finished'
+      end
+    end
   end
 end

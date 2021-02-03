@@ -3,8 +3,8 @@
 <div class="finished_wrapper">
   <div class="finished_container">
     <div class="finished_title">
-      <% if request.referer&.include?(new_contest_path) %>
-        <h1>コンテストを開催しました！</h1>
+      <% if request.referer&.include?(new_contest_work_path) %>
+        <h1>作品を投稿しました！</h1>
       <% else %>
         <h1>編集が完了しました！</h1>
       <% end %>
