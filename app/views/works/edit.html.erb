@@ -14,10 +14,10 @@
     </div>
   </div>
   <div class="work_form_wrapper">
-    <%= form_with model: @work, url: contest_works_path, local: true do |f| %>
+    <%= form_with model: @work, url: contest_work_path, local: true do |f| %>
     <div class="work_form_container">
       <%= render 'error_messages', model: f.object %>      
-      <h1>作品を投稿する</h1>
+      <h1>作品を編集する</h1>
         <div class="work_title">
           <div class="form_group">
             <div class='form_text_wrap'>
@@ -64,7 +64,7 @@
             <% end%>
           </div>
         <div class="work_submit_area">
-          <button class="work_submit_frame yellow_button"><%= f.submit "投稿する"%></button>
+          <button class="work_submit_frame yellow_button"><%= f.submit "更新する"%></button>
         </div>
       <% end %>
     </div>

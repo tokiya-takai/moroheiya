@@ -10,13 +10,13 @@
       <div class="join_button_container">
       <% if @work.user.id == current_user.id %>
         <button class="work_edit_button_frame yellow_button">
-          <%= link_to '編集する', edit_contest_path(@contest.id), class: :join_button %>
+          <%= link_to '編集する', edit_contest_work_path(@contest.id,@work.id), class: :join_button %>
         </button>
       <% end %>
       </div>
     </div>
     <div class="work_header_lower">
-      <%= @contest.content %>
+      <div class="work_header_content"><%= @contest.content %></div>
     </div>
   </div>
   <div class="work_show_title_area">

@@ -1,9 +1,9 @@
 class WorksController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_contest, only: [:new, :create, :show]
+  before_action :find_contest, only: [:new, :create, :show, :edit, :update]
+  before_action :find_work, only: [:show, :edit, :update, :finished]
 
   def show
-    @work = Work.find(params[:id])
   end
 
 
@@ -33,11 +33,28 @@ class WorksController < ApplicationController
 
     if @work.save
       @favorite = Favorite.create(user_id: current_user.id, work_id: @work.id)
-      redirect_to root_path
+      render :finished
     else
       render :new
     end
 
+  end
+
+  def edit
+    if @work.user_id != current_user.id
+      redirect_to contest_work_path(@work.contest_id, @work.id)
+    end
+  end
+
+  def update
+    if @work.update(work_params)
+      render :finished
+    else
+      render :edit
+    end
+  end
+
+  def finished
   end
 
   private
@@ -47,5 +64,9 @@ class WorksController < ApplicationController
 
   def find_contest
     @contest = Contest.find(params[:contest_id])
+  end
+
+  def find_work
+    @work = Work.find(params[:id])
   end
 end
