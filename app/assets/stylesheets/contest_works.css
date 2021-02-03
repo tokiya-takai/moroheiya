@@ -86,10 +86,16 @@
 }
 .work_frame {
   width: 75%;
-  height: 320px;
+  height: 300px;
   margin: 0 auto;
   border: 15px solid #2d2020;
   border-radius: 7px;
+  box-shadow: 2px 3px 3px #aaaaaa;
+  opacity: 1;
+  transition: 200ms;
+}
+.work_frame:hover {
+  opacity: 0.7;
 }
 .work_image_frame {
   width: 100%;
@@ -104,7 +110,7 @@
   height: 100%;
 }
 .work_information_area {
-  height: 45%;
+  height: 40%;
 }
 .work_user_nickname {
   font-size: 16px;
@@ -115,7 +121,9 @@
 }
 .work_content_container {
   width: 100%;
-  height: 78px;
+  height: 68px;
+  font-size: 12px;
+  padding: 0 5px;
   overflow: hidden;
 }
 .list_favorite_icons {
