@@ -1,0 +1,19 @@
+<%= render 'shared/header' %>
+
+<div class="finished_wrapper">
+  <div class="finished_container">
+    <div class="finished_title">
+      <h1>登録が完了しました！</h1>
+    </div>
+    <div class="return_to_each">
+      <div class="rte_button_frame yellow_button">
+        <%= link_to 'トップページに戻る', root_path %>
+      </div>
+      <div class="rte_button_frame yellow_button">
+        <%= link_to 'コンテスト一覧へ', list_contests_path %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>
