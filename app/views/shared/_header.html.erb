@@ -64,7 +64,7 @@
                 <div class="user_menu_middle">
                   <div class="user_setting_area" id="user-settings-button">
                     <div class="user_setting_button">
-                      <%= link_to image_tag('settings.svg',class: :setting_icon) + "設定", root_path, class: :user_setting%>
+                      <%= link_to image_tag('settings.svg',class: :setting_icon) + "設定", user_path(current_user.id), class: :user_setting%>
                     </div>
                   </div>
                 </div>
