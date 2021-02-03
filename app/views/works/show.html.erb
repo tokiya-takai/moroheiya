@@ -1,0 +1,53 @@
+<%= render 'shared/header' %>
+<div class="work_wrapper">
+  <div class="work_header">
+    <div class="return_list"><span class="return_list_icon"></span><%= link_to'作品一覧へ戻る', contest_path(@contest.id)%></div>
+    <div class="work_header_upper">
+      <div class="whu_thumbnail_frame">
+        <%= image_tag(@contest.image, class: :whu_image)%>
+      </div>
+      <h1><%= @contest.title%></h1>
+      <div class="join_button_container">
+      <% if @work.user.id == current_user.id %>
+        <button class="work_edit_button_frame yellow_button">
+          <%= link_to '編集する', edit_contest_path(@contest.id), class: :join_button %>
+        </button>
+      <% end %>
+      </div>
+    </div>
+    <div class="work_header_lower">
+      <%= @contest.content %>
+    </div>
+  </div>
+  <div class="work_show_title_area">
+    <h1><%= @work.user.nickname %>さんの作品</h1>
+  </div>
+  <div class="work_body_container">
+    <div class="work_body_left">
+      <div class="work_object_frame">
+        <% if @contest.genre_id == 2 %>
+          <%= image_tag @work.image, class: :work_object %>
+        <% else %>
+          <%= video_tag rails_blob_path(@work.video), poster: rails_blob_path(@work.image), poster_skip_pipeline: :ture, controls: true, autobuffer: true, size: "640x360"%>
+        <% end %>
+      </div>
+      <div class="work_favorites">
+        <ul class="work_favorite_icons">
+          <li class="work_favorite"><%= image_tag 'black_icon.png', class: :work_favo %><%= @work.favorite.black_favorite.to_s(:delimited) %></li>
+          <li class="work_favorite"><%= image_tag 'gold_icon.png', class: :work_favo %><%= @work.favorite.gold_favorite.to_s(:delimited) %></li>
+          <li class="work_favorite"><%= image_tag 'purple_icon.png', class: :work_favo %><%= @work.favorite.purple_favorite.to_s(:delimited) %></li>
+          <li class="work_favorite"><%= image_tag 'normal_icon.png', class: :work_favo %><%= @work.favorite.normal_favorite.to_s(:delimited) %></li>
+        </ul>
+      </div>
+    </div>
+    <div class="work_body_right">
+      <div class="work_information_container">
+        <h2><%= @work.title %></h2>
+        <div class="work_content_area">
+          <div class="work_content"><%= @work.content %></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <%= render 'shared/footer' %>
