@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :contests
   has_many :works
   has_one :favorite
+  has_one_attached :image
 
   VALID_EMAIL_REGEX = /\A[\w\-\._]+@[\w\-\._]+\.[A-Za-z]+\z/i
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i
@@ -36,4 +37,7 @@ class User < ApplicationRecord
     
     validates :birthday
   end
+
+  validates :profile, length: { maximum: 1000 }
+  
 end

@@ -123,6 +123,10 @@
   padding-top: 2px;
   overflow: hidden;
 }
+.user_proof_icon {
+  width: 20px;
+  height: 20px;
+}
 .work_content_container {
   width: 100%;
   height: 68px;

@@ -1,0 +1,98 @@
+.user_wrapper {
+  width: 60%;
+  height: auto;
+  margin: 30px auto;
+  border: 1px solid #aaaaaa;
+}
+.user_upper_container {
+  padding-top: 30px;
+  display: flex;
+}
+.user_image_container {
+  width: 20%;
+  height: 120px;
+}
+.user_image_frame {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  border-radius: 75px;
+}
+.user_image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.user_nickname_container {
+  width: 60%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+}
+.user_nickname_container h1 {
+  font-size: 35px;
+}
+.user_edit_button_container {
+  width: 20%;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user_edit_button_frame {
+  width: 80px;
+  height: 30px;
+  background-color: #ffd500;
+  border-radius: 3px;
+  box-shadow: 1px 2px 2px #aaaaaa;
+}
+.user_edit_button_frame a {
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  text-align: center;
+}
+.user_middle_container {
+  border-bottom: 1px solid #aaaaaa;
+}
+.user_middle_container h2 {
+  width: 60%;
+  height: 33px;
+  margin: 0 auto;
+  font-size: 22px;
+}
+.rotation_arrow_area {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+}
+.rotation_arrow {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  margin-left: 5px;
+  vertical-align: middle;
+  cursor: pointer;
+  transform:rotateZ(0deg);
+}
+.user_profile_container {
+  width: 60%;
+  height: 100px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.user_profile {
+  white-space: pre-wrap;
+  padding: 10px;
+}
+.user_lower_container {
+  padding: 10px;
+}
+.user_medal_list {
+  display: flex;
+}
+.user_medals {
+  width: 80px;
+  height: 80px;
+}

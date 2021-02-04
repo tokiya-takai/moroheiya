@@ -1,6 +1,6 @@
 <%= render 'shared/header' %>
 
-<%= form_with model: @user, url: user_registration_path, class: 'registration', local: true do |f| %>
+<%= form_with model: @user, url: users_sign_up_confirm_path, class: 'registration', local: true do |f| %>
   <div class="form_wrapper">
     <div class="form_initial">
       <h1 class="user_information">ユーザー情報</h1>
