@@ -5,7 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable
         #,:validatable
   
-  has_one :other_user
   has_many :contests
   has_many :works
   has_one :favorite
