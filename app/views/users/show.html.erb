@@ -20,15 +20,15 @@
     <div class="user_middle_container">
       <h2>プロフィール<span class="rotation_arrow_area"><%= image_tag'rotation.svg', class: :rotation_arrow %></span></h2>
       <div class="user_profile_container">
-        <p class="user_profile"><%if @user.profile != nil %><%= @user.profile %><%else%>まだプロフィールがありません。<%end%></p>
+        <p class="user_profile"><%if @user.other_user.profile != nil %><%= @user.other_user.profile %><%else%>まだプロフィールがありません。<%end%></p>
       </div>
     </div>
     <div class="user_lower_container">
       <ul class="user_medal_list">
-        <li class="list_user_cup"><%= image_tag'cup.svg', class: :user_medals if @user.count_first >= 5 %></li>
-        <li class="list_user_count_first"><% if @user.count_first >= 1 %><%= image_tag'first.svg', class: :user_medals %><%= @user.count_first%><%end%></li>
-        <li class="list_user_count_second"><% if @user.count_second >= 1 %><%= image_tag'second.svg', class: :user_medals %><%= @user.count_second%><%end%></li>
-        <li class="list_user_count_third"><% if @user.count_third >= 1 %><%= image_tag'third.svg', class: :user_medals %><%= @user.count_third%><%end%></li>
+        <li class="list_user_cup"><%= image_tag'cup.svg', class: :user_medals if @user.other_user.count_first >= 5 %></li>
+        <li class="list_user_count_first"><% if @user.other_user.count_first >= 1 %><%= image_tag'first.svg', class: :user_medals %><%= @user.other_user.count_first%><%end%></li>
+        <li class="list_user_count_second"><% if @user.other_user.count_second >= 1 %><%= image_tag'second.svg', class: :user_medals %><%= @user.other_user.count_second%><%end%></li>
+        <li class="list_user_count_third"><% if @user.other_user.count_third >= 1 %><%= image_tag'third.svg', class: :user_medals %><%= @user.other_user.count_third%><%end%></li>
       </ul>
     </div>
   </div>

@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable
         #,:validatable
   
+  has_one :other_user
   has_many :contests
   has_many :works
   has_one :favorite
@@ -37,7 +38,5 @@ class User < ApplicationRecord
     
     validates :birthday
   end
-
-  validates :profile, length: { maximum: 1000 }
   
 end
