@@ -3,8 +3,8 @@
     <div class="user_upper_container">
       <div class="user_image_container">
         <div class="user_image_frame">
-          <% if @user.image.attached? %>
-            <%= image_tag(@user.image, class: :user_image) %>
+          <% if @user.other_user.image.attached? %>
+            <%= image_tag(@user.other_user.image, class: :user_image) %>
           <% else %>
             <%= image_tag'user_icon.svg', class: :user_image %>
           <% end %>
@@ -14,7 +14,7 @@
         <h1><%= @user.nickname %></h1>
       </div>
       <div class="user_edit_button_container">
-        <%if @user.id == current_user.id%><button class="user_edit_button_frame"><%= link_to '編集',edit_user_registration_path %></button><%end%>
+        <%if @user.id == current_user.id%><button class="user_edit_button_frame"><%= link_to '編集',edit_other_user_path %></button><%end%>
       </div>
     </div>
     <div class="user_middle_container">
