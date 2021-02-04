@@ -15,6 +15,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
     # paramsにbackがあれば、情報を保持したまま入力ページへ遷移するためnewアクションへrender
     render :new and return if params[:back]
     super
+    OtherUser.create(user_id: @user.id)
   end
 
   # GET /resource/edit
