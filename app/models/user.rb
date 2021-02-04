@@ -37,4 +37,7 @@ class User < ApplicationRecord
     
     validates :birthday
   end
+
+  validates :profile, length: { maximum: 1000 }
+  
 end
