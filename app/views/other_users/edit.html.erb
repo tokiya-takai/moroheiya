@@ -1,0 +1,28 @@
+<%= render 'shared/header' %>
+  <div class="user_wrapper">
+    <%= form_with model:@other_user, url: other_user_path, local: true do |f|%>
+      <div class="user_upper_container">
+        <div class="other_user_image_container">
+          <div class="other_user_image_frame">
+            <label for="user-image">
+              <% if @user.other_user.image.attached? %>
+                <%= image_tag(@user.other_user.image, class: :other_user_image) %>
+              <% else %>
+                <%= image_tag'user_icon.svg', class: :other_user_image %>
+              <% end %>
+              <%= f.file_field :image, id:"user-image"%>
+            </label>
+          </div>
+        </div>
+        <div class="user_nickname_container">
+          <h1><%= @user.nickname %></h1>
+        </div>
+      </div>
+      <div class="user_middle_container">
+        <h2>プロフィール</h2>
+        <div class="user_profile_container">
+          <%= f.text_field :profile %>
+        </div>
+      </div>
+  </div>
+<%= render 'shared/footer' %>
