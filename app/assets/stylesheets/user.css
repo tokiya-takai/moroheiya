@@ -10,11 +10,11 @@
 }
 .user_image_container {
   width: 20%;
-  height: 150px;
+  height: 120px;
 }
 .user_image_frame {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   margin: 0 auto;
   border-radius: 75px;
 }
@@ -25,7 +25,7 @@
 }
 .user_nickname_container {
   width: 60%;
-  height: 150px;
+  height: 120px;
   display: flex;
   align-items: center;
 }
@@ -34,7 +34,7 @@
 }
 .user_edit_button_container {
   width: 20%;
-  height: 150px;
+  height: 120px;
   display: flex;
   justify-content: center;
   align-items: center;

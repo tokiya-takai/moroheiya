@@ -6,7 +6,6 @@ $(function () {
       this.classList.add('up');
       $(this)
       .css({ top: 0 })
-      .animate2({ top: '100px' }, 100)
       .animate2({ transform: 'rotate(180deg)' }, 100);
       const profileHeight = userProfile.getBoundingClientRect().height;
       console.log(profileHeight);
@@ -15,7 +14,6 @@ $(function () {
       this.classList.remove('up');
       $(this)
       .css({ top: 100 })
-      .animate2({ top: '0px' }, 100)
       .animate2({ transform: 'rotate(0deg)' }, 100);
       $('.user_profile_container').animate({ height: '100px' }, { duration: 300, easing: 'swing' });
     }

@@ -14,7 +14,7 @@
         <h1><%= @user.nickname %></h1>
       </div>
       <div class="user_edit_button_container">
-        <%if @user.id == current_user.id%><button class="user_edit_button_frame"><%= link_to '編集',root_path %></button><%end%>
+        <%if @user.id == current_user.id%><button class="user_edit_button_frame"><%= link_to '編集',edit_user_registration_path %></button><%end%>
       </div>
     </div>
     <div class="user_middle_container">
