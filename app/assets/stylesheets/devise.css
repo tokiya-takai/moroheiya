@@ -185,9 +185,9 @@ select::-ms-expand {
   border-radius: 75px;
   position: relative;
 }
-.edit_user_image_frame::after {
+/* .edit_user_image_frame::after {
 
-}
+} */
 #user-image {
   display: none;
 }
