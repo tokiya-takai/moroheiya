@@ -1,3 +1,4 @@
+// ユーザープロフィール表示ボタン
 $(function () {
   const userProfile = document.querySelector('.user_profile');
 
@@ -20,8 +21,6 @@ $(function () {
   });
 });
 
-
-
 $.fn.animate2 = function (properties, duration, ease) {
   ease = ease || 'ease';
   var $this = this;
@@ -35,3 +34,14 @@ $.fn.animate2 = function (properties, duration, ease) {
       }, duration);
   });
 };
+
+// 選択した画像を表示
+$(function() {
+  $('#user-image').on('change', function(e) {
+      var file = e.target.files[0];
+      // ブラウザ上でのみ有効なローカルなURLを取得する
+      var blobUrl = window.URL.createObjectURL(file);
+
+      $('.attr_user_image').attr('src', blobUrl);
+  });
+});

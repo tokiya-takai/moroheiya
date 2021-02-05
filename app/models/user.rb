@@ -2,27 +2,21 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable
-        #,:validatable
+         :recoverable, :rememberable,:validatable
   
   has_many :contests
   has_many :works
   has_one :favorite
+  has_one_attached :image
 
-  VALID_EMAIL_REGEX = /\A[\w\-\._]+@[\w\-\._]+\.[A-Za-z]+\z/i
-  VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i
+  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i
   JAPANESE_REGEX = /\A[ぁ-んァ-ヶ一-龥々]+\z/
   KATAKANA_REGEX = /\A[ァ-ヶー－]+\z/
-  
+
+  validates :password, format: { with: PASSWORD_REGEX }, allow_blank: true
+
   with_options presence: true do
     validates :nickname, length: { maximum: 20 }
-    #メールアドレスが必須であり、@を含んでおり、重複していないこと
-    validates :email, uniqueness: { case_sensitive: true }
-    validates :email, length: { maximum: 50 }
-    validates :email, format: { with: VALID_EMAIL_REGEX }, allow_blank: true
-    #パスワードが必須であり、半角英数字混合の6文字以上であること
-    validates :password, format: { with: VALID_PASSWORD_REGEX }, length: {minimum: 6, maximum: 100}, allow_blank: true
-    validates :password, confirmation: true
 
     validates :family_name,       format: {with: JAPANESE_REGEX }, length: { maximum: 20 }, allow_blank: true
     validates :family_name
@@ -37,4 +31,16 @@ class User < ApplicationRecord
     validates :birthday
   end
   
+  def update_without_password(params, *options)
+    params.delete(:current_password)
+
+    if params[:password].blank? && params[:password_confirmation].blank?
+      params.delete(:password)
+      params.delete(:password_confirmation)
+    end
+    result = update_attributes(params, *options)
+    clean_up_passwords
+    result
+  end
+
 end
