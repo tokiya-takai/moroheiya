@@ -1,6 +1,6 @@
 class ContestsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :list]
-  before_action :find_contest, only: [:show, :edit, :update]
+  before_action :authenticate_user!, except: [:index, :list, :show]
+  before_action :find_contest, only: [:show, :edit, :update,:finished]
 
   def index
   end

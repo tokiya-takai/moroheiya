@@ -43,16 +43,24 @@
             <div class="right_btn header_user">
               <div class="header_user_hover_area" id="user-button">
                 <div class="user_icon_container">
-                  <%= image_tag('user_icon.svg', class: :user_icon) %>
+                  <% if @current_user.image.attached? %>
+                      <%= image_tag(@current_user.image, class: :user_icon)%>
+                    <% else %>
+                      <%= image_tag('user_icon.svg', class: :user_icon) %>
+                    <% end %>
                 </div>
                 <div class="user_nick_name_container">
-                  <%= current_user.nickname %>
+                  <%= current_user.nickname %><%= image_tag('proof_name.png',class: :header_proof) if @current_user.count_first >= 1 %>
                 </div>
               </div>
               <div class="user_menu" id="user-menu">
                 <div class="user_menu_upper">
                   <div class="user_menu_image">
-                    <%= image_tag('user_icon.svg', class: :user_image) %>
+                    <% if @current_user.image.attached? %>
+                      <%= image_tag(@current_user.image, class: :user_image)%>
+                    <% else %>
+                      <%= image_tag('user_icon.svg', class: :user_image) %>
+                    <% end %>
                   </div>
                   <div class="user_menu_nickname">
                     <%= current_user.nickname%>

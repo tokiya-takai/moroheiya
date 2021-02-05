@@ -5,7 +5,7 @@
         <%= image_tag image_work.image %>
       </div>
       <div class="work_information_area">
-        <% if image_work.user.other_user.count_first >= 1 %>
+        <% if image_work.user.count_first >= 1 %>
         <%# ユーザーイメージ後入れ %>
           <p class="work_user_nickname"><%= image_work.user.nickname %><%= image_tag 'proof_name.png',class: :user_proof_icon %>さんの作品</p>
         <% else %>

@@ -126,6 +126,7 @@
 .user_proof_icon {
   width: 20px;
   height: 20px;
+  vertical-align: middle;
 }
 .work_content_container {
   width: 100%;

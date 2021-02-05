@@ -7,7 +7,7 @@
       </div>
       <h1><%= @contest.title%></h1>
       <div class="join_button_container">
-      <% if @contest.user.id == current_user.id %>
+      <% if user_signed_in? && @contest.user.id == current_user.id %>
         <button class="contest_edit_button_frame yellow_button">
           <%= link_to '編集する', edit_contest_path(@contest.id), class: :join_button %>
         </button>
