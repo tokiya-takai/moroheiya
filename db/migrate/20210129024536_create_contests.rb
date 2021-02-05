@@ -6,7 +6,7 @@ class CreateContests < ActiveRecord::Migration[6.0]
       t.integer     :category_id, null: false
       t.text        :content,     null: false
       t.datetime    :deadline,    null: false
-      t.boolean     :public,      null: false, default: false
+      t.boolean     :public,      null: false, default: true
       t.references  :user,        foreign_key: true
       t.timestamps
     end

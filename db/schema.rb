@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 2021_02_02_073314) do
     t.integer "category_id", null: false
     t.text "content", null: false
     t.datetime "deadline", null: false
-    t.boolean "public", default: false, null: false
+    t.boolean "public", default: true, null: false
     t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

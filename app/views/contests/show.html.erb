@@ -24,11 +24,15 @@
   </div>
   <div class="work_list_wrapper">
     <ul class="work_list">
-    <% if @contest.genre_id == 2%>
-      <%= render partial: 'image_work', collection: @works, local: { image_work: @works }%>
-    <% else %>
-      <%= render partial: 'video_work', collection: @works, local: { video_work: @works }%>
-    <% end%>
+      <% if @contest.public == false %>
+        <h1 class="not_public">このコンテストは非公開です。</h2>
+      <% else %>
+        <% if @contest.genre_id == 2%>
+          <%= render partial: 'image_work', collection: @works, local: { image_work: @works }%>
+        <% else %>
+          <%= render partial: 'video_work', collection: @works, local: { video_work: @works }%>
+        <% end%>
+      <%end%>
     </ul>
   </div>
 </div>
