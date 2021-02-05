@@ -158,9 +158,7 @@
   box-sizing: border-box;
 }
 /* ファイル選択 */
-.start_form_button_area {
-  /* width: 30%; */
-}
+
 #thumbnail { 
   display: none;
 }
@@ -169,7 +167,6 @@
 }
 .browse_btn {
   display: block;
-  /* width: 100%; */
   text-align: center;
   background-color: #ebebeb;
   padding: 3px;

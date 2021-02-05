@@ -12,29 +12,19 @@
 |   family_name_kana  | string  | null: false |
 |   first_name_kana   | string  | null: false |
 |       birthday      | string  | null: false |
+|      profile        | integer |             |
+|   black_favorite    | integer |             |
+|   gold_favorite     | integer |             |
+|   purple_favorite   | integer |             |
+|    count_first      | integer |             |
+|    count_second     | integer |             |
+|    count_third      | integer |             |
 
 ### Associations
 
-has_one :other_user
 has_many :contests
 has_many :works
 has_one :favorite
-
-## other_users テーブル
-|       Column        |  Type      |   Options   |
-| ------------------- | ---------- | ----------- |
-|       user          | references |
-|      profile        | integer    |             |
-|   black_favorite    | integer    |             |
-|   gold_favorite     | integer    |             |
-|   purple_favorite   | integer    |             |
-|    count_first      | integer    |             |
-|    count_second     | integer    |             |
-|    count_third      | integer    |             |
-
-### Associations
-
-belongs_to :user
 
 
 ## contests テーブル

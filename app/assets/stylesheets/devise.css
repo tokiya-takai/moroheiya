@@ -168,3 +168,76 @@ select::-ms-expand {
 }
 
 /* アカウント情報編集 */
+.edit_user_wrapper {
+  margin: 50px 0;
+}
+.edit_user_division {
+  display: flex;
+}
+.edit_user_image_wrapper {
+  width: 40%;
+}
+.edit_user_image_container {
+  width: 200px;
+  height: 280px;
+  margin: 0 50px 0 auto;
+  border: 1px solid #2d2020;
+  border-radius: 3px;
+}
+.edit_user_image_frame {
+  width: 150px;
+  height: 150px;
+  border-radius: 75px;
+  margin: 20px auto;
+}
+#user-image {
+  display: none;
+}
+.user_browse_btn {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ebebeb;
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid #2d2020;
+}
+.edit_user_information_wrapper {
+  width: 40%;
+  border: 1px solid #2d2020;
+  border-radius: 3px;
+  padding: 28px 0 0 15px;
+  font-size: 16px;
+}
+.edit_input {
+  width: 60%;
+  margin-top: 5px;
+  height: 40px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #2d2020;
+  background: #fff;
+  font-size: 13px;
+  resize: none;
+}
+.edit_input_profile {
+  width: 90%;
+  margin-top: 5px;
+  height: 220px;
+  padding: 10px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #2d2020;
+  background: #fff;
+  font-size: 13px;
+  resize: none;
+}
+.edit_actions {
+  width: 60px;
+  height: 28px;
+  text-align: center;
+  background-color: #ffd500;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px #aaaaaa;
+  margin: 20px 30px 5px auto;
+}

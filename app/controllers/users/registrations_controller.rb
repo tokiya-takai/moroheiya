@@ -15,7 +15,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
     # paramsにbackがあれば、情報を保持したまま入力ページへ遷移するためnewアクションへrender
     render :new and return if params[:back]
     super
-    OtherUser.create(user_id: @user.id)
   end
 
   # GET /resource/edit
@@ -59,7 +58,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   super
   # end
 
-  # protected
+  protected
+
+  def update_resource(resource, params)
+    resource.update_without_password(params)
+  end
 
   # If you have extra params to permit, append them to the sanitizer.
   # def configure_sign_up_params
