@@ -9,12 +9,14 @@
             <% if @user.image.attached? %>
               <%= image_tag(@user.image, class:"user_image attr_user_image") %>
             <% else %>
-              <%= image_tag'user_icon.svg', class: :user_image%>
+              <%= image_tag'user_icon.svg', class: "user_image attr_user_image"%>
             <% end %>
           </div>
           <label for="user-image" class="select_user_image">
             <span class="user_browse_btn">画像をアップロード</span><%= f.file_field :image, id: "user-image" %>
           </label>
+          <p class="delete_user_image">画像を削除</p>
+          <%= f.text_field :image_delete_message, id:"image-delete-message"%>
         </div>
       </div>
       <div class="edit_user_information_wrapper">

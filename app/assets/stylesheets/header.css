@@ -107,20 +107,26 @@
 }
 /* ユーザー表示 */
 .user_icon_container {
-  width: 26px;
-  height: 26px;
+  width: 28px;
+  height: 28px;
   margin-right: 10px;
-  border-radius: 13px;
 }
 .user_icon {
-  width: 100%;
-  object-fit: fill;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 .user_nick_name_container {
   line-height: 30px;
   width: 100px;
   height: 30px;
   overflow: hidden;
+}
+.header_proof {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
 }
 .header_user {
   margin-right: 20px;

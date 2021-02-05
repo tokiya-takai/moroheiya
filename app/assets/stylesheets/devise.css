@@ -203,6 +203,18 @@ select::-ms-expand {
   border-radius: 5px;
   border: 1px solid #2d2020;
 }
+.delete_user_image {
+  width: 80px;
+  text-align: center;
+  margin: 10px auto;
+  cursor: pointer;
+}
+.delete_user_image:hover {
+  opacity: 0.7;
+}
+#image-delete-message {
+  display: none;
+}
 .edit_user_information_wrapper {
   width: 40%;
   border: 1px solid #2d2020;

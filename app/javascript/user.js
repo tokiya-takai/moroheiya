@@ -42,6 +42,14 @@ $(function() {
       // ブラウザ上でのみ有効なローカルなURLを取得する
       var blobUrl = window.URL.createObjectURL(file);
 
-      $('.attr_user_image').attr('src', blobUrl);
+    $('.attr_user_image').attr('src', blobUrl);
+    $('#image-delete-message').val('false');
+  });
+});
+
+$(function () {
+  $('.delete_user_image').on('click', function () {
+    $('.attr_user_image').attr('src', '/assets/user_icon.svg');
+    $('#image-delete-message').val('true');
   });
 });

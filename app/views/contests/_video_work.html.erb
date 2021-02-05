@@ -5,11 +5,11 @@
         <%= image_tag video_work.image %>
       </div>
       <div class="work_information_area">
-        <% if video_work.user.other_user.count_first >= 1 %>
+        <% if video_work.user.count_first >= 1 %>
         <%# ユーザーイメージ後入れ %>
-          <p class="work_user_nickname"><%= video_work.user.nickname %><%= image_tag 'proof_name.png',class: :user_proof_icon %>さんの作品</p>
+          <p class="work_user_nickname"><%= image_tag(image_work.user.image, class: :work_user_icon )%><%= video_work.user.nickname %><%= image_tag 'proof_name.png',class: :user_proof_icon %>さんの作品</p>
         <% else %>
-         <p class="work_user_nickname"><%= video_work.user.nickname %>さんの作品</p>
+         <p class="work_user_nickname"><%= image_tag(image_work.user.image, class: :work_user_icon )%><%= video_work.user.nickname %>さんの作品</p>
         <% end %>
         <div class="work_content_container">
           <%= video_work.content%>

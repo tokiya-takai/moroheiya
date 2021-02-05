@@ -20,7 +20,7 @@
     <div class="user_middle_container">
       <h2>プロフィール<span class="rotation_arrow_area"><%= image_tag'rotation.svg', class: :rotation_arrow %></span></h2>
       <div class="user_profile_container">
-        <p class="user_profile"><%if @user.profile != nil %><%= @user.profile %><%else%>まだプロフィールがありません。<%end%></p>
+        <p class="user_profile"><%if @user.profile == "" %>まだプロフィールがありません。<%else%><%= @user.profile %><%end%></p>
       </div>
     </div>
     <div class="user_lower_container">
