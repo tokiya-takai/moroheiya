@@ -1,6 +1,8 @@
 class ContestsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :list, :show]
-  before_action :find_contest, only: [:show, :edit, :update,:finished]
+  before_action :find_contest, only: [:show, :edit, :update, :finished]
+
+  require './app/lib/search_contests'
 
   def index
   end
@@ -43,6 +45,12 @@ class ContestsController < ApplicationController
   end
 
   def finished
+  end
+
+  def search
+    contests = SearchContests.search(params[:keyword])
+    @contests = Kaminari.paginate_array(contests).page(params[:page]).per(6)
+    @keyword = params[:keyword]
   end
 
 

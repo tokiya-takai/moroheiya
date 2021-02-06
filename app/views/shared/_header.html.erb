@@ -5,9 +5,9 @@
         <div class="header_left_container">
           <%= link_to image_tag('logo.png', class: :logo), root_path %>
           <div class="search_form_block">
-            <%= form_with url: '#', local: true, method: :get, class: "serch_form" do | form | %>
+            <%= form_with url: search_contests_path, local: true, method: :get, class: "serch_form" do | f | %>
               <%= image_submit_tag "search.svg", class: :search %>
-              <%= form.text_field :keyword, placeholder: "キーワードで検索", class: "search_input" %>
+              <%= f.text_field :keyword, placeholder: "コンテストを検索", class: "search_input" %>
             <% end %>
           </div>
         </div>
