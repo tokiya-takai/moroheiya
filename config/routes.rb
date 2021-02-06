@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   root to: 'tops#index'
   resources :contests, except: [:destory] do
     collection do
+      get 'search'
+
       get 'list'
 
       get 'finished'
