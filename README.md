@@ -24,7 +24,6 @@
 
 has_many :contests
 has_many :works
-has_one :favorite
 
 
 ## contests テーブル
@@ -56,22 +55,69 @@ has_one :third
 |     content     | text       | null: false |
 |       user      | references | null: false |
 |      contest    | references | null: false |
+|   black_count   | integer    |             |
+|   gold_count    | integer    |             |
+|   purple_count  | integer    |             |
+|   normal_count  | integer    |             |
 
 belongs_to :user
 belongs_to :contest
-has_one :favorite
+has_many :black
+has_many :gold
+has_many :purple
+has_many :normal
 has_one :first
 has_one :second
 has_one :third
 
-## favorites テーブル
+## normal テーブル
 
-|     Column      |    Type    |   Options        |
-| --------------- | ---------- | ---------------- |
-| black_favorite  | boolean    | default: false   |
-| gold_favorite   | boolean    | default: false   |
-| purple_favorite | boolean    | default: false   |
-| normal_favorite | boolean    | default: false   |
+|     Column      |    Type    |   Options   |
+| --------------- | ---------- | ----------- |
+|    user_id      | integer    |             |
+|    work_id      | integer    |             |
+
+
+### Association
+
+belongs_to :user
+belongs_to :work
+
+## purple テーブル
+
+|     Column      |    Type    |   Options   |
+| --------------- | ---------- | ----------- |
+|    user_id      | integer    |             |
+|    work_id      | integer    |             |
+
+
+### Association
+
+belongs_to :user
+belongs_to :work
+
+
+## gold テーブル
+
+|     Column      |    Type    |   Options   |
+| --------------- | ---------- | ----------- |
+|    user_id      | integer    |             |
+|    work_id      | integer    |             |
+
+
+### Association
+
+belongs_to :user
+belongs_to :work
+
+
+## black テーブル
+
+|     Column      |    Type    |   Options   |
+| --------------- | ---------- | ----------- |
+|    user_id      | integer    |             |
+|    work_id      | integer    |             |
+
 
 ### Association
 

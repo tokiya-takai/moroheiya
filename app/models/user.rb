@@ -4,10 +4,15 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable,:validatable
   
-  has_many :contests
-  has_many :works
-  has_one :fav
-  has_one_attached :image
+  has_many :contests, dependent: :destroy
+  has_many :works, dependent: :destroy
+  has_many :normals, dependent: :destroy
+  has_many :normal_works, through: :normals, source: :work
+
+  has_one_attached :image, dependent: :destroy
+
+
+
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i
   JAPANESE_REGEX = /\A[ぁ-んァ-ヶ一-龥々]+\z/

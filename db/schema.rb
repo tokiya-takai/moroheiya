@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_02_073314) do
+ActiveRecord::Schema.define(version: 2021_02_06_162819) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -47,17 +47,11 @@ ActiveRecord::Schema.define(version: 2021_02_02_073314) do
     t.index ["user_id"], name: "index_contests_on_user_id"
   end
 
-  create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "user_id"
-    t.bigint "work_id"
-    t.boolean "black_favorite", default: false
-    t.boolean "gold_favorite", default: false
-    t.boolean "purple_favorite", default: false
-    t.boolean "normal_favorite", default: false
+  create_table "normals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "work_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_favorites_on_user_id"
-    t.index ["work_id"], name: "index_favorites_on_work_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -92,14 +86,13 @@ ActiveRecord::Schema.define(version: 2021_02_02_073314) do
     t.bigint "contest_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "normals_count"
     t.index ["contest_id"], name: "index_works_on_contest_id"
     t.index ["user_id"], name: "index_works_on_user_id"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "contests", "users"
-  add_foreign_key "favorites", "users"
-  add_foreign_key "favorites", "works"
   add_foreign_key "works", "contests"
   add_foreign_key "works", "users"
 end

@@ -21,12 +21,6 @@
         <div class="work_content_container">
           <%= video_work.content%>
         </div>
-        <ul class="list_favorite_icons">
-          <li class="favorite_icons"><%= image_tag 'black_icon.png', class: :work_fav_icons %><%= video_work.favorite.black_favorite.to_s(:delimited) %></li>
-          <li class="favorite_icons"><%= image_tag 'gold_icon.png', class: :work_fav_icons %><%= video_work.favorite.gold_favorite.to_s(:delimited) %></li>
-          <li class="favorite_icons"><%= image_tag 'purple_icon.png', class: :work_fav_icons %><%= video_work.favorite.purple_favorite.to_s(:delimited) %></li>
-          <li class="favorite_icons"><%= image_tag 'normal_icon.png', class: :work_fav_icons %><%= video_work.favorite.normal_favorite.to_s(:delimited) %></li>
-        </ul>
       </div>
     <% end %>
   </div>

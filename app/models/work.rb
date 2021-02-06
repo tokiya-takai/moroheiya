@@ -1,12 +1,13 @@
 class Work < ApplicationRecord
   belongs_to :user
   belongs_to :contest
-  has_one :favorite
+  has_many :normals, dependent: :destroy
+  has_many :working_users, through: :works, source: :user
 
   counter_culture :contest, column_name: 'works_count'
 
-  has_one_attached :image
-  has_one_attached :video
+  has_one_attached :image, dependent: :destroy
+  has_one_attached :video, dependent: :destroy
 
   with_options presence: true do
     validates :title,   length: {maximum: 40}

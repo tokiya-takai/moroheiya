@@ -1,7 +1,7 @@
 class Contest < ApplicationRecord
   belongs_to :user
-  has_many :works
-  has_one_attached :image
+  has_many :works, dependent: :destroy
+  has_one_attached :image, dependent: :destroy
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :genre

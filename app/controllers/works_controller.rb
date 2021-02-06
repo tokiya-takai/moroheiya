@@ -53,7 +53,6 @@ class WorksController < ApplicationController
     end
 
     if @work.save
-      @favorite = Favorite.create(user_id: current_user.id, work_id: @work.id)
       render :finished
     else
       render :new
@@ -77,6 +76,7 @@ class WorksController < ApplicationController
 
   def finished
   end
+
 
   private
   def work_params
