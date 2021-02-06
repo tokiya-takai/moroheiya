@@ -5,11 +5,18 @@
         <%= image_tag image_work.image %>
       </div>
       <div class="work_information_area">
-        <% if image_work.user.count_first >= 1 %>
-        <%# ユーザーイメージ後入れ %>
-          <p class="work_user_nickname"><%= image_tag(image_work.user.image, class: :work_user_icon )%><%= image_work.user.nickname %><%= image_tag 'proof_name.png',class: :user_proof_icon %>さんの作品</p>
+        <% if image_work.user.image.attached? %>
+          <% if image_work.user.count_first >= 1 %>
+            <p class="work_user_nickname"><%= image_tag(image_work.user.image, class: :work_user_icon )%><%= image_work.user.nickname %><%= image_tag 'proof_name.png',class: :user_proof_icon %>さんの作品</p>
+          <% else %>
+            <p class="work_user_nickname"><%= image_tag(image_work.user.image, class: :work_user_icon )%><%= image_work.user.nickname %>さんの作品</p>
+          <% end %>
         <% else %>
-         <p class="work_user_nickname"><%= image_tag(image_work.user.image, class: :work_user_icon )%><%= image_work.user.nickname %>さんの作品</p>
+          <% if image_work.user.count_first >= 1 %>
+            <p class="work_user_nickname"><%= image_tag('user_icon.svg', class: :work_user_icon )%><%= image_work.user.nickname %><%= image_tag 'proof_name.png',class: :user_proof_icon %>さんの作品</p>
+          <% else %>
+            <p class="work_user_nickname"><%= image_tag('user_icon.svg', class: :work_user_icon )%><%= image_work.user.nickname %>さんの作品</p>
+          <% end %>
         <% end %>
         <div class="work_content_container">
           <%= image_work.content%>
