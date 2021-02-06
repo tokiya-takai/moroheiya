@@ -213,12 +213,12 @@ body {
   margin: 0 20px;
 }
 
-.form_block {
-  width: 45%;
+.search_form_block {
+  width: 40%;
   height: 25px;
   border: 1px solid #707070;
-  /* background-color: #f6f6f6; */
-  /* border-radius: 2px; */
+  background-color: #f6f6f6;
+  border-radius: 3px;
 }
 
 .search_form {
@@ -227,16 +227,17 @@ body {
 }
 
 .search {
-  /* height: 13px;
-  margin-left: 2px; */
-  width: 10%;
+  position: absolute;
+  width: 25px;
+  padding: 3px;
 }
 
 .search_input {
-  /* color: #707070; */
-  /* font-size: 8px; */
-  width: 90%;
-  /* height: 100%; */
+  width: 100%;
+  line-height: 25px;
+  padding: 0 0 0 25px;
+  color: #707070;
+  font-size: 8px;
 }
 
 .header_nav {

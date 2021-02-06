@@ -4,7 +4,7 @@
       <div class="header_left">
         <div class="header_left_container">
           <%= link_to image_tag('logo.png', class: :logo), root_path %>
-          <div class="form_block">
+          <div class="search_form_block">
             <%= form_with url: '#', local: true, method: :get, class: "serch_form" do | form | %>
               <%= image_submit_tag "search.svg", class: :search %>
               <%= form.text_field :keyword, placeholder: "キーワードで検索", class: "search_input" %>
