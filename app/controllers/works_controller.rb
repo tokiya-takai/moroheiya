@@ -3,6 +3,8 @@ class WorksController < ApplicationController
   before_action :find_contest, only: [:new, :create, :show, :edit, :update]
   before_action :find_work, only: [:show, :edit, :update, :finished]
 
+  require './app/lib/file_validation'
+
   def show
   end
 
@@ -16,18 +18,37 @@ class WorksController < ApplicationController
 
   def create
     @work = Work.new(work_params)
+
     if (@contest.genre_id == 3) && (@work.video.blank?)
       @work.valid?
       @work.errors[:base] << "動画が選択されていません。"
       render :new and return
     end
 
-    if (@contest.genre_id == 3)
-      filename = @work.video.filename.to_s
-      unless filename.end_with?(".mp4")
+    if !(@work.image.blank?)
+      case @contest.genre_id
+      when 2
+        filename = @work.image.filename.to_s
+        unless FileValidation.check(filename)
+          @work.valid?
+          @work.errors[:base] << "画像のファイル形式でアップロードしてください。(png jpg bmp pict)"
+          render :new and return
+        end
+
+      when 3
+        filename = @work.image.filename.to_s
+        flag = false
         @work.valid?
-        @work.errors[:base] << "動画はmp4形式でアップロードしてください。"
-        render :new and return
+        unless FileValidation.check(filename)
+          @work.errors[:base] << "画像のファイル形式でアップロードしてください。(png jpg bmp pict)"
+          flag = true
+        end
+        filename = @work.video.filename.to_s
+        unless filename.end_with?(".mp4")
+          @work.errors[:base] << "動画はmp4形式でアップロードしてください。"
+          flag = true
+        end
+        render :new and return if flag
       end
     end
 
