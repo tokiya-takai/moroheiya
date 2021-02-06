@@ -50,10 +50,10 @@ ActiveRecord::Schema.define(version: 2021_02_02_073314) do
   create_table "favorites", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "work_id"
-    t.integer "black_favorite", default: 0
-    t.integer "gold_favorite", default: 0
-    t.integer "purple_favorite", default: 0
-    t.integer "normal_favorite", default: 0
+    t.boolean "black_favorite", default: false
+    t.boolean "gold_favorite", default: false
+    t.boolean "purple_favorite", default: false
+    t.boolean "normal_favorite", default: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_favorites_on_user_id"

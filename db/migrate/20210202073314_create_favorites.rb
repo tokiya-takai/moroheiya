@@ -3,10 +3,10 @@ class CreateFavorites < ActiveRecord::Migration[6.0]
     create_table :favorites do |t|
       t.references      :user,  foreign_key: true
       t.references      :work,  foreign_key: true
-      t.integer         :black_favorite,  default: 0
-      t.integer         :gold_favorite,   default: 0
-      t.integer         :purple_favorite, default: 0
-      t.integer         :normal_favorite, default: 0
+      t.boolean         :black_favorite,  default: false
+      t.boolean         :gold_favorite,   default: false
+      t.boolean         :purple_favorite, default: false
+      t.boolean         :normal_favorite, default: false
       t.timestamps
     end
   end

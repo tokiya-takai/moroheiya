@@ -2097,6 +2097,7 @@ select::-ms-expand {
   width: 100%;
   line-height: 30px;
   padding-top: 2px;
+  white-space: nowrap;
   overflow: hidden;
 }
 
@@ -2321,7 +2322,7 @@ select::-ms-expand {
 }
 
 .work_favorite {
-  padding-left: 20px;
+  margin-left: 20px;
   font-size: 20px;
 }
 
