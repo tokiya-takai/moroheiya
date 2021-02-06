@@ -1,6 +1,9 @@
+@charset "UTF-8";
 body {
-  font-family: "Open Sans", "Myriad", Helvetica, Arial, "Noto Sans JP", sans-serif;
-  font: bold 14px "ヒラギノ角ゴ ProN W3", "Hiragino KaKu Gothic ProN", "メイリオ", Meiryo,"Lucida Grande", Verdana, "MS Pゴシック", sans-serif;
+  font-family: 'Roboto', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font: 700 14px "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  /* font-family: "Open Sans", "Myriad", Helvetica, Arial, "Noto Sans JP", sans-serif;
+  font: bold 14px "ヒラギノ角ゴ ProN W3", "Hiragino KaKu Gothic ProN", "メイリオ", Meiryo,"Lucida Grande", Verdana, "MS Pゴシック", sans-serif; */
   color: #2d2020;
 }
 
@@ -8,9 +11,10 @@ body {
 .hero_container {
   width: 100vw;
   height: 75vh;
-  background-image: url('/images/main.jpg');
+  background-image: url("/images/main.jpg");
   background-size: cover;
 }
+
 .catch_copy {
   width: 100%;
   font-size: 75px;
@@ -21,62 +25,82 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
   /* -webkit- transform: translateY(-50%) translateX(-50%); */
   opacity: 0;
 }
+
 .hero_border {
   display: block;
   width: 100%;
   height: 50px;
   background-color: #2d2020;
 }
+
 .initial {
   height: 150px;
 }
+
 .initial_title {
   text-align: center;
   font-size: 30px;
   margin: 20px 0;
 }
+
 .initial_button_container {
   font-size: 20px;
 }
+
 .initial_button_frame {
   width: 250px;
   height: 40px;
-  margin: 0 auto;;
+  margin: 0 auto;
   border-radius: 5px;
   background-color: #ffd500;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  box-shadow: 2px 3px #aaaaaa;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 2px 3px #aaaaaa;
+          box-shadow: 2px 3px #aaaaaa;
 }
+
 .initial_button_frame:hover {
   background-color: #ffe76e;
   color: #503f3f;
 }
+
 .initial_button {
-  display: block;
+  text-align: center;
   line-height: 40px;
   width: 100%;
-  height: 100%;
 }
 
 /* MOROHEIYA(what)とは */
-
 .what {
   height: 1600px;
 }
+
 .what_title_container {
   width: 100%;
   height: 16%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .what_title {
   width: 30%;
   text-align: center;
@@ -85,33 +109,44 @@ body {
 }
 
 /* 共通設定 */
-.what_first,.what_second {
+.what_first, .what_second {
   height: 43%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.what_content_container,.what_image_container {
+
+.what_content_container, .what_image_container {
   width: 50%;
 }
+
 .what_content {
   width: 75%;
   font-size: 25px;
   margin: 0 auto;
 }
+
 .what_content_title {
   font-size: 30px;
 }
+
 .what_image_body {
   margin: 0 auto;
   text-align: center;
 }
+
 .what_image {
   width: 500px;
   height: 500px;
 }
-/* ここまで */
 
+/* ここまで */
 /* 特徴 */
 .feature {
   width: 100%;
@@ -119,9 +154,11 @@ body {
   background-color: #2d2020;
   color: #fbfbfb;
 }
+
 .feature_title_container {
   height: 20%;
 }
+
 .feature_title {
   width: 7%;
   text-align: center;
@@ -130,66 +167,109 @@ body {
   margin: 0 auto;
   padding-top: 20px;
 }
+
 .feature_upper {
   height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 24px;
 }
+
 .feature_upper_left, .feature_upper_right, .feature_lower_left, .feature_lower_right {
   width: 50%;
   height: 100%;
 }
+
 .three_types {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .type {
   width: 130px;
   height: 130px;
   margin: 0 15px;
 }
+
 .type_names {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .type_name {
   width: 130px;
   text-align: center;
   margin: 0 15px;
 }
+
 .three_types_content {
   text-align: center;
   margin-top: 10px;
 }
+
 .proof {
   margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .proof_image {
   height: 130px;
 }
+
 .proof_content {
   margin-top: 46px;
   text-align: center;
 }
+
 .feature_lower {
   height: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 24px;
 }
+
 .favo_content {
   width: 60%;
   margin: 0 auto;
 }
+
 .feature_to_how {
   font-size: 18px;
   border-bottom: 1px solid #fbfbfb;
@@ -201,9 +281,11 @@ body {
   /* height: 650px; */
   height: auto;
 }
+
 .pick_up_title_container {
   height: 150px;
 }
+
 .pick_up_title {
   width: 15%;
   text-align: center;
@@ -212,25 +294,37 @@ body {
   margin: 0 auto;
   padding-top: 20px;
 }
+
 .to_list_container {
   height: 80px;
   font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 .to_list_container a {
   opacity: 1;
+  -webkit-transition: 200ms;
   transition: 200ms;
 }
+
 .to_list_container a:hover {
   opacity: 0.7;
 }
+
 .dummy {
   width: 300px;
   height: 370px;
   position: relative;
 }
+
 .fukidashi {
   width: 200px;
   position: absolute;
@@ -241,6 +335,7 @@ body {
   background: #ffd500;
   opacity: 0;
 }
+
 .fukidashi:after {
   position: absolute;
   width: 0;
@@ -254,45 +349,60 @@ body {
   pointer-events: none;
   content: " ";
 }
-/* コンテスト表示は共通 */
 
+/* コンテスト表示は共通 */
 /* トップページラスト  */
 .top_page_last {
   width: 100vw;
   height: 80vh;
-  background-image: url('/images/footer_image.jpg');
+  background-image: url("/images/footer_image.jpg");
   background-size: cover;
 }
+
 .last_title {
   text-align: center;
   font-size: 50px;
   padding-top: 40px;
 }
+
 .last_button_container {
-  height: 100px;
+  height: 55px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
 }
+
 .last_button_frame {
   width: 18%;
-  height: 55%;
+  height: 100%;
   margin: 0 auto;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #f15656;
   border-radius: 5px;
-  box-shadow: 2px 3px #8f7c00;
+  -webkit-box-shadow: 2px 3px #8f7c00;
+          box-shadow: 2px 3px #8f7c00;
 }
+
 .last_button_frame:hover {
   background-color: #f18585;
 }
+
 .last_button {
   line-height: 55px;
-  display: block;
   width: 100%;
-  height: 100%;
   font-size: 20px;
+  text-align: center;
   color: #fbfbfb;
 }
