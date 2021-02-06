@@ -66,12 +66,12 @@ has_one :third
 
 ## favorites テーブル
 
-|     Column      |    Type    |   Options   |
-| --------------- | ---------- | ----------- |
-| black_favorite  | integer    |             |
-| gold_favorite   | integer    |             |
-| purple_favorite | integer    |             |
-| normal_favorite | integer    |             |
+|     Column      |    Type    |   Options        |
+| --------------- | ---------- | ---------------- |
+| black_favorite  | boolean    | default: false   |
+| gold_favorite   | boolean    | default: false   |
+| purple_favorite | boolean    | default: false   |
+| normal_favorite | boolean    | default: false   |
 
 ### Association
 

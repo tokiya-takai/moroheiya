@@ -2127,7 +2127,7 @@ select::-ms-expand {
   margin-right: 7px;
 }
 
-.work_icons {
+.work_fav_icons {
   width: 20px;
   height: 20px;
   margin-right: 4px;
@@ -2325,7 +2325,7 @@ select::-ms-expand {
   font-size: 20px;
 }
 
-.work_favo {
+.work_fav {
   width: 30px;
   height: 30px;
 }
