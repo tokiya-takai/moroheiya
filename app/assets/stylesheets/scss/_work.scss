@@ -131,10 +131,11 @@
   display: flex;
 }
 .work_favorite {
-  padding-left: 20px;
+  margin-left: 20px;
   font-size: 20px;
+  cursor: pointer;
 }
-.work_favo {
+.work_fav {
   width: 30px;
   height: 30px;
 }
