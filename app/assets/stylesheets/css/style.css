@@ -2635,3 +2635,8 @@ select::-ms-expand {
   border: 1px solid #aaaaaa;
   border-radius: 6px;
 }
+
+.order_error {
+  text-align: center;
+  color: red;
+}

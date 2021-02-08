@@ -4,6 +4,7 @@
   <div class="order_container">
     <h1>いいねを購入する</h1>
     <%= form_with model: @order, url: confirm_orders_path, local: true do |f|%>
+      <%= render 'error_messages', model: f.object%>
       <div class="order_group">
         <div class="order_icon_container">
           <%= image_tag 'black_icon.png'%>
