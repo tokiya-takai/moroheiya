@@ -29,9 +29,11 @@ Rails.application.routes.draw do
   end
   
   resources :users
-  resources :orders, only: [:new, :create, :confirm] do
+  resources :orders, only: [:new, :create, :confirm, :complete] do
     collection do
       post 'confirm'
+
+      get 'complete'
     end
   end
 end
