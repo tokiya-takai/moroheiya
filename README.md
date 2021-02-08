@@ -24,6 +24,7 @@
 
 has_many :contests
 has_many :works
+has_many :normals
 
 
 ## contests テーブル
@@ -62,10 +63,10 @@ has_one :third
 
 belongs_to :user
 belongs_to :contest
-has_many :black
-has_many :gold
-has_many :purple
-has_many :normal
+has_many :blacks
+has_many :golds
+has_many :purples
+has_many :normals
 has_one :first
 has_one :second
 has_one :third

@@ -1121,9 +1121,28 @@ select::-ms-expand {
   display: flex;
 }
 
-.user_medals {
+.user_medals, .user_fav {
   width: 80px;
   height: 80px;
+}
+
+.user_fav_list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.user_has_favorites {
+  border-top: 1px solid #aaaaaa;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 /* トップページ */
@@ -2114,24 +2133,6 @@ select::-ms-expand {
   font-size: 12px;
   padding: 0 5px;
   overflow: hidden;
-}
-
-.list_favorite_icons {
-  padding-left: 7px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.favorite_icons {
-  margin-right: 7px;
-}
-
-.work_fav_icons {
-  width: 20px;
-  height: 20px;
-  margin-right: 4px;
 }
 
 /* 作品投稿フォーム */

@@ -97,7 +97,15 @@
 .user_medal_list {
   display: flex;
 }
-.user_medals {
+.user_medals,.user_fav {
   width: 80px;
   height: 80px;
+}
+.user_fav_list {
+  display: flex;
+}
+.user_has_favorites {
+  border-top: 1px solid #aaaaaa;
+  display: flex;
+  justify-content: space-between;
 }
