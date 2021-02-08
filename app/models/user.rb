@@ -6,6 +6,7 @@ class User < ApplicationRecord
   
   has_many :contests, dependent: :destroy
   has_many :works, dependent: :destroy
+  has_many :order
   has_many :normals, dependent: :destroy
   has_many :normal_works, through: :normals, source: :work
 
