@@ -10,7 +10,7 @@
         </div>
         <p>blackいいね &nbsp;@¥500</p>
         <div class="order_input">
-          <%= f.number_field :black, min: 0 %>
+          <%= f.number_field :black, min: 0, readonly: true %>
         </div>      </div>
       <div class="order_group">
         <div class="order_icon_container">
@@ -18,7 +18,7 @@
         </div>
         <p>goldいいね &nbsp;&nbsp;&nbsp;@¥200</p>
         <div class="order_input">
-          <%= f.number_field :gold, min: 0 %>
+          <%= f.number_field :gold, min: 0, readonly: true %>
         </div>      </div>
       <div class="order_group">
         <div class="order_icon_container">
@@ -26,10 +26,10 @@
         </div>
         <p>purpleいいね @¥100</p>
         <div class="order_input">
-          <%= f.number_field :purple, min: 0 %>
+          <%= f.number_field :purple, min: 0, readonly: true %>
         </div>
       </div>
-      <%= f.submit '確認'%>
+      <%= f.submit '購入する'%>
     <% end %>
   </div>
 </div>
