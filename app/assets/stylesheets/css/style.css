@@ -2569,26 +2569,90 @@ select::-ms-expand {
 
 .order_wrapper {
   width: 100vw;
-  height: 80vh;
+  height: 800px;
   margin-bottom: 100px;
 }
 
-.order_container {
+.card_container {
   width: 50%;
-  height: 330px;
-  margin: 100px auto 0 auto;
-  border: 1px solid #2d2020;
-  -webkit-box-shadow: 2px 2px 3px #aaaaaa;
-          box-shadow: 2px 2px 3px #aaaaaa;
+  margin: 0 auto;
 }
 
-.order_container h1 {
+.card_form_group {
+  margin-bottom: 20px;
+}
+
+.card_form_group input {
+  width: 70%;
+  height: 28px;
+  border: 1px solid #aaaaaa;
+}
+
+.available_card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 35px;
+}
+
+.card_logo {
+  width: 40px;
+  margin: 3px 5px;
+}
+
+.card_text {
+  font-size: 16px;
+}
+
+.card_text span {
+  font-size: 13px;
+  padding: 3px;
+  color: white;
+  background-color: #ea352d;
+  border-radius: 2px;
+}
+
+.input_expiration_date_wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.input_expiration_date_wrap textarea {
+  width: 20%;
+  height: 28px;
+  border: 1px solid #aaaaaa;
+}
+
+.order_container, .card_information_area {
+  width: 50%;
+  height: 350px;
+  border: 1px solid #2d2020;
+}
+
+.order_container h1, .card_information_area h1 {
   display: block;
   width: 30%;
-  margin: 10px auto;
+  margin: 0 auto 20px auto;
+  padding-top: 20px;
   text-align: center;
   font-size: 25px;
   border-bottom: 5px solid #ffd500;
+}
+
+.card_information_area {
+  margin: 100px auto 0 auto;
+  -webkit-box-shadow: 2px 0px 3px #aaaaaa;
+          box-shadow: 2px 0px 3px #aaaaaa;
+}
+
+.order_container {
+  margin: 0 auto;
+  -webkit-box-shadow: 2px 2px 3px #aaaaaa;
+          box-shadow: 2px 2px 3px #aaaaaa;
+  border-top: none;
 }
 
 .order_group {
