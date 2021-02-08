@@ -37,7 +37,7 @@
             <li class="list_user_gold"><%= image_tag('gold_icon.png', class: :user_fav)%><%= @user.gold_favorite %></li>
             <li class="list_user_purple"><%= image_tag('purple_icon.png', class: :user_fav)%><%= @user.purple_favorite %></li>
           </ul>
-          <button>いいねを購入</button>
+          <button><%= link_to 'いいねを購入する', new_order_path %></button>
         </div>
       <% end %>
     </div>
