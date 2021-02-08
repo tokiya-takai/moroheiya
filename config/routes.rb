@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',
-    :sessions => 'users/sessions'   
+    :sessions => 'users/sessions'
   } 
   devise_scope :user do
     get "sign_in", :to => "users/sessions#new"
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
       
       get 'finished'
     end
-    resources :works do      
+    resources :works do
       collection do
         get 'finished'
       end
@@ -29,4 +29,5 @@ Rails.application.routes.draw do
   end
   
   resources :users
+  resources :orders
 end
