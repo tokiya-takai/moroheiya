@@ -2570,12 +2570,13 @@ select::-ms-expand {
 .order_wrapper {
   width: 100vw;
   height: 80vh;
+  margin-bottom: 100px;
 }
 
 .order_container {
   width: 50%;
-  height: 300px;
-  margin: 100px auto;
+  height: 330px;
+  margin: 100px auto 0 auto;
   border: 1px solid #2d2020;
   -webkit-box-shadow: 2px 2px 3px #aaaaaa;
           box-shadow: 2px 2px 3px #aaaaaa;
@@ -2639,4 +2640,22 @@ select::-ms-expand {
 .order_error {
   text-align: center;
   color: red;
+}
+
+.order_button {
+  display: block;
+  width: 15%;
+  height: 30px;
+  margin: 15px auto 0 auto;
+}
+
+.order_button input {
+  width: 100%;
+  line-height: 30px;
+  background-color: #ffd500;
+  border-radius: 3px;
+  -webkit-box-shadow: 2px 2px 2px #aaaaaa;
+          box-shadow: 2px 2px 2px #aaaaaa;
+  font-size: 20px;
+  text-align: center;
 }

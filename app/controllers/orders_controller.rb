@@ -9,7 +9,6 @@ class OrdersController < ApplicationController
 
   def confirm
     @order = Order.new(order_params)
-    binding.pry
     if (@order.black == nil) && (@order.gold == nil) && (@order.purple == nil)
       @order.errors[:base] << "1つ以上選択してください。"
       render :new

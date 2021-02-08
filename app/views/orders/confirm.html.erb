@@ -2,7 +2,7 @@
 
 <div class="order_wrapper">
   <div class="order_container">
-    <h1>いいねを購入する</h1>
+    <h1>購入内容確認</h1>
     <%= form_with model: @order, url: confirm_orders_path, local: true do |f|%>
       <div class="order_group">
         <div class="order_icon_container">
@@ -29,7 +29,7 @@
           <%= f.number_field :purple, min: 0, readonly: true %>
         </div>
       </div>
-      <%= f.submit '購入する'%>
+      <button class="order_button"><%= f.submit '購入する'%></button>
     <% end %>
   </div>
 </div>
