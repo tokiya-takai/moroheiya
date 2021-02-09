@@ -10,10 +10,11 @@ class OrdersController < ApplicationController
   def create
     if @order.save
       add_user_favorite
+      pay = calc_pay
       card = Card.where(user_id: current_user.id).first
       Payjp.api_key = ENV['PAYJP_SECRET_KEY']
       Payjp::Charge.create(
-        :amount => 13500,
+        :amount => pay,
         :customer => card.customer_id,
         :currency => 'jpy',
       )
@@ -25,10 +26,14 @@ class OrdersController < ApplicationController
   end
 
   def confirm
-    if (@order.black == nil) && (@order.gold == nil) && (@order.purple == nil)
+    if (@order.black == nil || @order.black == 0 ) && (@order.gold == nil || @order.gold == 0 ) && (@order.purple == nil || @order.purple == 0 )
       @order.errors[:base] << "1つ以上選択してください。"
       render :new and return
     end
+    @order.black = 0 if @order.black == nil
+    @order.gold = 0 if @order.gold == nil
+    @order.purple = 0 if @order.purple == nil
+    
     card = Card.where(user_id: current_user.id).first
     if card.blank?
       redirect_to controller: "card", action: "new"
@@ -56,12 +61,7 @@ class OrdersController < ApplicationController
   end
 
   def add_user_favorite
-    orders = params.require(:order)
-    favorites = []
-    orders.each_value do | order |
-      order = "0" if order == ""
-      favorites.push(order)
-    end
+    favorites = get_favorites
     user = User.find(@order.user_id)
     user.black_favorite += favorites[0].to_i
     user.gold_favorite += favorites[1].to_i
@@ -71,5 +71,23 @@ class OrdersController < ApplicationController
     rescue
       @order.errors[:base] << "予期せぬエラーが発生しました。"
     end
+  end
+
+  def calc_pay
+    favorites = get_favorites
+    pay = favorites[0].to_i * 500
+    pay += favorites[1].to_i * 200
+    pay += favorites[2].to_i * 100
+    return pay
+  end
+
+  def get_favorites
+    orders = params.require(:order)
+    favorites = []
+    orders.each_value do | order |
+      order = "0" if order == ""
+      favorites.push(order)
+    end
+    return favorites
   end
 end

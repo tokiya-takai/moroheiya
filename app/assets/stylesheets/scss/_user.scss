@@ -108,8 +108,15 @@
   border-top: 1px solid #aaaaaa;
   display: flex;
   justify-content: space-between;
-  button:hover {
-    opacity: 0.7;
+  align-items: center;
+  button {
+    height: 25px;
+    a {
+      line-height: 25px;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 .to_card {
