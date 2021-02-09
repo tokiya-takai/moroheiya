@@ -1,0 +1,37 @@
+<%= form_with url:cards_path, method: :post, id: "charge-form", class: "details", name: "inputForm" do |f| %>
+    <div class="card_container">
+      <div class="card_form_group">
+        <div class='card_text'>
+          <label>カード情報</label>
+          <span>必須</span>
+        </div>
+        <%= f.text_field :number, class:"input_card", id:"card-number", placeholder:"カード番号(半角英数字)", maxlength:"16" %>
+        <div class='available_card'>
+          <%= image_tag 'card-visa.gif', class: 'card_logo'%>
+          <%= image_tag 'card-mastercard.gif', class: 'card_logo'%>
+          <%= image_tag 'card-jcb.gif', class: 'card_logo'%>
+          <%= image_tag 'card-amex.gif', class: 'card_logo'%>
+        </div>
+      </div>
+      <div class="card_form_group">
+        <div class='card_text'>
+          <label>有効期限</label>
+          <span>必須</span>
+        </div>
+        <div class='input_expiration_date_wrap'>
+          <%= f.text_area :exp_month, class:"input_expiration_date", id:"card-exp-month", placeholder:"例)3" %>
+          <p>月</p>
+          <%= f.text_area :exp_year, class:"input_expiration_date", id:"card-exp-year", placeholder:"例)23" %>
+          <p>年</p>
+        </div>
+      </div>
+      <div class="card_form_group">
+        <div class='card_text'>
+          <label>セキュリティコード</label>
+          <span>必須</span>
+        </div>
+        <%= f.text_field :cvc,class:"input_card", id:"card-cvc", placeholder:"カード背面4桁もしくは3桁の番号", maxlength:"4" %>
+      </div>
+      <%= f.submit "登録する", class: "add_btn", id: "payment_card_submit-button" %>
+    </div>
+  <% end %>
