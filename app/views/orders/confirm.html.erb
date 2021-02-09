@@ -1,0 +1,67 @@
+<%= render 'shared/header' %>
+
+<div class="order_wrapper">
+  <div class="order_container">
+    <h1>購入内容確認</h1>
+    <p>購入を確定しますか？</p>
+    <%= form_with model: @order, url: orders_path, local: true do |f|%>
+      <div class="order_group">
+        <div class="order_icon_container">
+          <%= image_tag 'black_icon.png'%>
+        </div>
+        <p>blackいいね &nbsp;@¥500</p>
+        <div class="order_input_confirm">
+          <%= f.number_field :black, min: 0, readonly: true %>個
+        </div>
+      </div>
+      <div class="order_group">
+        <div class="order_icon_container">
+          <%= image_tag 'gold_icon.png'%>
+        </div>
+        <p>goldいいね &nbsp;&nbsp;&nbsp;@¥200</p>
+        <div class="order_input_confirm">
+          <%= f.number_field :gold, min: 0, readonly: true %>個
+        </div>
+      </div>
+      <div class="order_group">
+        <div class="order_icon_container">
+          <%= image_tag 'purple_icon.png'%>
+        </div>
+        <p>purpleいいね @¥100</p>
+        <div class="order_input_confirm">
+          <%= f.number_field :purple, min: 0, readonly: true %>個
+        </div>
+      </div>
+      <div class="sum">
+        <p>合計金額&nbsp:</p>
+        <% sum = @order.black * 500 %>
+        <% sum += @order.gold * 200 %>
+        <% sum += @order.purple * 100 %>
+        <%= "¥" + sum.to_s(:delimited) %>
+      </div>
+      <% if @card.blank? %>
+        <p>カードが登録されていません。購入ボタンを押すと入力画面が表示されます</p>
+        <div class="buy_btn_checkout">
+          <%= form_with model:@order, action: :create, method: :post do %>
+            <script class="payjp-button" src="https://checkout.pay.jp" type="text/javascript" data-text="購入する" data-key="pk_test_ad515ba65e4c6c2bb1e58dff"></script>
+          <% end %>
+        </div>
+      <% else %>
+        <div class="use_card">
+          <%= "カード情報" %><br />
+          <%= "**** **** **** " + @card.last4 %>
+          <% exp_month = @card.exp_month.to_s %>
+          <% exp_year = @card.exp_year.to_s.slice(2,3) %><br />
+          <%= exp_month + " / " + exp_year %>
+        </div>
+        <div class="buy_btn">
+          <%= form_with model:@order, action: :create, method: :post, local: true do %>
+            <button>購入する</button>
+          <% end %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
+<%= render 'shared/footer' %>

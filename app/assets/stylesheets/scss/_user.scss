@@ -92,12 +92,40 @@
   padding: 10px;
 }
 .user_lower_container {
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 .user_medal_list {
   display: flex;
 }
-.user_medals {
+.user_medals,.user_fav {
   width: 80px;
   height: 80px;
+}
+.user_fav_list {
+  display: flex;
+}
+.user_has_favorites {
+  border-top: 1px solid #aaaaaa;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  button {
+    height: 25px;
+    a {
+      line-height: 25px;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+.to_card {
+  font-weight: normal;
+  height: 50px;
+  border-top: 1px solid #aaaaaa;
+  display: flex;
+  align-items: center;
+  button:hover {
+    opacity: 0.7;
+  }
 }

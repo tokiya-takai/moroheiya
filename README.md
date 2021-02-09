@@ -24,6 +24,8 @@
 
 has_many :contests
 has_many :works
+has_many :normals
+has_many :orders
 
 
 ## contests テーブル
@@ -39,7 +41,7 @@ has_many :works
 |       user      | references | null: false                |
 |    works_count  | integer    | null: false                | counter_cultureを使用
 
-### Associations テーブル
+### Associations
 
 belongs_to :user
 has_many :works
@@ -62,10 +64,10 @@ has_one :third
 
 belongs_to :user
 belongs_to :contest
-has_many :black
-has_many :gold
-has_many :purple
-has_many :normal
+has_many :blacks
+has_many :golds
+has_many :purples
+has_many :normals
 has_one :first
 has_one :second
 has_one :third
@@ -78,7 +80,7 @@ has_one :third
 |    work_id      | integer    |             |
 
 
-### Association
+### Associations
 
 belongs_to :user
 belongs_to :work
@@ -91,7 +93,7 @@ belongs_to :work
 |    work_id      | integer    |             |
 
 
-### Association
+### Associations
 
 belongs_to :user
 belongs_to :work
@@ -105,7 +107,7 @@ belongs_to :work
 |    work_id      | integer    |             |
 
 
-### Association
+### Associations
 
 belongs_to :user
 belongs_to :work
@@ -119,7 +121,7 @@ belongs_to :work
 |    work_id      | integer    |             |
 
 
-### Association
+### Associations
 
 belongs_to :user
 belongs_to :work
@@ -132,7 +134,7 @@ belongs_to :work
 |  contest  | integer   | uniquness   |
 |    work   | integer   | uniquness   |(2カラムによる一意性.validatesにて担保)
 
-### Association
+### Associations
 
 belongs_to :contest
 belongs_to :work
@@ -144,7 +146,7 @@ belongs_to :work
 |  contest  | integer   | uniquness   |
 |    work   | integer   | uniquness   |(2カラムによる一意性.validatesにて担保)
 
-### Association
+### Associations
 
 belongs_to :contest
 belongs_to :work
@@ -156,7 +158,21 @@ belongs_to :work
 |  contest  | integer   | uniquness   |
 |    work   | integer   | uniquness   |(2カラムによる一意性.validatesにて担保)
 
-### Association
+### Associations
 
 belongs_to :contest
 belongs_to :work
+
+
+## orders テーブル
+
+|  Column   |     Type     |   Options           |
+| --------- | ------------ | ------------------- |
+|    user   | references   | foreign_key: true   |
+|    black  | integer      |                     |
+|    gold   | integer      |                     |
+|   purple  | integer      |                     |
+
+### Association
+
+belongs_to :user

@@ -30,6 +30,19 @@
         <li class="list_user_count_second"><% if @user.count_second >= 1 %><%= image_tag'second.svg', class: :user_medals %><%= @user.count_second%><%end%></li>
         <li class="list_user_count_third"><% if @user.count_third >= 1 %><%= image_tag'third.svg', class: :user_medals %><%= @user.count_third%><%end%></li>
       </ul>
+      <% if @user.id == current_user.id %>
+        <div class="user_has_favorites">
+          <ul class="user_fav_list">
+            <li class="list_user_black"><%= image_tag('black_icon.png', class: :user_fav)%><%= @user.black_favorite %></li>
+            <li class="list_user_gold"><%= image_tag('gold_icon.png', class: :user_fav)%><%= @user.gold_favorite %></li>
+            <li class="list_user_purple"><%= image_tag('purple_icon.png', class: :user_fav)%><%= @user.purple_favorite %></li>
+          </ul>
+          <button><%= link_to 'いいねを購入する', new_order_path %></button>
+        </div>
+        <div class="to_card">
+          <button><%= link_to 'カード情報の確認・登録', new_card_path %></button>
+        </div>
+      <% end %>
     </div>
   </div>
 <%= render 'shared/footer' %>
