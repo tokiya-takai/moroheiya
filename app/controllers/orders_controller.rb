@@ -1,6 +1,8 @@
 class OrdersController < ApplicationController
   before_action :get_order, only: [:create, :confirm]
 
+  require 'payjp'
+
   def new
     @order = Order.new
   end
@@ -20,6 +22,7 @@ class OrdersController < ApplicationController
       @order.errors[:base] << "1つ以上選択してください。"
       render :new and return
     end
+    
   end
 
   def complete

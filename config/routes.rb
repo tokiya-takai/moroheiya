@@ -36,4 +36,7 @@ Rails.application.routes.draw do
       get 'complete'
     end
   end
+
+  resources :cards, only: [:new, :create] do
+  end
 end

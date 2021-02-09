@@ -1111,7 +1111,7 @@ select::-ms-expand {
 }
 
 .user_lower_container {
-  padding: 10px;
+  padding: 10px 10px 0 10px;
 }
 
 .user_medal_list {
@@ -1143,6 +1143,19 @@ select::-ms-expand {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.to_card {
+  height: 50px;
+  border-top: 1px solid #aaaaaa;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 /* トップページ */
@@ -2573,66 +2586,16 @@ select::-ms-expand {
   margin-bottom: 100px;
 }
 
-.card_container {
-  width: 50%;
-  margin: 0 auto;
-}
-
-.card_form_group {
-  margin-bottom: 20px;
-}
-
-.card_form_group input {
-  width: 70%;
-  height: 28px;
-  border: 1px solid #aaaaaa;
-}
-
-.available_card {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  height: 35px;
-}
-
-.card_logo {
-  width: 40px;
-  margin: 3px 5px;
-}
-
-.card_text {
-  font-size: 16px;
-}
-
-.card_text span {
-  font-size: 13px;
-  padding: 3px;
-  color: white;
-  background-color: #ea352d;
-  border-radius: 2px;
-}
-
-.input_expiration_date_wrap {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.input_expiration_date_wrap textarea {
-  width: 20%;
-  height: 28px;
-  border: 1px solid #aaaaaa;
-}
-
-.order_container, .card_information_area {
+.order_container {
   width: 50%;
   height: 350px;
+  margin: 50px auto 0 auto;
   border: 1px solid #2d2020;
+  -webkit-box-shadow: 2px 2px 3px #aaaaaa;
+          box-shadow: 2px 2px 3px #aaaaaa;
 }
 
-.order_container h1, .card_information_area h1 {
+.order_container h1 {
   display: block;
   width: 30%;
   margin: 0 auto 20px auto;
@@ -2640,19 +2603,6 @@ select::-ms-expand {
   text-align: center;
   font-size: 25px;
   border-bottom: 5px solid #ffd500;
-}
-
-.card_information_area {
-  margin: 100px auto 0 auto;
-  -webkit-box-shadow: 2px 0px 3px #aaaaaa;
-          box-shadow: 2px 0px 3px #aaaaaa;
-}
-
-.order_container {
-  margin: 0 auto;
-  -webkit-box-shadow: 2px 2px 3px #aaaaaa;
-          box-shadow: 2px 2px 3px #aaaaaa;
-  border-top: none;
 }
 
 .order_group {
@@ -2701,6 +2651,18 @@ select::-ms-expand {
   border-radius: 6px;
 }
 
+.order_input_confirm {
+  width: 30%;
+  text-align: center;
+}
+
+.order_input_confirm input {
+  height: 25px;
+  width: 50px;
+  margin-left: 25px;
+  text-align: center;
+}
+
 .order_error {
   text-align: center;
   color: red;
@@ -2722,4 +2684,91 @@ select::-ms-expand {
           box-shadow: 2px 2px 2px #aaaaaa;
   font-size: 20px;
   text-align: center;
+}
+
+.card_information_area {
+  width: 50%;
+  margin: 100px auto;
+  padding-bottom: 20px;
+  border: 1px solid #2d2020;
+}
+
+.card_information_area h1 {
+  display: block;
+  width: 30%;
+  margin: 0 auto 20px auto;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 25px;
+  border-bottom: 5px solid #ffd500;
+}
+
+.card_container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.card_form_group {
+  margin-bottom: 20px;
+  padding-left: 50px;
+}
+
+.card_form_group input {
+  width: 100%;
+  height: 28px;
+  border: 1px solid #aaaaaa;
+}
+
+.available_card {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 35px;
+}
+
+.card_logo {
+  width: 40px;
+  margin: 3px 5px;
+}
+
+.card_text {
+  font-size: 16px;
+}
+
+.card_text span {
+  font-size: 13px;
+  padding: 3px;
+  color: white;
+  background-color: #ea352d;
+  border-radius: 2px;
+}
+
+.input_expiration_date_wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.input_expiration_date_wrap textarea {
+  width: 20%;
+  height: 28px;
+  border: 1px solid #aaaaaa;
+}
+
+.input_expiration_date_wrap p {
+  line-height: 28px;
+}
+
+.add_btn {
+  display: block;
+  width: 60px;
+  height: 28px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #ffd500;
+  border-radius: 3px;
+  -webkit-box-shadow: 2px 2px 2px #aaaaaa;
+          box-shadow: 2px 2px 2px #aaaaaa;
 }

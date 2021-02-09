@@ -9,27 +9,32 @@
           <%= image_tag 'black_icon.png'%>
         </div>
         <p>blackいいね &nbsp;@¥500</p>
-        <div class="order_input">
-          <%= f.number_field :black, min: 0, readonly: true %>
-        </div>      </div>
+        <div class="order_input_confirm">
+          <%= f.number_field :black, min: 0, readonly: true %>個
+        </div>
+      </div>
       <div class="order_group">
         <div class="order_icon_container">
           <%= image_tag 'gold_icon.png'%>
         </div>
         <p>goldいいね &nbsp;&nbsp;&nbsp;@¥200</p>
-        <div class="order_input">
-          <%= f.number_field :gold, min: 0, readonly: true %>
-        </div>      </div>
+        <div class="order_input_confirm">
+          <%= f.number_field :gold, min: 0, readonly: true %>個
+        </div>
+      </div>
       <div class="order_group">
         <div class="order_icon_container">
           <%= image_tag 'purple_icon.png'%>
         </div>
         <p>purpleいいね @¥100</p>
-        <div class="order_input">
-          <%= f.number_field :purple, min: 0, readonly: true %>
+        <div class="order_input_confirm">
+          <%= f.number_field :purple, min: 0, readonly: true %>個
         </div>
       </div>
-      <button class="order_button"><%= f.submit '購入する'%></button>
+      <%#<button class="order_button"><%= f.submit '購入する'%><%#</button>%>
+      <%= form_with(action: :pay, method: :post) do %>
+        <script class="payjp-button" src="https://checkout.pay.jp" type="text/javascript" data-text="購入する" data-key="pk_test_ad515ba65e4c6c2bb1e58dff"></script>
+      <% end %>
     <% end %>
   </div>
 </div>

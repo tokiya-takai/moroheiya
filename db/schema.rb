@@ -34,11 +34,12 @@ ActiveRecord::Schema.define(version: 2021_02_08_111906) do
   end
 
   create_table "cards", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id"
+    t.bigint "user_id"
     t.string "customer_id"
     t.string "card_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_cards_on_user_id"
   end
 
   create_table "contests", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -110,6 +111,7 @@ ActiveRecord::Schema.define(version: 2021_02_08_111906) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "cards", "users"
   add_foreign_key "contests", "users"
   add_foreign_key "orders", "users"
   add_foreign_key "works", "contests"
