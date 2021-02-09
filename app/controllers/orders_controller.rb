@@ -22,7 +22,6 @@ class OrdersController < ApplicationController
       @order.errors[:base] << "1つ以上選択してください。"
       render :new and return
     end
-    
   end
 
   def complete

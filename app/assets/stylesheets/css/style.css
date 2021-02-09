@@ -2614,6 +2614,11 @@ select::-ms-expand {
   border-bottom: 5px solid #ffd500;
 }
 
+.order_container > p {
+  text-align: center;
+  font-weight: normal;
+}
+
 .order_group {
   display: -webkit-box;
   display: -webkit-flex;
