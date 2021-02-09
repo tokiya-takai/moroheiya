@@ -1,12 +1,12 @@
 <%= render 'shared/header' %>
 <div class="card_information_area">
   <h1>カード情報入力</h1>
-  <div class="form-group">
-    <p id="number-form" class="payjs-outer"></p>
+  <div class="card_form_group card_info">
+    <p id="number-form" class="payjs-outer card_number"></p>
     <p id="expiry-form" class="payjs-outer"></p>
-    <p id="cvc-form" class="payjs-outer"></p>
+    <p id="cvc-form" class="payjs-outer card_cvc"></p>
   </div>
-  <div class="form-group">
+  <div class="card_form_group">
     <%= form_with url: pay_cards_path, method: :post, id: "card_form" do |f| %>
       <div id="card_token"></div>
       <%= f.submit "登録する", class:"btn", id: "info_submit" %>
