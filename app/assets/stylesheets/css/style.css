@@ -1145,7 +1145,12 @@ select::-ms-expand {
           justify-content: space-between;
 }
 
+.user_has_favorites button:hover {
+  opacity: 0.7;
+}
+
 .to_card {
+  font-weight: normal;
   height: 50px;
   border-top: 1px solid #aaaaaa;
   display: -webkit-box;
@@ -1156,6 +1161,10 @@ select::-ms-expand {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.to_card button:hover {
+  opacity: 0.7;
 }
 
 /* トップページ */
