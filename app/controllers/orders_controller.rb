@@ -10,6 +10,13 @@ class OrdersController < ApplicationController
   def create
     if @order.save
       add_user_favorite
+      card = Card.where(user_id: current_user.id).first
+      Payjp.api_key = ENV['PAYJP_SECRET_KEY']
+      Payjp::Charge.create(
+        :amount => 13500,
+        :customer => card.customer_id,
+        :currency => 'jpy',
+      )
       render :complete and return
     else
       @order.errors[:base] << "予期しないエラーが発生しました。"
@@ -22,8 +29,16 @@ class OrdersController < ApplicationController
       @order.errors[:base] << "1つ以上選択してください。"
       render :new and return
     end
+    card = Card.where(user_id: current_user.id).first
+    if card.blank?
+      redirect_to controller: "card", action: "new"
+    else
+      Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
+      customer = Payjp::Customer.retrieve(card.customer_id)
+      @card = customer.cards.retrieve(card.card_id)
+    end
   end
-
+  
   def complete
     unless @order.errors == nil
       render :new and return

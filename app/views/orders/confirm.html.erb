@@ -38,12 +38,23 @@
           </div>
         </div>
       <% end %>
-      <%#<button class="order_button"><%= f.submit '購入する'%><%#</button>%>
-      <div class="buy_bton">
-        <%= form_with(action: :pay, method: :post) do %>
-          <script class="payjp-button" src="https://checkout.pay.jp" type="text/javascript" data-text="購入する" data-key="pk_test_ad515ba65e4c6c2bb1e58dff"></script>
-        <% end %>
-      </div>
+      <% if @card.blank? %>
+        <p>カードが登録されていません。購入ボタンを押すと入力画面が表示されます</p>
+        <div class="buy_bton">
+          <%= form_with model:@order, action: :create, method: :post do %>
+            <script class="payjp-button" src="https://checkout.pay.jp" type="text/javascript" data-text="購入する" data-key="pk_test_ad515ba65e4c6c2bb1e58dff"></script>
+          <% end %>
+        </div>
+      <% else %>
+          <%= "**** **** **** " + @card.last4 %>
+          <% exp_month = @card.exp_month.to_s %>
+          <% exp_year = @card.exp_year.to_s.slice(2,3) %>
+          <%= exp_month + " / " + exp_year %>
+          <br />
+          <%= form_with model:@order, action: :create, method: :post, local: true do %>
+            <button>購入する</button>
+          <% end %>
+      <% end %>
     <% end %>
   </div>
 </div>
