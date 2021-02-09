@@ -2695,6 +2695,11 @@ select::-ms-expand {
   text-align: center;
 }
 
+.buy_bton {
+  width: 70px;
+  margin: 20px auto;
+}
+
 .card_information_area {
   width: 50%;
   margin: 100px auto;

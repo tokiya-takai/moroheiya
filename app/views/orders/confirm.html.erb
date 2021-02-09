@@ -32,9 +32,11 @@
         </div>
       </div>
       <%#<button class="order_button"><%= f.submit '購入する'%><%#</button>%>
-      <%= form_with(action: :pay, method: :post) do %>
-        <script class="payjp-button" src="https://checkout.pay.jp" type="text/javascript" data-text="購入する" data-key="pk_test_ad515ba65e4c6c2bb1e58dff"></script>
-      <% end %>
+      <div class="buy_bton">
+        <%= form_with(action: :pay, method: :post) do %>
+          <script class="payjp-button" src="https://checkout.pay.jp" type="text/javascript" data-text="購入する" data-key="pk_test_ad515ba65e4c6c2bb1e58dff"></script>
+        <% end %>
+      </div>
     <% end %>
   </div>
 </div>
