@@ -1,5 +1,5 @@
 class NormalsController < ApplicationController
-  before_action :set_variables
+  before_action :find_work
 
   def add_normal
     normal = current_user.normals.new(work_id: @work.id)
@@ -8,8 +8,8 @@ class NormalsController < ApplicationController
 
   private
 
-  def set_variables
+  def find_work
     @work = Work.find(params[:work_id])
-    @id_name = "#normal-link-#{@work.id}"
+    # @id_name = "#normal-link-#{@work.id}"
   end
 end
