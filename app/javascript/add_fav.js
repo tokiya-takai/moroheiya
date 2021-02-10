@@ -1,4 +1,4 @@
-function add_fav() {
+$(function() {
   const normal = document.getElementById('normal')
   const normalNum = document.getElementById('normal_num')
 
@@ -8,6 +8,4 @@ function add_fav() {
       normalNum.classList.add('added');
     }
   })
-
-}
-window.addEventListener('load',add_fav)
+})
