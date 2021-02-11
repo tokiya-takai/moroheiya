@@ -14,6 +14,7 @@ class Contest < ApplicationRecord
     validates :image
     validates :genre_id
     validates :category_id
+    validates :user_id
   end
 
 

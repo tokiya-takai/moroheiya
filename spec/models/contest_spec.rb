@@ -59,6 +59,11 @@ RSpec.describe Contest, type: :model do
         @contest.valid?
         expect(@contest.errors.full_messages).to include("サムネイル が選択されていません。")
       end
+      it "userが紐付いていないと作成できない" do
+        @contest.user_id = nil
+        @contest.valid?
+        expect(@contest.errors.full_messages).to include("ユーザー が紐付いていません。")
+      end
     end
   end
 end
