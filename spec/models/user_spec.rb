@@ -50,60 +50,112 @@ RSpec.describe User, type: :model do
         @user.valid?
         expect(@user.errors.full_messages).to include("メールアドレス が入力されていません。")
       end
+      it "重複するemailは登録できない" do
+        @user.save
+        another_user = FactoryBot.build(:user)
+        another_user.email = @user.email
+        another_user.valid?
+        expect(another_user.errors.full_messages).to include("メールアドレス は既に使用されています。")
+      end
+      it "@の無いemailは登録できない" do
+        @user.email = "test.test"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("メールアドレス は有効でありません。")
+      end
       it "passwordがなければ登録できない" do
         @user.password = ""
         @user.valid?
         expect(@user.errors.full_messages).to include("パスワード が入力されていません。")
       end
-      it "password_confirmationがなければ登録できない" do
+      it "passwordが5文字以下では登録できない" do
+        @user.password = "qwe12"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("パスワード は6文字以上に設定して下さい。")
+      end
+      it "passwordが存在してもpassword_confirmationがなければ登録できない" do
         @user.password_confirmation = ""
         @user.valid?
         expect(@user.errors.full_messages).to include("確認用パスワード が一致していません。")
+      end
+      it "passwordが数字だけでは登録できない" do
+        @user.password = "123456"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("パスワード は有効でありません。")
+      end
+      it "passwordが英字だけでは登録できない" do
+        @user.password = "qwerty"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("パスワード は有効でありません。")
+      end
+      it "passwordが全角だと登録できない" do
+        @user.password = "あいうえおか"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("パスワード は有効でありません。")
       end
       it "family_nameがなければ登録できない" do
         @user.family_name = ""
         @user.valid?
         expect(@user.errors.full_messages).to include("苗字 が入力されていません。")
       end
+      it "family_nameが英字では登録できない" do
+        @user.family_name = "test"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("苗字 は有効でありません。")
+      end
+      it "family_nameが数字では登録できない" do
+        @user.family_name = "123"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("苗字 は有効でありません。")
+      end
       it "first_nameがなければ登録できない" do
         @user.first_name = ""
         @user.valid?
         expect(@user.errors.full_messages).to include("名前 が入力されていません。")
+      end
+      it "first_nameが英字では登録できない" do
+        @user.first_name = "test"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("名前 は有効でありません。")
+      end
+      it "first_nameが数字では登録できない" do
+        @user.first_name = "123"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("名前 は有効でありません。")
       end
       it "family_name_kanaがなければ登録できない" do
         @user.family_name_kana = ""
         @user.valid?
         expect(@user.errors.full_messages).to include("苗字(フリガナ) が入力されていません。")
       end
+      it "family_name_kanaが英字では登録できない" do
+        @user.family_name_kana = "test"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("苗字(フリガナ) は有効でありません。")
+      end
+      it "family_name_kanaが数字では登録できない" do
+        @user.family_name_kana = "123"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("苗字(フリガナ) は有効でありません。")
+      end
       it "first_name_kanaがなければ登録できない" do
         @user.first_name_kana = ""
         @user.valid?
         expect(@user.errors.full_messages).to include("名前(フリガナ) が入力されていません。")
       end
+      it "first_name_kanaが英字では登録できない" do
+        @user.first_name_kana = "test"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("名前(フリガナ) は有効でありません。")
+      end
+      it "first_name_kanaが数字では登録できない" do
+        @user.first_name_kana = "123"
+        @user.valid?
+        expect(@user.errors.full_messages).to include("名前(フリガナ) は有効でありません。")
+      end
       it "birthdayがなければ登録できない" do
         @user.birthday = ""
         @user.valid?
         expect(@user.errors.full_messages).to include("生年月日 が入力されていません。")
-      end
-      it "family_nameが全角日本語以外は登録できない" do
-        @user.family_name = "test"
-        @user.valid?
-        expect(@user.errors.full_messages).to include("苗字 は有効でありません。")
-      end
-      it "first_nameが全角日本語以外は登録できない" do
-        @user.first_name = "test"
-        @user.valid?
-        expect(@user.errors.full_messages).to include("名前 は有効でありません。")
-      end
-      it "family_name_kanaが全角カタカナ以外は登録できない" do
-        @user.family_name_kana = "test"
-        @user.valid?
-        expect(@user.errors.full_messages).to include("苗字(フリガナ) は有効でありません。")
-      end
-      it "first_name_kanaが全角カタカナ以外は登録できない" do
-        @user.first_name_kana = "test"
-        @user.valid?
-        expect(@user.errors.full_messages).to include("名前(フリガナ) は有効でありません。")
       end
     end
   end
