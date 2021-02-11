@@ -67,10 +67,11 @@ ja:
             video:
               blank: "が選択されていません。"
             contest_id:
-              blank: "がありません"
+              blank: "が紐付いていません。"
               invalid: "は有効でありません。"
             user_id:
               blank: "が紐付いていません。"
+              invalid: "は有効でありません。"
     attributes:
       contest:
         title: "タイトル"
@@ -85,5 +86,5 @@ ja:
         content: "説明"
         image: "画像"
         video: "動画"
-        contest_id: "コンテストID"
+        contest_id: "コンテスト"
         user_id: "ユーザー"

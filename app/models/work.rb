@@ -22,6 +22,7 @@ class Work < ApplicationRecord
     validates :title,   length: {maximum: 40}
     validates :content, length: {maximum: 1000}
     validates :image
+    validates :user_id
   end
 
 end
