@@ -33,9 +33,9 @@
   height: 120px;
   display: flex;
   align-items: center;
-}
-.user_nickname_container h1 {
-  font-size: 35px;
+  h1 {
+    font-size: 35px;
+  }
 }
 .user_edit_button_container {
   width: 20%;
@@ -50,21 +50,21 @@
   background-color: #ffd500;
   border-radius: 3px;
   box-shadow: 1px 2px 2px #aaaaaa;
-}
-.user_edit_button_frame a {
-  display: block;
-  width: 100%;
-  line-height: 30px;
-  text-align: center;
+  a {
+    display: block;
+    width: 100%;
+    line-height: 30px;
+    text-align: center;
+  }
 }
 .user_middle_container {
   border-bottom: 1px solid #2d2020;
-}
-.user_middle_container h2 {
-  width: 60%;
-  height: 33px;
-  margin: 0 auto;
-  font-size: 22px;
+  h2 {
+    width: 60%;
+    height: 33px;
+    margin: 0 auto;
+    font-size: 22px;
+  }
 }
 .rotation_arrow_area {
   display: inline-block;

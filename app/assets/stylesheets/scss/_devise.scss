@@ -87,19 +87,23 @@
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
+  select {
+    width: 60px;
+    margin-top: 5px;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 4px;
+    border: 1px solid #2d2020;
+    background: #fff;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  p {
+    line-height: 50px;
+    padding: 0 5px;
+  }
 }
 
-.input_birth_wrap select {
-  width: 60px;
-  margin-top: 5px;
-  height: 40px;
-  padding-left: 10px;
-  border-radius: 4px;
-  border: 1px solid #2d2020;
-  background: #fff;
-  font-size: 12px;
-  cursor: pointer;
-}
 /* 矢印復活css */
 select {
   -moz-appearance: menulist;
@@ -108,11 +112,6 @@ select {
 /* IE,Edge用 */
 select::-ms-expand {
   display: block;
-}
-
-.input_birth_wrap p {
-  line-height: 50px;
-  padding: 0 5px;
 }
 .submit_area {
   width: 100%;
@@ -135,9 +134,9 @@ select::-ms-expand {
   border-radius: 5px;
   box-shadow: 2px 3px #8f7c00;
   transition: 200ms;
-}
-.actions:hover {
-  background-color: #f18585;
+  &:hover {
+    background-color: #f18585;
+  }
 }
 .sign_submit_button {
   width: 100%;
@@ -153,9 +152,9 @@ select::-ms-expand {
 .sign_bottom_here {
   border-bottom: 1px solid #2d2020;
   font-weight: bold;
-}
-.sign_bottom_here:hover {
-  opacity: 0.7;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 .forgot_password:hover {
   opacity: 0.7;

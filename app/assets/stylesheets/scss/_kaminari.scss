@@ -18,15 +18,17 @@
   margin: 0 5px;
   border: 1px solid #2d2020;
 }
-.other a {
-  padding: 9px 13px;
-  border: 1px solid #2d2020;
-  background-color: white;
-  transition: 200ms;
-}
-.other a:hover {
-  color: beige;
-  background-color: #5a4040;
+.other {
+  a {
+    padding: 9px 13px;
+    border: 1px solid #2d2020;
+    background-color: white;
+    transition: 200ms;
+    &:hover {
+      color: beige;
+      background-color: #5a4040;
+    }
+  }
 }
 .next a, .last a {
   padding: 9px 0;

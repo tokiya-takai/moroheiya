@@ -19,6 +19,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  h1 {
+    width: 85%;
+    height: 100%;
+    padding-left: 20px;
+    font-size: 35px;
+    overflow: hidden;
+  }
 }
 .whu_thumbnail_frame {
   width: 5%;
@@ -27,13 +34,6 @@
 }
 .whu_image {
   width: 100%;
-}
-.work_header_upper h1 {
-  width: 85%;
-  height: 100%;
-  padding-left: 20px;
-  font-size: 35px;
-  overflow: hidden;
 }
 .join_button_container {
   width: 10%;

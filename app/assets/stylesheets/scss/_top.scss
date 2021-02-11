@@ -211,13 +211,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.to_list_container a {
-  opacity: 1;
-  transition: 200ms;
-}
-.to_list_container a:hover {
-  opacity: 0.7;
+  a {
+    opacity: 1;
+    transition: 200ms;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 .dummy {
   width: 300px;
@@ -233,19 +233,19 @@
   border-radius: 5px;
   background: #ffd500;
   opacity: 0;
-}
-.fukidashi:after {
-  position: absolute;
-  width: 0;
-  height: 0;
-  left: 0;
-  bottom: -19px;
-  margin-left: 10px;
-  border: solid transparent;
-  border-top-color: #ffd500;
-  border-width: 10px;
-  pointer-events: none;
-  content: " ";
+  &::after {
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    bottom: -19px;
+    margin-left: 10px;
+    border: solid transparent;
+    border-top-color: #ffd500;
+    border-width: 10px;
+    pointer-events: none;
+    content: " ";
+  }
 }
 /* コンテスト表示は共通 */
 
@@ -277,9 +277,9 @@
   background-color: #f15656;
   border-radius: 5px;
   box-shadow: 2px 3px #8f7c00;
-}
-.last_button_frame:hover {
-  background-color: #f18585;
+  &:hover {
+    background-color: #f18585;
+  }
 }
 .last_button {
   line-height: 55px;
