@@ -6,17 +6,24 @@
         <%= image_tag(@contest.image, class: :whu_image)%>
       </div>
       <h1><%= @contest.title%></h1>
-      <div class="join_button_container">
       <% if user_signed_in? && @contest.user.id == current_user.id %>
-        <button class="contest_edit_button_frame yellow_button">
-          <%= link_to '編集する', edit_contest_path(@contest.id), class: :join_button %>
-        </button>
+        <div class="my_contest_btn_container">
+          <div class="my_contest">
+            <button class="my_contest_btn yellow_button">
+              <%= link_to '参加する', new_contest_work_path(@contest.id), class: :join_button %>
+            </button>
+            <button class="my_contest_btn yellow_button">
+              <%= link_to '編集する', edit_contest_path(@contest.id), class: :join_button %>
+            </button>
+          </div>
+        </div>
       <% else %>
-        <button class="join_button_frame yellow_button">
-          <%= link_to '参加する', new_contest_work_path(@contest.id), class: :join_button %>
-        </button>
+        <div class="join_button_container">
+          <button class="join_button_frame yellow_button">
+            <%= link_to '参加する', new_contest_work_path(@contest.id), class: :join_button %>
+          </button>
+        </div>
       <% end %>
-      </div>
     </div>
     <div class="work_header_lower">
       <div class="work_header_content"><%= @contest.content %></div>

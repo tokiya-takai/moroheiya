@@ -11,9 +11,6 @@ class WorksController < ApplicationController
 
   def new
     @work = Work.new
-    if @contest.user_id == current_user.id
-      redirect_to contest_path(@contest.id)
-    end
   end
 
   def create
