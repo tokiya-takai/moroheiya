@@ -1,12 +1,34 @@
 $(function(){
   const black = document.getElementById('black');
   const blackNum = document.getElementById('black_num');
-  if (<%= @flag  %> == true ){
-    if(black.classList.contains('added')==false){
-      blackNum.innerHTML = Number(blackNum.innerHTML) + 1;
-      black.classList.add('added');
+  const gold = document.getElementById('gold');
+  const goldNum = document.getElementById('gold_num');
+  const purple = document.getElementById('purple');
+  const purpleNum = document.getElementById('purple_num');
+
+  if (<%= @flag[0] %> == true ){
+    switch("<%= @flag[1]%>"){
+      case "black":
+        add_num_common(black,blackNum);
+        break;
+      case "gold":
+        add_num_common(gold,goldNum);
+        break;
+      case "purple":
+        add_num_common(purple,purpleNum);
+        break;
+      default:
+        break;
+      return;
     }
-  }else{
+  } else {
     return false;
   }
-})
+});
+function add_num_common(element, elementNum){
+  if(element.classList.contains('added') == false) {
+    elementNum.innerHTML = Number(elementNum.innerHTML) + 1;
+    element.classList.add('added');
+  }
+}
+
