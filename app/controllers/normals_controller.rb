@@ -10,6 +10,5 @@ class NormalsController < ApplicationController
 
   def find_work
     @work = Work.find(params[:work_id])
-    # @id_name = "#normal-link-#{@work.id}"
   end
 end

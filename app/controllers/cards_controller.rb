@@ -1,4 +1,5 @@
 class CardsController < ApplicationController
+  before_action :authenticate_user!
 
   require 'payjp'
 
@@ -50,7 +51,7 @@ class CardsController < ApplicationController
     else
       Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
       customer = Payjp::Customer.retrieve(card.customer_id)
-      @default_card_information = customer.cards.retrieve(card.card_id)
+      @card = customer.cards.retrieve(card.card_id)
     end
   end
 end
