@@ -1,0 +1,12 @@
+$(function(){
+  const black = document.getElementById('black');
+  const blackNum = document.getElementById('black_num');
+  if (<%= @flag  %> == true ){
+    if(black.classList.contains('added')==false){
+      blackNum.innerHTML = Number(blackNum.innerHTML) + 1;
+      black.classList.add('added');
+    }
+  }else{
+    return false;
+  }
+})

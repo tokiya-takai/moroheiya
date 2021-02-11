@@ -12,7 +12,7 @@ require("../header")
 require("../tops_index")
 require("../contest")
 require("../user")
-require("../add_fav")
+require("../add_normal")
 require("../payjp")
 
 
