@@ -57,10 +57,10 @@ has_one :third
 |     content     | text       | null: false |
 |       user      | references | null: false |
 |      contest    | references | null: false |
-|   black_count   | integer    |             |
-|   gold_count    | integer    |             |
-|   purple_count  | integer    |             |
-|   normal_count  | integer    |             |
+|   blacks_count  | integer    |             |
+|   golds_count   | integer    |             |
+|   purples_count | integer    |             |
+|   normals_count | integer    |             |
 
 belongs_to :user
 belongs_to :contest

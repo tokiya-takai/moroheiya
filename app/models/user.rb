@@ -8,8 +8,18 @@ class User < ApplicationRecord
   has_many :contests, dependent: :destroy
   has_many :works, dependent: :destroy
   has_many :order
+
   has_many :normals, dependent: :destroy
   has_many :normal_works, through: :normals, source: :work
+
+  has_many :purples, dependent: :destroy
+  has_many :purple_works, through: :purples, source: :work
+
+  has_many :golds, dependent: :destroy
+  has_many :gold_works, through: :golds, source: :work
+
+  has_many :blacks, dependent: :destroy
+  has_many :black_works, through: :blacks, source: :work
 
   has_one_attached :image, dependent: :destroy
 

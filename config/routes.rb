@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   root to: 'tops#index'
   post   '/normal/:work_id' => 'normals#add_normal',   as: 'add_normal'
+  post   '/paid/:work_id' => 'paids#add_paid',   as: 'add_paid'
 
   devise_for :users, :controllers => {
     :registrations => 'users/registrations',

@@ -4,6 +4,15 @@ class Work < ApplicationRecord
   has_many :normals, dependent: :destroy
   has_many :working_users, through: :works, source: :user
 
+  has_many :purples, dependent: :destroy
+  has_many :working_users, through: :works, source: :user
+
+  has_many :golds, dependent: :destroy
+  has_many :working_users, through: :works, source: :user
+
+  has_many :blacks, dependent: :destroy
+  has_many :working_users, through: :works, source: :user
+
   counter_culture :contest, column_name: 'works_count'
 
   has_one_attached :image, dependent: :destroy
