@@ -1893,7 +1893,7 @@ select::-ms-expand {
 /* フォームここまで */
 /* 完了ページ */
 .finished_wrapper {
-  height: calc(100vh - 80px);
+  height: 500px;
 }
 
 .finished_container {

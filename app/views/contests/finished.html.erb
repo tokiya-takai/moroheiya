@@ -17,6 +17,10 @@
         <%= link_to 'コンテスト一覧へ戻る', list_contests_path %>
       </div>
     </div>
+    <div class="twitter">
+      <%= link_to("Twitterにシェア","https://twitter.com/share?url=#{request.url}/#{@contest.id}&text=#{@contest.title}を開催しました！", title: 'Twitter', target: '_blank') %>
+      <i class="fab fa-twitter"></i>
+    </div>
   </div>
 </div>
 
