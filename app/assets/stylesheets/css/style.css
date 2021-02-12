@@ -1959,6 +1959,31 @@ select::-ms-expand {
   text-align: center;
 }
 
+.shared {
+  height: 80px;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.twitter {
+  margin-right: 10px;
+}
+
+.tweet {
+  color: #00aced;
+}
+
+.line {
+  margin-left: 10px;
+}
+
 /* コンテストに紐付いた作品表示ページ */
 .work_wrapper {
   width: 100vw;
