@@ -209,7 +209,7 @@
 /* フォームここまで */
 /* 完了ページ */
 .finished_wrapper {
-  height: calc(100vh - 80px);
+  height: 500px;
 }
 .finished_container {
   width: 50%;
@@ -246,4 +246,19 @@
     width: 100%;
     text-align: center;
   }
+}
+.shared {
+  height: 80px;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.twitter {
+  margin-right: 10px;
+}
+.tweet {
+  color: #00aced;
+}
+.line {
+  margin-left: 10px;
 }

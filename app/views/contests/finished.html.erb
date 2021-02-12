@@ -17,6 +17,16 @@
         <%= link_to 'コンテスト一覧へ戻る', list_contests_path %>
       </div>
     </div>
+    <div class="shared">
+      <div class="twitter">
+        <i class="fab fa-twitter tweet"></i>
+        <%= link_to("Twitterにシェア","https://twitter.com/share?url=#{request.url}/#{@contest.id}&text=#{@contest.title}を開催しました！", title: 'Twitter', target: '_blank') %>
+      </div>
+      <div class="line">
+        <div class="line-it-button" data-lang="ja" data-type="share-a" data-ver="3" data-url="http://127.0.0.1:3000" data-color="default" data-size="small" data-count="false" style="display: none;"></div>
+        <script src="https://www.line-website.com/social-plugins/js/thirdparty/loader.min.js" async="async" defer="defer"></script>
+      </div>
+    </div>
   </div>
 </div>
 

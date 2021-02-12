@@ -1893,7 +1893,7 @@ select::-ms-expand {
 /* フォームここまで */
 /* 完了ページ */
 .finished_wrapper {
-  height: calc(100vh - 80px);
+  height: 500px;
 }
 
 .finished_container {
@@ -1957,6 +1957,31 @@ select::-ms-expand {
   line-height: 60px;
   width: 100%;
   text-align: center;
+}
+
+.shared {
+  height: 80px;
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.twitter {
+  margin-right: 10px;
+}
+
+.tweet {
+  color: #00aced;
+}
+
+.line {
+  margin-left: 10px;
 }
 
 /* コンテストに紐付いた作品表示ページ */
