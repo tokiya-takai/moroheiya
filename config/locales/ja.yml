@@ -50,6 +50,8 @@ ja:
               invalid: "は有効でありません。"
             image:
               blank: "が選択されていません。"
+            user_id:
+              blank: "が紐付いていません。"
         work:
           attributes:
             title:
@@ -65,7 +67,10 @@ ja:
             video:
               blank: "が選択されていません。"
             contest_id:
-              blank: "がありません"
+              blank: "が紐付いていません。"
+              invalid: "は有効でありません。"
+            user_id:
+              blank: "が紐付いていません。"
               invalid: "は有効でありません。"
     attributes:
       contest:
@@ -75,9 +80,11 @@ ja:
         content: "説明"
         deadline: "締め切り"
         image: "サムネイル"
+        user_id: "ユーザー"
       work:
         title: "タイトル"
         content: "説明"
         image: "画像"
         video: "動画"
-        contest_id: "コンテストID"
+        contest_id: "コンテスト"
+        user_id: "ユーザー"

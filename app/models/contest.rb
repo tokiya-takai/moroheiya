@@ -12,6 +12,9 @@ class Contest < ApplicationRecord
     validates :content,     length: { maximum: 1000 }
     validates :deadline
     validates :image
+    validates :genre_id
+    validates :category_id
+    validates :user_id
   end
 
 

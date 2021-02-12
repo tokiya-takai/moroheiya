@@ -31,8 +31,8 @@
   </div>
   <div class="work_list_wrapper">
     <ul class="work_list">
-      <% if @contest.public == false %>
-        <h1 class="not_public">このコンテストは非公開です。</h2>
+      <% if @contest.general == false %>
+        <h1 class="not_general">このコンテストは非公開です。</h2>
       <% else %>
         <% if @contest.genre_id == 2%>
           <%= render partial: 'image_work', collection: @works, local: { image_work: @works }%>

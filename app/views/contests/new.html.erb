@@ -36,7 +36,7 @@
               <div class='form_text_wrap'>
                 <label class="form_text">説明</label>
               </div>
-              <%= f.text_area :content, class:"input_contest_content", id:"title", maxlength: "1000" %>
+              <%= f.text_area :content, class:"input_contest_content", id:"content", maxlength: "1000" %>
             </div>
           </div>
           <div class="contest_deadline">
@@ -74,15 +74,15 @@
                     <div id="file-name" class="file_name"></div>
                   </div>
                 <div class="start_form_button_right">
-                  <div class="public_select">
+                  <div class="general_select">
                     <span>非公開</span>
-                    <%= f.check_box :public ,{ checked: false },false,true %>
+                    <%= f.check_box :general ,{ checked: false },false,true %>
                   </div>
                   <button class="create_button yellow_button"><%= f.submit "開催する"%></button>
                 </div>
               </div>
             </div>
-            <div class="public_caution">
+            <div class="general_caution">
               <p>非公開を選択すると、投稿された作品は公開されません。例えば、主催者が評価を行う場合などに使用します。変更はいつでも可能です。
             </div>
           </div>
