@@ -2499,9 +2499,8 @@ select::-ms-expand {
   border-bottom: 5px solid #ffd500;
 }
 
-.list_area {
-  width: 100%;
-  list-style: none;
+.contest_container {
+  min-height: 60vh;
 }
 
 .footer {
