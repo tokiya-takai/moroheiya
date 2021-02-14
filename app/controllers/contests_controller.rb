@@ -32,7 +32,7 @@ class ContestsController < ApplicationController
 
   def edit
     if @contest.user.id != current_user.id
-      render :show
+      redirect_to action: 'show'
     end
   end
 
