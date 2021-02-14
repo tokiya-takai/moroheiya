@@ -1,4 +1,5 @@
 class PaidsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_variables
 
   def add_paid

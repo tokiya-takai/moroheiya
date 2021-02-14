@@ -1,5 +1,5 @@
 class WorksController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :show
   before_action :find_contest, only: [:new, :create, :show, :edit, :update]
   before_action :find_work, only: [:show, :edit, :update, :finished]
 
