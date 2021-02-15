@@ -12,6 +12,7 @@
 ・ActiveStorage
 ・Heroku
 ・MySQL2
+・clockworkを使った定期バッチ処理
 
 # テーブル設計
 
