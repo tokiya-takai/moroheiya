@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_14_073936) do
+ActiveRecord::Schema.define(version: 2021_02_15_102636) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -131,6 +131,7 @@ ActiveRecord::Schema.define(version: 2021_02_14_073936) do
     t.integer "purples_count"
     t.integer "golds_count"
     t.integer "blacks_count"
+    t.integer "total_count", default: 0
     t.index ["contest_id"], name: "index_works_on_contest_id"
     t.index ["user_id"], name: "index_works_on_user_id"
   end

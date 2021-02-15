@@ -10,6 +10,9 @@ class WorksController < ApplicationController
 
 
   def new
+    if @contest.end == true
+      redirect_to contest_path(@contest.id)
+    end
     @work = Work.new
   end
 
