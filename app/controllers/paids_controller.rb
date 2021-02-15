@@ -10,6 +10,10 @@ class PaidsController < ApplicationController
       if @user.black_favorite == 0 || @user.black_favorite == nil
         return
       end
+      if current_user.blacks.blank?
+        @work.total_count += 20
+        @work.save
+      end
       black = current_user.blacks.new(work_id: @work.id)
       black.save!
       @user.black_favorite -= 1
@@ -20,6 +24,10 @@ class PaidsController < ApplicationController
       if @user.gold_favorite == 0 || @user.gold_favorite == nil
         return
       end
+      if current_user.golds.blank?
+        @work.total_count += 10
+        @work.save
+      end
       gold = current_user.golds.new(work_id: @work.id)
       gold.save!
       @user.gold_favorite -= 1
@@ -29,6 +37,10 @@ class PaidsController < ApplicationController
     when "purple"
       if @user.purple_favorite == 0 || @user.purple_favorite == nil
         return
+      end
+      if current_user.purples.blank?
+        @work.total_count += 5
+        @work.save
       end
       purple = current_user.purples.new(work_id: @work.id)
       purple.save!
