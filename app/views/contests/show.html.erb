@@ -6,23 +6,27 @@
         <%= image_tag(@contest.image, class: :whu_image)%>
       </div>
       <h1><%= @contest.title%></h1>
-      <% if user_signed_in? && @contest.user.id == current_user.id %>
-        <div class="my_contest_btn_container">
-          <div class="my_contest">
-            <button class="my_contest_btn yellow_button">
+      <% if @contest.end != true %>
+        <% if user_signed_in? && @contest.user.id == current_user.id %>
+          <div class="my_contest_btn_container">
+            <div class="my_contest">
+              <button class="my_contest_btn yellow_button">
+                <%= link_to '参加する', new_contest_work_path(@contest.id), class: :join_button %>
+              </button>
+              <button class="my_contest_btn yellow_button">
+                <%= link_to '編集する', edit_contest_path(@contest.id), class: :join_button %>
+              </button>
+            </div>
+          </div>
+        <% else %>
+          <div class="join_button_container">
+            <button class="join_button_frame yellow_button">
               <%= link_to '参加する', new_contest_work_path(@contest.id), class: :join_button %>
             </button>
-            <button class="my_contest_btn yellow_button">
-              <%= link_to '編集する', edit_contest_path(@contest.id), class: :join_button %>
-            </button>
           </div>
-        </div>
+        <% end %>
       <% else %>
-        <div class="join_button_container">
-          <button class="join_button_frame yellow_button">
-            <%= link_to '参加する', new_contest_work_path(@contest.id), class: :join_button %>
-          </button>
-        </div>
+        <div class="join_button_container"></div>
       <% end %>
     </div>
     <div class="work_header_lower">
@@ -34,10 +38,19 @@
       <% if @contest.general == false %>
         <h1 class="not_general">このコンテストは非公開です。</h2>
       <% else %>
-        <% if @contest.genre_id == 2%>
-          <%= render partial: 'image_work', collection: @works, local: { image_work: @works }%>
+        <% if @contest.end != true %>
+          <% if @contest.genre_id == 2%>
+            <%= render partial: 'image_work', collection: @works, local: { image_work: @works }%>
+          <% else %>
+            <%= render partial: 'video_work', collection: @works, local: { video_work: @works }%>
+          <% end%>
         <% else %>
-          <%= render partial: 'video_work', collection: @works, local: { video_work: @works }%>
+          <h2>このコンテストは終了しています。</h2>
+          <% if @contest.genre_id == 2%>
+            <%= render partial: 'image_work', collection: @end_works, local: { image_work: @end_works }%>
+          <% else %>
+            <%= render partial: 'video_work', collection: @end_works, local: { video_work: @end_works }%>
+          <% end %>
         <% end%>
       <%end%>
     </ul>

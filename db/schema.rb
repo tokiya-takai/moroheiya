@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_10_061128) do
+ActiveRecord::Schema.define(version: 2021_02_15_102636) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2021_02_10_061128) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "works_count", default: 0, null: false
+    t.boolean "end", default: false
     t.index ["user_id"], name: "index_contests_on_user_id"
   end
 
@@ -130,6 +131,7 @@ ActiveRecord::Schema.define(version: 2021_02_10_061128) do
     t.integer "purples_count"
     t.integer "golds_count"
     t.integer "blacks_count"
+    t.integer "total_count", default: 0
     t.index ["contest_id"], name: "index_works_on_contest_id"
     t.index ["user_id"], name: "index_works_on_user_id"
   end

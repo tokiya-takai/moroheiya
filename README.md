@@ -12,6 +12,7 @@
 ・ActiveStorage
 ・Heroku
 ・MySQL2
+・clockworkを使った定期バッチ処理
 
 # テーブル設計
 
@@ -55,6 +56,7 @@ has_many :orders
 |      public     | boolean    | null: false, default: true |
 |       user      | references | null: false                |
 |    works_count  | integer    | null: false                | counter_cultureを使用
+|       end       | boolean    | null: false, default:false |
 
 ### Associations
 
@@ -76,6 +78,7 @@ has_one :third
 |   golds_count   | integer    |             |
 |   purples_count | integer    |             |
 |   normals_count | integer    |             |
+|    total_count  | integer    |             |
 
 belongs_to :user
 belongs_to :contest
