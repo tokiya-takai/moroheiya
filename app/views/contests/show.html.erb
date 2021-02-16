@@ -34,6 +34,9 @@
     </div>
   </div>
   <div class="work_list_wrapper">
+    <% if @contest.end == true %>
+      <h2 class="end_contest_info">このコンテストは終了しています。</h2>
+    <% end %>
     <ul class="work_list">
       <% if @contest.general == false %>
         <h1 class="not_general">このコンテストは非公開です。</h2>
@@ -45,7 +48,6 @@
             <%= render partial: 'video_work', collection: @works, local: { video_work: @works }%>
           <% end%>
         <% else %>
-          <h2>このコンテストは終了しています。</h2>
           <% if @contest.genre_id == 2%>
             <%= render partial: 'image_work', collection: @end_works, local: { image_work: @end_works }%>
           <% else %>
@@ -55,5 +57,10 @@
       <%end%>
     </ul>
   </div>
+  <div class="paginate_area">
+      <div class="paginate_container">
+        <%= paginate @works %>
+      </div>
+    </div>
 </div>
 <%= render 'shared/footer' %>

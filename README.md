@@ -8,6 +8,8 @@
 ・いいね機能
 ・3種類の有料いいね機能
 ・有料いいね購入機能
+・いいね数によるランキング機能
+・ランキング上位にメダル付与機能
 ・ページネーション機能
 ・ActiveStorage
 ・Heroku
@@ -53,7 +55,7 @@ has_many :orders
 |   category_id   | integer    | null: false                | ActiveHashを使用
 |     content     | text       | null: false                |
 |     deadline    | date       | null: false                |
-|      public     | boolean    | null: false, default: true |
+|      general     | boolean    | null: false, default: true |
 |       user      | references | null: false                |
 |    works_count  | integer    | null: false                | counter_cultureを使用
 |       end       | boolean    | null: false, default:false |
@@ -90,7 +92,7 @@ has_one :first
 has_one :second
 has_one :third
 
-## normal テーブル
+## normals テーブル
 
 |     Column      |    Type    |   Options   |
 | --------------- | ---------- | ----------- |
@@ -103,21 +105,7 @@ has_one :third
 belongs_to :user
 belongs_to :work
 
-## purple テーブル
-
-|     Column      |    Type    |   Options   |
-| --------------- | ---------- | ----------- |
-|    user_id      | integer    |             |
-|    work_id      | integer    |             |
-
-
-### Associations
-
-belongs_to :user
-belongs_to :work
-
-
-## gold テーブル
+## purples テーブル
 
 |     Column      |    Type    |   Options   |
 | --------------- | ---------- | ----------- |
@@ -131,7 +119,7 @@ belongs_to :user
 belongs_to :work
 
 
-## black テーブル
+## golds テーブル
 
 |     Column      |    Type    |   Options   |
 | --------------- | ---------- | ----------- |
@@ -145,40 +133,17 @@ belongs_to :user
 belongs_to :work
 
 
-## firsts テーブル
+## blacks テーブル
 
-|  Column   |   Type    |   Options   |
-| --------- | --------- | ----------- |
-|  contest  | integer   | uniquness   |
-|    work   | integer   | uniquness   |(2カラムによる一意性.validatesにて担保)
+|     Column      |    Type    |   Options   |
+| --------------- | ---------- | ----------- |
+|    user_id      | integer    |             |
+|    work_id      | integer    |             |
 
-### Associations
-
-belongs_to :contest
-belongs_to :work
-
-## seconds テーブル
-
-|  Column   |   Type    |   Options   |
-| --------- | --------- | ----------- |
-|  contest  | integer   | uniquness   |
-|    work   | integer   | uniquness   |(2カラムによる一意性.validatesにて担保)
 
 ### Associations
 
-belongs_to :contest
-belongs_to :work
-
-## thirds テーブル
-
-|  Column   |   Type    |   Options   |
-| --------- | --------- | ----------- |
-|  contest  | integer   | uniquness   |
-|    work   | integer   | uniquness   |(2カラムによる一意性.validatesにて担保)
-
-### Associations
-
-belongs_to :contest
+belongs_to :user
 belongs_to :work
 
 
