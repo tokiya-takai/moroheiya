@@ -146,6 +146,7 @@
   display: none;
   width: 230px;
   height: 300px;
+  @include fz(14);
   background-color: white;
   position: absolute;
   top: 70px;
@@ -243,7 +244,6 @@
   height: 100%;
 }
 /* ここまで */
-/* ここまで */
 .right_btn {
   width: 30%;
   height: 100%;
@@ -252,9 +252,11 @@
   align-items: center;
 }
 .sign_in_button {
+  @include fz(14);
   border-bottom: 2px solid #fbfbfb;
 }
 .sign_up_button {
+  @include fz(14);
   padding: auto 0 28px 0;
   border-bottom: 2px solid #fbfbfb;
 }

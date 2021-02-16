@@ -2,6 +2,7 @@
   width: 100vw;
   height: 800px;
   margin-bottom: 100px;
+  @include fz(14);
 }
 
 .order_container,.order_container_confirm {

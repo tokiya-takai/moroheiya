@@ -88,6 +88,7 @@
 // 確認・削除画面
 .card_show_wrapper {
   height: 60vh;
+  @include fz(14);
 }
 .card_show_container {
   width: 40%;

@@ -248,6 +248,7 @@ body {
   display: none;
   width: 230px;
   height: 300px;
+  font-size: 1.4rem;
   background-color: white;
   position: absolute;
   top: 70px;
@@ -365,7 +366,6 @@ body {
 }
 
 /* ここまで */
-/* ここまで */
 .right_btn {
   width: 30%;
   height: 100%;
@@ -384,10 +384,12 @@ body {
 }
 
 .sign_in_button {
+  font-size: 1.4rem;
   border-bottom: 2px solid #fbfbfb;
 }
 
 .sign_up_button {
+  font-size: 1.4rem;
   padding: auto 0 28px 0;
   border-bottom: 2px solid #fbfbfb;
 }
@@ -841,6 +843,7 @@ select::-ms-expand {
   border-radius: 3px;
   -webkit-box-shadow: 2px 2px 3px #aaaaaa;
           box-shadow: 2px 2px 3px #aaaaaa;
+  font-size: 1.4rem;
 }
 
 .user_upper_container {
@@ -2632,6 +2635,7 @@ select::-ms-expand {
   width: 100vw;
   height: 800px;
   margin-bottom: 100px;
+  font-size: 1.4rem;
 }
 
 .order_container, .order_container_confirm {
@@ -2916,6 +2920,7 @@ select::-ms-expand {
 
 .card_show_wrapper {
   height: 60vh;
+  font-size: 1.4rem;
 }
 
 .card_show_container {

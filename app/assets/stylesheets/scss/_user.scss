@@ -5,6 +5,7 @@
   border: 1px solid #2d2020;
   border-radius: 3px;
   box-shadow: 2px 2px 3px #aaaaaa;
+  @include fz(14);
 }
 .user_upper_container {
   padding-top: 30px;
