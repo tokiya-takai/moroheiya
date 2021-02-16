@@ -55,7 +55,7 @@ has_many :orders
 |   category_id   | integer    | null: false                | ActiveHashを使用
 |     content     | text       | null: false                |
 |     deadline    | date       | null: false                |
-|      public     | boolean    | null: false, default: true |
+|      general     | boolean    | null: false, default: true |
 |       user      | references | null: false                |
 |    works_count  | integer    | null: false                | counter_cultureを使用
 |       end       | boolean    | null: false, default:false |
@@ -92,7 +92,7 @@ has_one :first
 has_one :second
 has_one :third
 
-## normal テーブル
+## normals テーブル
 
 |     Column      |    Type    |   Options   |
 | --------------- | ---------- | ----------- |
@@ -105,21 +105,7 @@ has_one :third
 belongs_to :user
 belongs_to :work
 
-## purple テーブル
-
-|     Column      |    Type    |   Options   |
-| --------------- | ---------- | ----------- |
-|    user_id      | integer    |             |
-|    work_id      | integer    |             |
-
-
-### Associations
-
-belongs_to :user
-belongs_to :work
-
-
-## gold テーブル
+## purples テーブル
 
 |     Column      |    Type    |   Options   |
 | --------------- | ---------- | ----------- |
@@ -133,7 +119,21 @@ belongs_to :user
 belongs_to :work
 
 
-## black テーブル
+## golds テーブル
+
+|     Column      |    Type    |   Options   |
+| --------------- | ---------- | ----------- |
+|    user_id      | integer    |             |
+|    work_id      | integer    |             |
+
+
+### Associations
+
+belongs_to :user
+belongs_to :work
+
+
+## blacks テーブル
 
 |     Column      |    Type    |   Options   |
 | --------------- | ---------- | ----------- |
