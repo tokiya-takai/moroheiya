@@ -1,95 +1,18 @@
+@mixin fz($size: 16) {
+  font-size: ($size / 10) + rem;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: 'Roboto', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
-  font: 700 14px "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  font: 700 62.5% "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
   /* font-family: "Open Sans", "Myriad", Helvetica, Arial, "Noto Sans JP", sans-serif;
   font: bold 14px "ヒラギノ角ゴ ProN W3", "Hiragino KaKu Gothic ProN", "メイリオ", Meiryo,"Lucida Grande", Verdana, "MS Pゴシック", sans-serif; */
+  width: 100vw;
   color: #2d2020;
-}
-
-
-/* コンテスト表示共通 */
-.contest_container {
-  height: auto;
-}
-.contests {
-  width: 70%;
-  height: 80%;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-.list_contest {
-  width: 33%;
-  margin-bottom: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.contest_frame {
-  width: 300px;
-  height: 370px;
-  &:hover {
-    opacity: 0.7;
-  }
-}
-.contest_body {
-  height: 100%;
-  border: 15px solid #2d2020;
-  border-radius: 8px;
-  box-shadow: 2px 3px 2px #aaaaaa;
-}
-.contest_image_container {
-  margin-top: 10px;
-  width: 100%;
-  height: 200px;
-}
-.contest_image {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-.contest_title {
-  width: 100%;
-  height: 25%;
-  font-size: 16px;
-  p {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-}
-.contest_content {
-  font-size: 10px;
-  width: 95%;
-  height: 75%;
-  margin: 0 auto;
-  p {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-}
-.contest_information {
-  width: 90%;
-  height: 30%;
-  margin: 0 auto;
-}
-.other_information {
-  width: 90%;
-  height: 8%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  font-size: 8px;
-  opacity: 0.7;
-}
-.contest_people {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* フォームページのファイルネーム横幅共通 */

@@ -83,7 +83,7 @@
 }
 .work_list_wrapper {
   width: 100vw;
-  height: 100vh;
+  min-height: 50vh;
   margin-top: 80px;
 }
 .end_contest_info {
@@ -107,7 +107,7 @@
 }
 .work_frame {
   width: 75%;
-  height: 300px;
+  height: 25vw;
   margin: 0 auto;
   border: 15px solid #2d2020;
   border-radius: 7px;
