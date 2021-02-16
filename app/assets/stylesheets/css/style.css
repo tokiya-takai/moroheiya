@@ -2102,6 +2102,12 @@ select::-ms-expand {
   margin-top: 80px;
 }
 
+.end_contest_info {
+  height: 50px;
+  font-size: 18px;
+  text-align: center;
+}
+
 .work_list {
   width: 90%;
   height: auto;
@@ -2126,6 +2132,7 @@ select::-ms-expand {
 .list_work {
   width: 25%;
   height: 100%;
+  margin: 10px 0;
 }
 
 .work_frame {
