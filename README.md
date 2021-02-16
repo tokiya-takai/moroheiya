@@ -8,6 +8,8 @@
 ・いいね機能
 ・3種類の有料いいね機能
 ・有料いいね購入機能
+・いいね数によるランキング機能
+・ランキング上位にメダル付与機能
 ・ページネーション機能
 ・ActiveStorage
 ・Heroku
@@ -142,43 +144,6 @@ belongs_to :work
 ### Associations
 
 belongs_to :user
-belongs_to :work
-
-
-## firsts テーブル
-
-|  Column   |   Type    |   Options   |
-| --------- | --------- | ----------- |
-|  contest  | integer   | uniquness   |
-|    work   | integer   | uniquness   |(2カラムによる一意性.validatesにて担保)
-
-### Associations
-
-belongs_to :contest
-belongs_to :work
-
-## seconds テーブル
-
-|  Column   |   Type    |   Options   |
-| --------- | --------- | ----------- |
-|  contest  | integer   | uniquness   |
-|    work   | integer   | uniquness   |(2カラムによる一意性.validatesにて担保)
-
-### Associations
-
-belongs_to :contest
-belongs_to :work
-
-## thirds テーブル
-
-|  Column   |   Type    |   Options   |
-| --------- | --------- | ----------- |
-|  contest  | integer   | uniquness   |
-|    work   | integer   | uniquness   |(2カラムによる一意性.validatesにて担保)
-
-### Associations
-
-belongs_to :contest
 belongs_to :work
 
 
