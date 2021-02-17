@@ -15,6 +15,7 @@
 ・Heroku
 ・MySQL2
 ・clockworkを使った定期バッチ処理
+・AWS S3
 
 # テーブル設計
 

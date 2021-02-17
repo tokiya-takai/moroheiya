@@ -67,3 +67,4 @@ gem 'payjp'
 gem 'dotenv-rails'
 gem 'font-awesome-sass'
 gem 'clockwork'
+gem "aws-sdk-s3", require: false
