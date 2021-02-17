@@ -1431,7 +1431,7 @@ select::-ms-expand {
 
 .list_contest {
   width: 33%;
-  padding: 25px;
+  padding: 50px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
