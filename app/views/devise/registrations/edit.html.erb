@@ -38,9 +38,13 @@
             <%= f.text_area :profile, autofocus: true, autocomplete: "profile", class: :edit_input_profile %>
           </div>
         </div>
-        <div class="edit_actions">
-          <%= f.submit "保存" %>
-        </div>
+        <% if @user.email == "test@test.com" %>
+            <%= "テストユーザーは更新できません。" %>
+        <% else %>
+          <div class="edit_actions">
+            <%= f.submit "保存" %>
+          </div>
+        <% end %>
       </div>
     </div>
   <% end %>
