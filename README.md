@@ -3,6 +3,7 @@
 テストユーザー<br />
 email : test@test.com<br />
 pass  : test123<br />
+※テストユーザーではユーザー情報の変更ができません。機能を利用する場合はアカウントの作成をお願いします。<br />
 <br />
 アプリケーションの概要<br />
 個人が自由にコンテストを開催し参加者を募ることで、趣味の共有・向上を図ることができます。<br />
@@ -22,9 +23,9 @@ https://moroheiya.herokuapp.com/
 - ランキング上位にメダル付与機能
 - ページネーション機能
 - ActiveStorage
-- Heroku
 - MySQL2
 - clockworkを使った定期バッチ処理
+- インフラ AWS
 - AWS S3
 <br />
 
