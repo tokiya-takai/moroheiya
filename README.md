@@ -36,7 +36,7 @@ https://moroheiya-contest.com/
 - JavaScript
 - jQuery
 - MySQL2
-- AWS(VPC, EC2, RDS, Route53, S3)
+- AWS(VPC, EC2, RDS, Route53, S3, Certificate Manager(ACM))
 <br />
 
 アプリケーションの使い方 :<br />
