@@ -2,7 +2,7 @@ $(function () {
   
   if (document.URL.match(/cards/)){
 
-    var payjp = Payjp('pk_test_ad515ba65e4c6c2bb1e58dff');
+    var payjp = Payjp(process.env.PAYJP_PUBLIC_KEY);
 
     var elements = payjp.elements();
 
