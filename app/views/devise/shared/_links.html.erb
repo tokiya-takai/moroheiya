@@ -7,7 +7,19 @@
 <% end %>
 
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <div class="sign_bottom"><%= link_to "パスワードをお忘れですか？", new_password_path(resource_name),class: :forgot_password %><br /></div>
+  <div class="sign_bottom"><%= link_to "パスワードをお忘れですか？", new_password_path(resource_name),class: :forgot_password %></div>
+<% end %>
+
+<%- if controller_name == 'sessions' || controller_name == 'registrations' %>
+  <div class="sign_bottom">
+    <%= form_with model: @user, url: user_session_path, class: 'session guests_form', local: true do |f| %>
+      <%= f.email_field :email, class:"guests_data", id:"email", value: "test@test.com" %>
+      <%= f.password_field :password, class:"guests_data", id:"password", value: "test123" %>
+      <div class="gest_login">
+        <%= f.submit "ゲストでログイン", class: :guests_submit %>
+      </div>
+    <% end %>
+  </div>
 <% end %>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>

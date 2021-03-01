@@ -67,11 +67,13 @@ https://moroheiya.herokuapp.com/
 アプリケーションのクローン<br />
 
 ```
-git clone https://github.com/tokiya-takai/moroheiya
+git clone https://github.com/tokiya-takai/moroheiya.git
 
 bundle install
 
 yarn install
+
+yarn add @fortawesome/fontawesome-free
 
 rails db:create db:migrate
 ```
