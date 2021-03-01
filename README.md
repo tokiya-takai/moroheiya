@@ -1,4 +1,6 @@
 ご覧いただきありがとうございます。
+テストユーザーはログインもしくは新規登録画面からボタン一つでログインできるようになっています。
+是非そちらをご利用ください。
 
 テストユーザー<br />
 email : test@test.com<br />
@@ -9,27 +11,24 @@ pass  : test123<br />
 個人が自由にコンテストを開催し参加者を募ることで、趣味の共有・向上を図ることができます。<br />
 
 URL  
-https://moroheiya.herokuapp.com/  
+https://moroheiya-contest.com/
 <br />
 
 アプリケーション機能一覧<br />
 - deviseを使ったユーザー認証機能
 - コンテスト開催機能
 - コンテスト応募機能（作品投稿機能）
-- いいね機能
-- 3種類の有料いいね機能
+- 無料いいね機能および3種類の有料いいね機能
 - 有料いいね購入機能
 - いいね数によるランキング機能
 - ランキング上位にメダル付与機能
 - ページネーション機能
-- ActiveStorage
-- MySQL2
 - clockworkを使った定期バッチ処理
-- インフラ AWS
-- AWS S3
+- Twitter共有機能
+- LINE共有機能
 <br />
 
-使用言語、フレームワークおよびDB<br />
+使用言語、フレームワーク、インフラ<br />
 - Ruby 2.6.5
 - Rails 6.0.0
 - HTML
@@ -37,6 +36,7 @@ https://moroheiya.herokuapp.com/
 - JavaScript
 - jQuery
 - MySQL2
+- AWS(VPC, EC2, RDS, Route53, S3)
 <br />
 
 アプリケーションの使い方 :<br />
