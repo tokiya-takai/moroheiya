@@ -1,3 +1,4 @@
+require('dotenv').config();
 $(function () {
   
   if (document.URL.match(/cards/)){
