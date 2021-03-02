@@ -1,4 +1,6 @@
-require('dotenv').config();
+const ENV_PATH = path.join(__dirname, '.env');
+require('dotenv').config({ path: ENV_PATH });
+
 $(function () {
   
   if (document.URL.match(/cards/)){
