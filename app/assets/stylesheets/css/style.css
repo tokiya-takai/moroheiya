@@ -519,6 +519,10 @@ body {
   border-bottom: 1px solid #2d2020;
 }
 
+.user_information_area {
+  font-size: 14px;
+}
+
 .form_group {
   width: 60%;
   display: -webkit-box;
@@ -599,6 +603,7 @@ body {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  font-size: 14px;
 }
 
 .input_name_left {
@@ -794,6 +799,7 @@ select::-ms-expand {
 .user_browse_btn {
   display: block;
   width: 80%;
+  font-size: 12px;
   margin: 0 auto;
   text-align: center;
   background-color: #ebebeb;
@@ -804,6 +810,7 @@ select::-ms-expand {
 
 .delete_user_image {
   width: 80px;
+  font-size: 14px;
   text-align: center;
   margin: 10px auto;
   cursor: pointer;
@@ -1006,8 +1013,8 @@ select::-ms-expand {
 }
 
 .user_medals, .user_fav {
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
 }
 
 .user_fav_list {

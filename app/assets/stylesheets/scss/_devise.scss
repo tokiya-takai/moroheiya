@@ -17,7 +17,9 @@
   font-size: 20px;
   border-bottom: 1px solid #2d2020;
 }
-
+.user_information_area {
+  font-size: 14px;
+}
 .form_group {
   width: 60%;
   display: flex;
@@ -77,6 +79,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  font-size: 14px;
 }
 .input_name_left {
   width: 135px;
@@ -220,6 +223,7 @@ select::-ms-expand {
 .user_browse_btn {
   display: block;
   width: 80%;
+  font-size: 12px;
   margin: 0 auto;
   text-align: center;
   background-color: #ebebeb;
@@ -229,12 +233,13 @@ select::-ms-expand {
 }
 .delete_user_image {
   width: 80px;
+  font-size: 14px;
   text-align: center;
   margin: 10px auto;
   cursor: pointer;
-}
-.delete_user_image:hover {
-  opacity: 0.7;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 #image-delete-message {
   display: none;

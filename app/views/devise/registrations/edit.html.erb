@@ -13,7 +13,7 @@
             <% end %>
           </div>
           <label for="user-image" class="select_user_image">
-            <span class="user_browse_btn">画像をアップロード</span><%= f.file_field :image, id: "user-image" %>
+            <span class="user_browse_btn">画像をアップロード</span><%= f.file_field :image, id: "user-image", disabled: current_user.email == "test@test.com" %>
           </label>
           <p class="delete_user_image">画像を削除</p>
           <%= f.text_field :image_delete_message, id:"image-delete-message"%>
@@ -25,17 +25,17 @@
         <div class="edit_user_information_area">
           <div class="field">
             <%= f.label :nickname %><br />
-            <%= f.text_area :nickname, autofocus: true, autocomplete: "nickname", class: :edit_input, maxlength:"20" %>
+            <%= f.text_area :nickname, autofocus: true, autocomplete: "nickname", class: :edit_input, maxlength:"20",readonly: current_user.email == "test@test.com" %>
           </div>
 
           <div class="field">
             <%= f.label :email %><br />
-            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: :edit_input %>
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", class: :edit_input, readonly: current_user.email == "test@test.com" %>
           </div>
 
           <div class="field">
             <%= f.label :profile %><br />
-            <%= f.text_area :profile, autofocus: true, autocomplete: "profile", class: :edit_input_profile %>
+            <%= f.text_area :profile, autofocus: true, autocomplete: "profile", class: :edit_input_profile, readonly: current_user.email == "test@test.com"%>
           </div>
         </div>
         <% if @user.email == "test@test.com" %>
