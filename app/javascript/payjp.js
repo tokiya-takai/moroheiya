@@ -1,5 +1,4 @@
-const ENV_PATH = path.join(__dirname, '.env');
-require('dotenv').config({ path: ENV_PATH });
+require('dotenv').config();
 
 $(function () {
   
