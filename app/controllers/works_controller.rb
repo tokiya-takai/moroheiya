@@ -6,6 +6,9 @@ class WorksController < ApplicationController
   require './app/lib/file_validation'
 
   def show
+    if @contest.general == true && current_user.id != @contest.user.id
+      redirect_to contest_path(@contest.id)
+    end
   end
 
 
