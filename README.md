@@ -39,6 +39,10 @@ https://moroheiya-contest.com/
 - AWS(VPC, EC2, RDS, Route53, S3, Certificate Manager(ACM))
 <br />
 
+テスト<br />
+- RSpec
+<br />
+
 アプリケーションの使い方 :<br />
 アカウントを持っていない場合<br />
 - コンテストとその作品を閲覧することができます。<br />
