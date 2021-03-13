@@ -35,6 +35,7 @@ body {
   border-bottom: 1px solid #2d2020;
   -webkit-box-shadow: 0 3px 5px 2px rgba(136, 136, 136, 0.3);
           box-shadow: 0 3px 5px 2px rgba(136, 136, 136, 0.3);
+  position: relative;
 }
 
 .inner {
@@ -493,9 +494,61 @@ body {
   list-style-image: url("/images/arrow.png");
 }
 
-/* フッター共通 */
-.list_item {
-  opacity: 1;
+#dialog {
+  width: 30vw;
+  height: 12vw;
+  background-color: white;
+  border: 1px solid #2d2020;
+  border-radius: 4px;
+  -webkit-box-shadow: 3px 3px 2px rgba(136, 136, 136, 0.3);
+          box-shadow: 3px 3px 2px rgba(136, 136, 136, 0.3);
+  padding: 1vw;
+  font-size: 1vw;
+  color: #2d2020;
+  position: absolute;
+  top: 300%;
+  left: 35%;
+}
+
+.dialog_upper {
+  height: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dialog_lower {
+  height: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.dialog_lower button {
+  width: 90px;
+  height: 40px;
+  margin-left: 10px;
+  border: 1px solid #2d2020;
+  border-radius: 4px;
+  text-align: center;
+}
+
+#yes {
+  background-color: #ffd500;
 }
 
 /* ログイン・ログアウト共通 */
