@@ -106,16 +106,35 @@ function openUserMenu() {
 // 使い方GitHubへのアクセスを確認する
 function confirmAccess() {
   const toGit = document.querySelector(".to_git");
-  
-  toGit.addEventListener('click', () => {
-    var result = window.confirm('GitHubのページへ遷移します。よろしいですか?');
+  const dialog = document.getElementById("dialog");
+  const yesButton = document.getElementById("yes");
+  const noButton = document.getElementById("no");
+  const dialogBackground = document.getElementById("dialog-background");
+  const path = "https://github.com/tokiya-takai/moroheiya";
 
-    if( result ) {
-      window.location.href = 'https://github.com/tokiya-takai/moroheiya';
-    }
-    else {
-      return;
-    }
+  //スクロール禁止の関数
+  function noScroll(event) {
+    event.preventDefault();
+  }
+  //ダイアログの処理
+  toGit.addEventListener('click', () => {
+    //ダイアログを表示
+    dialogBackground.style.display = "block";
+    //スクロールを禁止
+    document.addEventListener('touchmove', noScroll, { passive: false });
+    document.addEventListener('mousewheel', noScroll, { passive: false });
+    //はいを押すとGitのページへ遷移
+    yesButton.addEventListener('click', () => {
+      window.location.href = path;
+      dialogBackground.style.display = "none";
+    });
+    //いいえを押すとダイアログを閉じる
+    noButton.addEventListener('click', () => {
+      dialogBackground.style.display = "none";
+      //スクロール禁止を解除
+      document.removeEventListener('touchmove', noScroll, { passive: false });
+      document.removeEventListener('mousewheel', noScroll, { passive: false });
+    });
   })
 }
 
