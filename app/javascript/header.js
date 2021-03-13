@@ -103,8 +103,25 @@ function openUserMenu() {
   });
 }
 
+// 使い方GitHubへのアクセスを確認する
+function confirmAccess() {
+  const toGit = document.querySelector(".to_git");
+  
+  toGit.addEventListener('click', () => {
+    var result = window.confirm('GitHubのページへ遷移します。よろしいですか?');
+
+    if( result ) {
+      window.location.href = 'https://github.com/tokiya-takai/moroheiya';
+    }
+    else {
+      return;
+    }
+  })
+}
+
 
 window.addEventListener('load', userButton);
 window.addEventListener('load', findList);
 window.addEventListener('load', listItemOpacity);
 window.addEventListener('load', openUserMenu);
+window.addEventListener('load', confirmAccess);
