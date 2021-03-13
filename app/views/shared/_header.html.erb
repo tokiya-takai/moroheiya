@@ -1,4 +1,15 @@
 <header class="header">
+  <div id="dialog-background">
+    <div id="dialog">
+      <div class="dialog_upper">
+        <p>GitHubのページへ遷移します。よろしいですか?</p>
+      </div>
+      <div class="dialog_lower">
+        <button id="yes">はい</button>
+        <button id="no">いいえ</button>
+      </div>
+    </div>
+  </div>
   <div class="inner">
     <div class="header_items">
       <div class="header_left">
@@ -24,7 +35,7 @@
                end   
             %>
             <li class="nav_items"><a href="<%= path %>" id="to-how">MOROHEIYAとは</a></li>
-            <li class="nav_items"><%= link_to "使い方",root_path %></li>
+            <li class="nav_items to_git"><a href="javascript:void(0);">使い方</a>
           </ul>
         </div>
       </nav>
@@ -124,5 +135,5 @@
         </div>
       </div>
     </div>
-  <div>
+  </div>
 </header>

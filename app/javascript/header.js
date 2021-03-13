@@ -103,8 +103,44 @@ function openUserMenu() {
   });
 }
 
+// 使い方GitHubへのアクセスを確認する
+function confirmAccess() {
+  const toGit = document.querySelector(".to_git");
+  const dialog = document.getElementById("dialog");
+  const yesButton = document.getElementById("yes");
+  const noButton = document.getElementById("no");
+  const dialogBackground = document.getElementById("dialog-background");
+  const path = "https://github.com/tokiya-takai/moroheiya";
+
+  //スクロール禁止の関数
+  function noScroll(event) {
+    event.preventDefault();
+  }
+  //ダイアログの処理
+  toGit.addEventListener('click', () => {
+    //ダイアログを表示
+    dialogBackground.style.display = "block";
+    //スクロールを禁止
+    document.addEventListener('touchmove', noScroll, { passive: false });
+    document.addEventListener('mousewheel', noScroll, { passive: false });
+    //はいを押すとGitのページへ遷移
+    yesButton.addEventListener('click', () => {
+      window.location.href = path;
+      dialogBackground.style.display = "none";
+    });
+    //いいえを押すとダイアログを閉じる
+    noButton.addEventListener('click', () => {
+      dialogBackground.style.display = "none";
+      //スクロール禁止を解除
+      document.removeEventListener('touchmove', noScroll, { passive: false });
+      document.removeEventListener('mousewheel', noScroll, { passive: false });
+    });
+  })
+}
+
 
 window.addEventListener('load', userButton);
 window.addEventListener('load', findList);
 window.addEventListener('load', listItemOpacity);
 window.addEventListener('load', openUserMenu);
+window.addEventListener('load', confirmAccess);
