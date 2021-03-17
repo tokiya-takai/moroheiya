@@ -78,7 +78,7 @@
                 <div class="start_form_button_right">
                   <div class="general_select">
                     <span>非公開</span>
-                    <%= f.check_box 'public', {}, true, false %>
+                    <%= f.check_box :general ,{ checked: @contest.general == false },false,true %>
                   </div>
                   <button class="create_button yellow_button"><%= f.submit "更新する"%></button>
                 </div>
