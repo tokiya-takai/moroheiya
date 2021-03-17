@@ -1,12 +1,12 @@
 class WorksController < ApplicationController
-  before_action :authenticate_user!, except: :show
+  before_action :authenticate_user!
   before_action :find_contest, only: [:new, :create, :show, :edit, :update]
   before_action :find_work, only: [:show, :edit, :update, :finished]
 
   require './app/lib/file_validation'
 
   def show
-    if @contest.general == true && current_user.id != @contest.user.id
+    if @contest.general == false && current_user.id != @contest.user.id
       redirect_to contest_path(@contest.id)
     end
   end
