@@ -67,7 +67,7 @@ class ContestsController < ApplicationController
 
   def contest_params
     deadline = connect_deadline
-    params.require(:contest).permit(:title,:genre_id,:category_id,:content,:image,:public).merge(deadline: deadline, user_id: current_user.id)
+    params.require(:contest).permit(:title,:genre_id,:category_id,:content,:image,:general).merge(deadline: deadline, user_id: current_user.id)
   end
 
   def connect_deadline
