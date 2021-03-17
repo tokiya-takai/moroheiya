@@ -38,7 +38,7 @@
       <h2 class="end_contest_info">このコンテストは終了しています。</h2>
     <% end %>
     <ul class="work_list">
-      <% if @contest.general == true %>
+      <% if @contest.general == false %>
         <h1 class="not_general">このコンテストは非公開です。</h2>
         <% if user_signed_in? && @contest.user.id == current_user.id %>
           <% if @contest.genre_id == 2%>
