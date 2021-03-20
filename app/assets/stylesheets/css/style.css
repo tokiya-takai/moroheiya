@@ -2097,6 +2097,14 @@ select::-ms-expand {
   padding-bottom: 30px;
 }
 
+.work_header p {
+  width: 95%;
+  height: 40px;
+  margin: 0 auto;
+  font-size: 18px;
+  padding-top: 15px;
+}
+
 .work_header_upper {
   width: 95%;
   height: 50%;

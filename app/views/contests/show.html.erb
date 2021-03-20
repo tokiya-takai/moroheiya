@@ -1,6 +1,7 @@
 <%= render 'shared/header' %>
 <div class="work_wrapper">
   <div class="work_header">
+    <p>主催:<%= @contest.user.nickname %></p>
     <div class="work_header_upper">
       <div class="whu_thumbnail_frame">
         <%= image_tag(@contest.image, class: :whu_image)%>
