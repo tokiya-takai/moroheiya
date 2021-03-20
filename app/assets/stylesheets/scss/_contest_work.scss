@@ -10,13 +10,15 @@
   background-color: #fffed8;
   border-bottom: 1px solid #c4c0c0;
   padding-bottom: 30px;
-  p {
-    width: 95%;
-    height: 40px;
-    margin: 0 auto;
-    font-size: 18px;
-    padding-top: 15px;
-  }
+}
+.work_header_supplement_info {
+  width: 95%;
+  height: 40px;
+  margin: 0 auto;
+  padding-top: 15px;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
 }
 .work_header_upper {
   width: 95%;

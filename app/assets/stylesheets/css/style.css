@@ -2097,12 +2097,20 @@ select::-ms-expand {
   padding-bottom: 30px;
 }
 
-.work_header p {
+.work_header_supplement_info {
   width: 95%;
   height: 40px;
   margin: 0 auto;
-  font-size: 18px;
   padding-top: 15px;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .work_header_upper {
