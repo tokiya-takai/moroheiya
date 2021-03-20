@@ -31,6 +31,7 @@ class ContestsController < ApplicationController
     if @contest.end == true
       @end_works = Work.where(contest_id: params[:id]).page(params[:page]).per(8).order("total_count DESC")
     end
+    @deadline = @contest.deadline.strftime("%Y年%m月%d日 %H時%M分")
   end
 
   def edit
